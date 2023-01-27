@@ -106,7 +106,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                   ),
 
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Theme(data: ThemeData(
@@ -124,46 +124,49 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               });
                             },
                           )),
-                      Flexible(child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "List your property on MLS",
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                15.0,
-                                Colors.black,
-                                FontWeight.w500,
-                                'FontRegular'),
+                      Flexible(child: Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "List your property on MLS",
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(
+                                  15.0,
+                                  Colors.black,
+                                  FontWeight.w500,
+                                  'FontRegular'),
 
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Get seen by more people",
-                                style: CustomWidget(context: context)
-                                    .CustomSizedTextStyle(
-                                    12.0,
-                                    AppColors.hintColor,
-                                    FontWeight.w500,
-                                    'FontRegular'),
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Get seen by more people",
+                                  style: CustomWidget(context: context)
+                                      .CustomSizedTextStyle(
+                                      12.0,
+                                      AppColors.hintColor,
+                                      FontWeight.w500,
+                                      'FontRegular'),
 
-                              ),
-                              Text(
-                                "\$ 1000 extra",
-                                style: CustomWidget(context: context)
-                                    .CustomSizedTextStyle(
-                                    12.0,
-                                    Colors.black,
-                                    FontWeight.w500,
-                                    'FontRegular'),
+                                ),
+                                Text(
+                                  "\$ 1000 extra",
+                                  style: CustomWidget(context: context)
+                                      .CustomSizedTextStyle(
+                                      12.0,
+                                      Colors.black,
+                                      FontWeight.w500,
+                                      'FontRegular'),
 
-                              )
-                            ],
-                          )
-                        ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),)
 
                       //Checkbox
@@ -175,7 +178,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                   ),
 
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Theme(data: ThemeData(
@@ -193,47 +196,52 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               });
                             },
                           )),
-                      Flexible(child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Include a virtual tour",
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                15.0,
-                                Colors.black,
-                                FontWeight.w500,
-                                'FontRegular'),
 
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Create a degital twin of your property",
-                                style: CustomWidget(context: context)
-                                    .CustomSizedTextStyle(
-                                    12.0,
-                                    AppColors.hintColor,
-                                    FontWeight.w500,
-                                    'FontRegular'),
+                      Flexible(child: Padding(
+                        padding: EdgeInsets.only(top: 10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Include a virtual tour",
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(
+                                  15.0,
+                                  Colors.black,
+                                  FontWeight.w500,
+                                  'FontRegular'),
 
-                              ),
-                              Text(
-                                "\$ 5000 extra",
-                                style: CustomWidget(context: context)
-                                    .CustomSizedTextStyle(
-                                    12.0,
-                                    Colors.black,
-                                    FontWeight.w500,
-                                    'FontRegular'),
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Create a degital twin of your property",
+                                  style: CustomWidget(context: context)
+                                      .CustomSizedTextStyle(
+                                      12.0,
+                                      AppColors.hintColor,
+                                      FontWeight.w500,
+                                      'FontRegular'),
 
-                              )
-                            ],
-                          )
-                        ],
+                                ),
+                                Text(
+                                  "\$ 5000 extra",
+                                  style: CustomWidget(context: context)
+                                      .CustomSizedTextStyle(
+                                      12.0,
+                                      Colors.black,
+                                      FontWeight.w500,
+                                      'FontRegular'),
+
+                                )
+                              ],
+                            )
+                          ],
+                        ),
                       ),)
+
 
                       //Checkbox
                     ],
