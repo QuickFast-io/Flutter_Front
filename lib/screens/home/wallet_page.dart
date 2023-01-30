@@ -333,7 +333,7 @@ class _WalletState extends State<Wallet> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "cost : ",
+                        "Cost : ",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(12.0, AppColors.blackColor,
                                 FontWeight.w400, 'FontRegular'),
