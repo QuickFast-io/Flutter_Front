@@ -49,7 +49,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
     return Column(
       children: [
         SizedBox(
-          height: 24.0,
+          height: 20.0,
         ),
         Expanded(
           flex: 3,
@@ -59,7 +59,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
             children: [
               Image.asset(widget.coinDetails!.image.toString(),width: 80.0,height: 60.0,),
               SizedBox(
-                height: 10.0,
+                height: 24.0,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -75,7 +75,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                     textAlign: TextAlign.center,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 5.0),
+                    padding: EdgeInsets.only(top: 12.0),
                     child: Text(
                       "\$ "+ widget.coinDetails!.value.toString(),
                       style: CustomWidget(context: context)
@@ -87,7 +87,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                 ],
               ),
               SizedBox(
-                height: 15.0,
+                height: 12.0,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,6 +101,8 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                           SendScreen(coinDetails: widget.coinDetails!,)));
                     },
                     child: Container(
+                      width: 137.0,
+                      height: 45.0,
                       decoration: BoxDecoration(
                         color: Colors.transparent,
                         border: Border.all(color:Colors.black ),
@@ -134,6 +136,8 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                       showDepoist();
                     },
                     child: Container(
+                      width: 137.0,
+                      height: 45.0,
                       decoration: BoxDecoration(
                         color: Colors.transparent,
                         border: Border.all(color:Colors.black ),
