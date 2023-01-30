@@ -3,6 +3,7 @@ import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.da
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 import 'package:rabbit/screens/home/chat_menu_screen.dart';
 import 'package:rabbit/screens/home/chat_screen.dart';
 import 'package:rabbit/screens/home/dashboard.dart';
@@ -62,6 +63,7 @@ class _Home_ScreenState extends State<Home_Screen> {
       }
     headerTitle = titleheader[currentindex];
   }
+
 
   Widget dashBoard(){
     return Container(
