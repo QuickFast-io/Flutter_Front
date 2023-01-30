@@ -73,7 +73,7 @@ class _TransferState extends State<Transfer> {
           Text(
             "="+"\$234,568.45",
             style: CustomWidget(context: context).CustomSizedTextStyle(
-                16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
+                16.0, Color(0xFF737373), FontWeight.w400, 'FontRegular'),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 37.0,),
@@ -121,7 +121,7 @@ class _TransferState extends State<Transfer> {
                 ],
               ),
             ),
-            SizedBox(height: 15.0,),
+            SizedBox(height: 45.0,),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -236,7 +236,7 @@ class _TransferState extends State<Transfer> {
             ),
           ],
         ),
-
+        SizedBox(height: 45.0,),
         InkWell(
           onTap: (){
             setState(() {
