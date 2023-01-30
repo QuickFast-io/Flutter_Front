@@ -86,7 +86,7 @@ class _WalletState extends State<Wallet> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 10.0,
+                height: 12.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -114,7 +114,7 @@ class _WalletState extends State<Wallet> {
                 ],
               ),
               SizedBox(
-                height: 5.0,
+                height: 12.0,
               ),
               Text(
                 "0.0034 BTC",
@@ -124,7 +124,7 @@ class _WalletState extends State<Wallet> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 25.0,
+                height: 35.0,
               ),
               CustomSwitch(
                   value: switchVal,
@@ -143,7 +143,7 @@ class _WalletState extends State<Wallet> {
           ),
         ),
         SizedBox(
-          height: 10.0,
+          height: 25.0,
         ),
         Expanded(
           flex: 5,

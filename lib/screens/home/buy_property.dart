@@ -48,7 +48,7 @@ class _BuyPropertyState extends State<BuyProperty> {
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(10.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
@@ -147,34 +147,42 @@ class _BuyPropertyState extends State<BuyProperty> {
                     ),
                   ],
                 ),
-                SizedBox(height: 5.0),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Cost : ",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(
-                          12.0,
-                          Color(0xFF696969),
-                          FontWeight.w400,
-                          'FontRegular'),
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      "\$ 8,560,000",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(
-                          18.0,
-                          Colors.black,
-                          FontWeight.w600,
-                          'FontRegular'),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(right: 15.0,left: 15.0,top: 25.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Cost : ",
+                            style: CustomWidget(context: context)
+                                .CustomSizedTextStyle(
+                                12.0,
+                                Color(0xFF696969),
+                                FontWeight.w400,
+                                'FontRegular'),
+                            textAlign: TextAlign.center,
+                          ),
+                          Text(
+                            "\$ 8,560,000",
+                            style: CustomWidget(context: context)
+                                .CustomSizedTextStyle(
+                                18.0,
+                                Colors.black,
+                                FontWeight.w600,
+                                'FontRegular'),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                      SvgPicture.asset("assets/others/chat.svg",height: 22.0,),
+                    ],
+                  ),
                 ),
-                SizedBox(height: 10.0,),
               ],
             ),
 
