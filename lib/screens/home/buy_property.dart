@@ -48,7 +48,7 @@ class _BuyPropertyState extends State<BuyProperty> {
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(10.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Column(
