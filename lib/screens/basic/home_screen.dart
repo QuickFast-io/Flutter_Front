@@ -6,7 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/screens/home/chat_menu_screen.dart';
 import 'package:rabbit/screens/home/chat_screen.dart';
 import 'package:rabbit/screens/home/dashboard.dart';
-import 'package:rabbit/screens/home/rabbit_page.dart';
+import 'package:rabbit/screens/wallet/rabbit_page.dart';
 import 'package:rabbit/screens/home/wallet_page.dart';
 import 'package:rabbit/screens/side_menu/offers_screen.dart';
 import 'package:rabbit/screens/side_menu/profile_menu_screen.dart';
@@ -15,7 +15,8 @@ import '../../common/colors.dart';
 import '../../common/custom_widget.dart';
 
 class Home_Screen extends StatefulWidget {
-  const Home_Screen({Key? key}) : super(key: key);
+  int index;
+   Home_Screen({Key? key,required this.index}) : super(key: key);
 
   @override
   State<Home_Screen> createState() => _Home_ScreenState();
@@ -51,6 +52,14 @@ class _Home_ScreenState extends State<Home_Screen> {
     // TODO: implement initState
     super.initState();
     dashView = true;
+    if(widget.index==-1)
+      {
+        currentindex=2;
+      }
+    else
+      {
+        currentindex=widget.index;
+      }
     headerTitle = titleheader[currentindex];
   }
 
