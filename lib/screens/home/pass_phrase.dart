@@ -251,21 +251,21 @@ class _PassphraseState extends State<Passphrase> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Create \n Wallet",
+                      "Create  Wallet",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(12.0, AppColors.blackColor,
                               FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.start,
                     ),
                     Text(
-                      "Secure \n Wallet",
+                      "Secure  Wallet",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(12.0, AppColors.blackColor,
                               FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     Text(
-                      "Confirm \n Wallet",
+                      "Confirm  Wallet",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(12, AppColors.blackColor,
                               FontWeight.w400, 'FontRegular'),

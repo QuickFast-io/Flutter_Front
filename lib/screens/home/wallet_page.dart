@@ -303,7 +303,7 @@ class _WalletState extends State<Wallet> {
                   ),
                   SizedBox(height: 10.0),
                   Text(
-                    "Exquisitely finished detached 6\nBedroom mansion",
+                    "Exquisitely finished detached 6Bedroom mansion",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         24.0,
                         AppColors.blackColor,

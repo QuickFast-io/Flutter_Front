@@ -232,7 +232,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                    children: [
                      SizedBox(height: 10.0),
                      Text(
-                       "Exquisitely finished detached 6 \nBedroom mansion",
+                       "Exquisitely finished detached 6 Bedroom mansion",
                        style: CustomWidget(context: context)
                            .CustomSizedTextStyle(
                            24.0,
@@ -299,7 +299,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                ),
 
                Text(
-                 "You haven't listed anyproperties, \n but we can fix that.",
+                 "You haven't listed anyproperties,  but we can fix that.",
                  textAlign: TextAlign.center,
                  style: CustomWidget(context: context)
                      .CustomSizedTextStyle(

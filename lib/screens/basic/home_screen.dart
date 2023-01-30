@@ -3,7 +3,7 @@ import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.da
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+import 'package:rabbit/common/custom_bottom_bar.dart';
 import 'package:rabbit/screens/home/chat_menu_screen.dart';
 import 'package:rabbit/screens/home/chat_screen.dart';
 import 'package:rabbit/screens/home/dashboard.dart';
@@ -118,87 +118,126 @@ class _Home_ScreenState extends State<Home_Screen> {
         children: [screen,
         ],
       ),
-      bottomNavigationBar: FloatingNavbar(
-        backgroundColor: Color(0xFFEBF3FF),
-        selectedBackgroundColor: Colors.transparent,
-        selectedItemColor: AppColors.blackColor,
-        unselectedItemColor: AppColors.blackColor,
-        onTap: (int val) {
-          changeIndex(val);
-        },
+      bottomNavigationBar: CustomLineIndicatorBottomNavbar(
+        selectedColor: Colors.blue,
+        unSelectedColor: Colors.black54,
+        backgroundColor: Colors.white,
         currentIndex: currentindex,
-        items: [
-          FloatingNavbarItem(
-              customWidget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: currentindex==0?Image.asset(
-                  "assets/menu_icons/home_active.png",
-                  height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/home.png",
-                  height:24.0 ,
-                ),
-              ),
-            title: 'Property',
+        unselectedIconSize: 15,
+        selectedIconSize: 20,
+        onTap: (index) {
+          setState(() {
+            currentindex = index;
+          });
+        },
+        enableLineIndicator: true,
+        lineIndicatorWidth: 3,
+        indicatorType: IndicatorType.Top,
+        // gradient: LinearGradient(
+        //   colors: [Colors.pink, Colors.yellow],
+        // ),
+        customBottomBarItems: [
+          CustomBottomBarItems(
+            label: 'Home',
+            icon: Icons.home,
           ),
-          FloatingNavbarItem(
-              customWidget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: currentindex==1?Image.asset(
-                  "assets/menu_icons/chat_active.png",
-                    height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/chat.png",
-                  height:24.0 ,
-                ),
-              ),
-            title: 'Chat',
+          CustomBottomBarItems(
+            label: 'Account',
+            icon: Icons.account_box_outlined,
           ),
-          FloatingNavbarItem(
-              customWidget: Container(
-
-                padding: EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: AppColors.appColor,
-                ),
-                child:Image.asset(
-                  "assets/menu_icons/wallet.png",
-                  width: 24.0,
-                  height:24.0 ,
-                  color: Colors.black,
-                  fit: BoxFit.contain,
-                ),
-              ),
+          CustomBottomBarItems(
+              label: 'Leaves', icon: Icons.calendar_today_outlined),
+          CustomBottomBarItems(
+            label: 'Loyalty',
+            icon: Icons.card_giftcard_rounded,
           ),
-          FloatingNavbarItem(
-              customWidget:Padding(
-                padding: const EdgeInsets.all(8.0),
-                child:currentindex==3?Image.asset(
-                  "assets/menu_icons/rabbit_active.png",
-                  height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/rabbit.png",
-                  height:24.0 ,
-                ),
-              ),
-            title: 'Rabbit',
-          ),
-          FloatingNavbarItem(
-              customWidget: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: currentindex==4?Image.asset(
-                  "assets/menu_icons/more_active.png",
-                  height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/more.png",
-                  height:24.0 ,
-                ),
-              ),
-            title: 'More',
+          CustomBottomBarItems(
+            label: 'Requests',
+            icon: Icons.list,
           ),
         ],
       ),
+      // bottomNavigationBar: FloatingNavbar(
+      //   backgroundColor: Color(0xFFEBF3FF),
+      //   selectedBackgroundColor: Colors.transparent,
+      //   selectedItemColor: AppColors.blackColor,
+      //   unselectedItemColor: AppColors.blackColor,
+      //   onTap: (int val) {
+      //     changeIndex(val);
+      //   },
+      //   currentIndex: currentindex,
+      //   items: [
+      //     FloatingNavbarItem(
+      //         customWidget: Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child: currentindex==0?Image.asset(
+      //             "assets/menu_icons/home_active.png",
+      //             height:30.0 ,
+      //           ):Image.asset(
+      //             "assets/menu_icons/home.png",
+      //             height:24.0 ,
+      //           ),
+      //         ),
+      //       title: 'Property',
+      //     ),
+      //     FloatingNavbarItem(
+      //         customWidget: Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child: currentindex==1?Image.asset(
+      //             "assets/menu_icons/chat_active.png",
+      //               height:30.0 ,
+      //           ):Image.asset(
+      //             "assets/menu_icons/chat.png",
+      //             height:24.0 ,
+      //           ),
+      //         ),
+      //       title: 'Chat',
+      //     ),
+      //     FloatingNavbarItem(
+      //         customWidget: Container(
+      //
+      //           padding: EdgeInsets.all(15.0),
+      //           decoration: BoxDecoration(
+      //             shape: BoxShape.circle,
+      //             color: AppColors.appColor,
+      //           ),
+      //           child:Image.asset(
+      //             "assets/menu_icons/wallet.png",
+      //             width: 24.0,
+      //             height:24.0 ,
+      //             color: Colors.black,
+      //             fit: BoxFit.contain,
+      //           ),
+      //         ),
+      //     ),
+      //     FloatingNavbarItem(
+      //         customWidget:Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child:currentindex==3?Image.asset(
+      //             "assets/menu_icons/rabbit_active.png",
+      //             height:30.0 ,
+      //           ):Image.asset(
+      //             "assets/menu_icons/rabbit.png",
+      //             height:24.0 ,
+      //           ),
+      //         ),
+      //       title: 'Rabbit',
+      //     ),
+      //     FloatingNavbarItem(
+      //         customWidget: Padding(
+      //           padding: const EdgeInsets.all(8.0),
+      //           child: currentindex==4?Image.asset(
+      //             "assets/menu_icons/more_active.png",
+      //             height:30.0 ,
+      //           ):Image.asset(
+      //             "assets/menu_icons/more.png",
+      //             height:24.0 ,
+      //           ),
+      //         ),
+      //       title: 'More',
+      //     ),
+      //   ],
+      // ),
     ), onWillPop:  () async {
       if (currentindex != 0) {
         setState(() {

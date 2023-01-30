@@ -90,7 +90,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                   ),
 
                   Text(
-                    "Get updates on your account, new \nfeatures and more. You can change this\n any time in settings.",
+                    "Get updates on your account, new features and more. You can change this any time in settings.",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
