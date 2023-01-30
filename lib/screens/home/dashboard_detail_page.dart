@@ -114,7 +114,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
              width:MediaQuery.of(context).size.width,
              height:MediaQuery.of(context).size.height,
              child: Column(
-               mainAxisAlignment: MainAxisAlignment.spaceAround,
+               mainAxisAlignment: MainAxisAlignment.start,
                crossAxisAlignment: CrossAxisAlignment.start,
                children: [
                  Column(
@@ -133,7 +133,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                        ),
                        alignment: Alignment.topLeft,
                      ),
-                     SizedBox(height: 10.0,),
+                     SizedBox(height: 20.0,),
                      Stack(
                        children: [
                          Container(
@@ -159,7 +159,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                                "For Sale",
                                style: CustomWidget(context: context)
                                    .CustomSizedTextStyle(
-                                   14.0,
+                                   13.0,
                                    Colors.black,
                                    FontWeight.w400,
                                    'FontRegular'),
@@ -169,7 +169,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                          ),
                        ],
                      ),
-                     SizedBox(height: 5.0),
+                     SizedBox(height: 10.0),
                      Row(
                        crossAxisAlignment: CrossAxisAlignment.center,
                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -184,7 +184,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                                    .CustomSizedTextStyle(
                                    14.0,
                                    Color(0xFF696969),
-                                   FontWeight.w600,
+                                   FontWeight.w400,
                                    'FontRegular'),
                                textAlign: TextAlign.center,
                              ),
@@ -200,7 +200,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                                    .CustomSizedTextStyle(
                                    14.0,
                                    Color(0xFF696969),
-                                   FontWeight.w600,
+                                   FontWeight.w400,
                                    'FontRegular'),
                                textAlign: TextAlign.center,
                              ),
@@ -216,7 +216,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                                    .CustomSizedTextStyle(
                                    14.0,
                                    Color(0xFF696969),
-                                   FontWeight.w600,
+                                   FontWeight.w400,
                                    'FontRegular'),
                                textAlign: TextAlign.center,
                              ),
@@ -226,11 +226,11 @@ class _DashboardDetailState extends State<DashboardDetail> {
                      ),
                    ],
                  ),
+                 SizedBox(height: 25.0,),
                  Column(
                    mainAxisAlignment: MainAxisAlignment.start,
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
-                     SizedBox(height: 10.0),
                      Text(
                        "Exquisitely finished detached 6 Bedroom mansion",
                        style: CustomWidget(context: context)
@@ -240,41 +240,50 @@ class _DashboardDetailState extends State<DashboardDetail> {
                            FontWeight.w600,
                            'FontRegular'),
                      ),
-                     SizedBox(height: 5.0),
-                     Text(
-                       "123 Happy Street Alpharetta",
-                       style: CustomWidget(context: context)
-                           .CustomSizedTextStyle(
-                           16.0,
-                           AppColors.blackColor,
-                           FontWeight.w400,
-                           'FontRegular'),
-                       textAlign: TextAlign.start,
+                     SizedBox(height: 10.0),
+                     Row(
+                       crossAxisAlignment: CrossAxisAlignment.center,
+                       mainAxisAlignment: MainAxisAlignment.start,
+                       children: [
+                         SvgPicture.asset("assets/others/locations.svg",height: 15.0,),
+                         SizedBox(width: 5.0,),
+                         Text(
+                           "123 Happy Street Alpharetta",
+                           style: CustomWidget(context: context)
+                               .CustomSizedTextStyle(
+                               16.0,
+                               AppColors.blackColor,
+                               FontWeight.w400,
+                               'FontRegular'),
+                           textAlign: TextAlign.start,
+                         ),
+                       ],
                      ),
-                     SizedBox(height: 5.0),
+
                    ],
                  ),
+                 SizedBox(height: 30.0,),
                  Row(
-                   crossAxisAlignment: CrossAxisAlignment.start,
+                   crossAxisAlignment: CrossAxisAlignment.center,
                    mainAxisAlignment: MainAxisAlignment.start,
                    children: [
                      Text(
-                       "cost : ",
+                       "Cost : ",
                        style: CustomWidget(context: context)
                            .CustomSizedTextStyle(
-                           14.0,
+                           13.0,
                            Color(0xFF696969),
-                           FontWeight.w600,
+                           FontWeight.w400,
                            'FontRegular'),
                        textAlign: TextAlign.center,
                      ),
                      Text(
-                       "\$ 8,560,000",
+                       "\$8,560,000",
                        style: CustomWidget(context: context)
                            .CustomSizedTextStyle(
                            18.0,
                            Colors.black,
-                           FontWeight.w700,
+                           FontWeight.w600,
                            'FontRegular'),
                        textAlign: TextAlign.center,
                      ),
@@ -303,9 +312,9 @@ class _DashboardDetailState extends State<DashboardDetail> {
                  textAlign: TextAlign.center,
                  style: CustomWidget(context: context)
                      .CustomSizedTextStyle(
-                     16.0,
+                     18.0,
                      AppColors.blackColor,
-                     FontWeight.w600,
+                     FontWeight.w400,
                      'FontRegular'),
                ),
 

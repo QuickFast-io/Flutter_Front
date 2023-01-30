@@ -76,17 +76,20 @@ class _WalletState extends State<Wallet> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              SizedBox(
+                height: 15.0,
+              ),
               Text(
-                AppLocalizations.instance.text("loc_your_balance").toUpperCase(),
+                AppLocalizations.instance.text("your balance").toUpperCase(),
                 style: CustomWidget(context: context).CustomSizedTextStyle(
-                    12.0,
-                    AppColors.blackColor,
-                    FontWeight.w400,
+                    14.0,
+                    AppColors.blackColor.withOpacity(0.5),
+                    FontWeight.w600,
                     'FontRegular'),
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 12.0,
+                height: 10.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -95,9 +98,9 @@ class _WalletState extends State<Wallet> {
                   Text(
                     "\$ 40,990,245",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        38.0,
+                        34.0,
                         AppColors.blackColor,
-                        FontWeight.w500,
+                        FontWeight.w600,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
@@ -107,24 +110,26 @@ class _WalletState extends State<Wallet> {
                       ".67",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(16.0, AppColors.blackColor,
-                              FontWeight.w500, 'FontRegular'),
+                              FontWeight.w600, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   )
                 ],
               ),
               SizedBox(
-                height: 12.0,
+                height: 4.0,
               ),
               Text(
                 "0.0034 BTC",
-                style: CustomWidget(context: context)
-                    .CustomSizedTextStyle(14.0, AppColors.blackColor,
-                    FontWeight.w400, 'FontRegular'),
+                style: CustomWidget(context: context).CustomSizedTextStyle(
+                    13.0,
+                    AppColors.blackColor,
+                    FontWeight.w600,
+                    'FontRegular'),
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 35.0,
+                height: 25.0,
               ),
               CustomSwitch(
                   value: switchVal,
@@ -143,7 +148,7 @@ class _WalletState extends State<Wallet> {
           ),
         ),
         SizedBox(
-          height: 25.0,
+          height: 10.0,
         ),
         Expanded(
           flex: 5,
@@ -173,6 +178,7 @@ class _WalletState extends State<Wallet> {
 
   Widget propertyUI() {
     return Container(
+      padding: EdgeInsets.all(5.0),
       child: ListView.builder(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
@@ -333,17 +339,17 @@ class _WalletState extends State<Wallet> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "Cost : ",
+                        "cost : ",
                         style: CustomWidget(context: context)
-                            .CustomSizedTextStyle(12.0, AppColors.blackColor,
-                                FontWeight.w400, 'FontRegular'),
+                            .CustomSizedTextStyle(14.0, Color(0xFF696969),
+                                FontWeight.w600, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         "\$ 8,560,000",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(18.0, Colors.black,
-                                FontWeight.w600, 'FontRegular'),
+                                FontWeight.w700, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -382,7 +388,6 @@ class _WalletState extends State<Wallet> {
                               Image.asset(
                                 transList[index].image.toString(),
                                 height: 35.0,
-                                width: 35.0,
                               ),
                               const SizedBox(width: 10.0,),
                               Container(
@@ -398,15 +403,15 @@ class _WalletState extends State<Wallet> {
                                               transList[index].name.toString(),
                                               style: CustomWidget(context: context)
                                                   .CustomSizedTextStyle(16.0, Colors.black,
-                                                  FontWeight.w400, 'FontRegular'),
+                                                  FontWeight.w500, 'FontRegular'),
                                               textAlign: TextAlign.center,
                                             ),
                                             const SizedBox(height: 5.0,),
                                             Text(
                                               "\$"+ transList[index].value.toString(),
                                               style: CustomWidget(context: context)
-                                                  .CustomSizedTextStyle(14.0, Colors.black,
-                                                  FontWeight.w400, 'FontRegular'),
+                                                  .CustomSizedTextStyle(14.0, Colors.black.withOpacity(0.8),
+                                                  FontWeight.w500, 'FontRegular'),
                                               textAlign: TextAlign.center,
                                             ),
                                           ],

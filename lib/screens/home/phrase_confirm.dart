@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/localization/localizations.dart';
@@ -42,7 +43,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: 25.0),
-            Image.asset("assets/others/phrase.png",
+            SvgPicture.asset("assets/menu/backup.svg",
                 height: 150.0, width: 150.0),
             SizedBox(height: 25.0),
             Text(

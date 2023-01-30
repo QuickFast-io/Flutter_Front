@@ -53,14 +53,14 @@ class _ProfileMenu_ScreenState extends State<ProfileMenu_Screen> {
                     child: Row(
                       children: [
                         Container(
-                          width: 48.0,
-                          height: 48.0,
+                          width: MediaQuery.of(context).size.width * 0.12,
+                          padding : EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 10.0),
                           decoration: BoxDecoration(
-                              color: Colors.transparent,),
-                          child: SvgPicture.asset("assets/menu/profile.svg",height: 48.0,width: 48.0,),
+                              color: Colors.orangeAccent,
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: Image.asset("assets/menu/group.png",
+                            height: 30.0,),
                         ),
-
-
                         SizedBox(width: 15.0,),
 
                         Column(

@@ -64,7 +64,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
+        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 20.0),
         color: AppColors.whiteColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -142,9 +142,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                 ],
               ),
             ),
-            Container(
-              height: 50.0,
-            ),
+
             InkWell(
               onTap: (){
                 setState(() {
@@ -191,8 +189,6 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                 ),
               ),
             ),
-
-            SizedBox(height: 10.0,)
           ],
 
         ),

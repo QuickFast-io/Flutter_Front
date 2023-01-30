@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/localization/localizations.dart';
@@ -46,21 +47,21 @@ class _DashBoardState extends State<DashBoard>
           children: [
             Image.asset(
               "assets/others/logo.png",
-              width: 21.0,
-              height: 19.0,
+              width: 24.0,
+              height: 24.0,
             ),
             SizedBox(width: 5.0,),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
               textAlign: TextAlign.center,
             ),
           ],
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
-        elevation: 0.5,
+        elevation: 0.2,
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -91,21 +92,21 @@ class _DashBoardState extends State<DashBoard>
               Text(
                 AppLocalizations.instance.text("loc_dash_title"),
                 style: CustomWidget(context: context).CustomSizedTextStyle(
-                    32.0,
+                    26.0,
                     AppColors.blackColor,
-                    FontWeight.w400,
+                    FontWeight.w500,
                     'FontRegular'),
               ),
               SizedBox(
-                height: 28.0,
+                height: 15.0,
               ),
               Container(
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(25.0),
+                  borderRadius: BorderRadius.circular(15.0),
                   border: Border.all(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.grey.withOpacity(0.1),
                   ),
                 ),
                 child: Row(
@@ -114,13 +115,18 @@ class _DashBoardState extends State<DashBoard>
                   children: [
                     Row(
                       children: [
-                        Image.asset(
-                          "assets/others/search.png",
-                          height: 14.0,
-                          width: 14.0,
+                        Icon(
+                          Icons.search_rounded,
+                          color: AppColors.blackColor,
+                          size: 22.0,
                         ),
+                        // SvgPicture.asset(
+                        //   "assets/menu/Icon.svg",
+                        //   height: 20.0,
+                        //   width: 20.0,
+                        // ),
                         SizedBox(
-                          width: 5.0,
+                          width: 10.0,
                         ),
                         Text(
                           AppLocalizations.instance.text("loc_location") +
@@ -139,7 +145,7 @@ class _DashBoardState extends State<DashBoard>
                         Text(
                           AppLocalizations.instance.text("loc_type"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(12.0, Color(0xFF737373),
+                              .CustomSizedTextStyle(12.0, Color(0xFFb6b6b6),
                               FontWeight.w400, 'FontRegular'),
                         ),
                         SizedBox(
@@ -147,11 +153,11 @@ class _DashBoardState extends State<DashBoard>
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Color(0xFF767676),
+                            color: Color(0xFFb6b6b6),
                             shape: BoxShape.circle,
                           ),
-                          height: 3.0,
-                          width: 3.0,
+                          height: 5.0,
+                          width: 5.0,
                         ),
                         SizedBox(
                           width: 5.0,
@@ -159,7 +165,7 @@ class _DashBoardState extends State<DashBoard>
                         Text(
                           AppLocalizations.instance.text("loc_price"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(12.0,  Color(0xFF737373),
+                              .CustomSizedTextStyle(12.0, Color(0xFFb6b6b6),
                               FontWeight.w400, 'FontRegular'),
                         ),
                         SizedBox(
@@ -167,11 +173,11 @@ class _DashBoardState extends State<DashBoard>
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Color(0xFF767676),
+                            color: Color(0xFFb6b6b6),
                             shape: BoxShape.circle,
                           ),
-                          height: 3.0,
-                          width: 3.0,
+                          height: 5.0,
+                          width: 5.0,
                         ),
                         SizedBox(
                           width: 5.0,
@@ -179,16 +185,20 @@ class _DashBoardState extends State<DashBoard>
                         Text(
                           AppLocalizations.instance.text("loc_feature"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(12.0,  Color(0xFF737373),
+                              .CustomSizedTextStyle(12.0, Color(0xFFb6b6b6),
                               FontWeight.w400, 'FontRegular'),
                         ),
                       ],
                     ),
+                    // Icon(
+                    //   Icons.filter_alt_outlined,
+                    //   color: AppColors.blackColor,
+                    // ),
                     Image.asset(
                       "assets/others/filter.png",
-                      height: 17.0,
-                      width: 17.0,
-                      color: Color(0xFF525252),
+                      height: 18.0,
+                      width: 18.0,
+                      color: Color(0xFF000000),
                     ),
                   ],
                 ),
@@ -198,7 +208,7 @@ class _DashBoardState extends State<DashBoard>
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height*0.58,
+                height: MediaQuery.of(context).size.height*0.56,
                 child: Column(
                   children: [
                     TabBar(
@@ -206,7 +216,7 @@ class _DashBoardState extends State<DashBoard>
                       indicatorColor: Colors.black,
                       labelStyle: TextStyle(
                         fontSize: 14.0,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                       ),
                       labelColor: Colors.black,
                       isScrollable: false,
@@ -236,27 +246,27 @@ class _DashBoardState extends State<DashBoard>
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            width: 103.0,
-            height: 46.0,
+            width: 80.0,
+            margin: EdgeInsets.only(bottom: 15.0),
             padding:
-                EdgeInsets.only(left: 24.0, right: 24.0, top: 2.0, bottom: 2.0),
+                EdgeInsets.only(left: 12.0, right: 12.0, top: 8.0, bottom: 8.0),
             decoration: BoxDecoration(
-              color: Color(0xFFFFFFFF),
-              borderRadius: BorderRadius.circular(22.38),
+              color: AppColors.whiteColor,
+              borderRadius: BorderRadius.circular(25.0),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset("assets/others/location.png",
-                    width: 17.0, height: 17.0),
-                SizedBox(width: 8.7,),
+                SvgPicture.asset("assets/others/location.svg",
+                    width: 20.0, height: 20.0),
+                SizedBox(width: 3.0,),
                 Text(
                   "Map",
                   style: CustomWidget(context: context).CustomSizedTextStyle(
                       14.0,
                       AppColors.blackColor,
-                      FontWeight.w400,
+                      FontWeight.w600,
                       'FontRegular'),
                   textAlign: TextAlign.center,
                 ),
@@ -301,7 +311,7 @@ class _DashBoardState extends State<DashBoard>
                     child: Text(
                       "Newyork",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0, Colors.white, FontWeight.w400, 'FontRegular'),
+                          12.0, Colors.white, FontWeight.w400, 'FontRegular'),
                     ),
                   ),
                 ),

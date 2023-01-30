@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rabbit/common/animator.dart';
 import 'package:rabbit/common/colors.dart';
@@ -159,9 +160,11 @@ class _ChangePinState extends State<ChangePin> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Icon(
-                          Icons.lock_outlined,
-                        ),
+                        SvgPicture.asset("assets/others/lock.svg",height: 22.0, ),
+                        // Icon(
+                        //   Icons.lock_outline_rounded,
+                        // ),
+                        SizedBox(width: 3.0,),
                         Text(
                           title,
                           style: GoogleFonts.urbanist(
