@@ -110,9 +110,9 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                         "Provide Personal Information",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            25.0,
+                            24.0,
                             AppColors.blackColor,
-                            FontWeight.w600,
+                            FontWeight.w500,
                             'FontRegular'),
                       ),
                       SizedBox(
@@ -122,9 +122,9 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                         "Pease enter your legal personal information, including your name, email, and phone number.",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            13.0,
+                            14.0,
                             AppColors.hintColor,
-                            FontWeight.w500,
+                            FontWeight.w400,
                             'FontRegular'),
                       ),
                       SizedBox(
@@ -388,37 +388,44 @@ class _Individual_ScreenState extends State<Individual_Screen> {
               ),
 
 
-              InkWell(
-                onTap: (){
-                  setState(() {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                Individual_Screen2()));
-                  });
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
-                  decoration: BoxDecoration(
-                    color: AppColors.appColor,
-                    // border: Border.all(
-                    //     color: AppColors.blackColor
-                    // ),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Continue",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(
-                          14.0,
-                          AppColors.blackColor,
-                          FontWeight.w700,
-                          'FontRegular'),
+              Container(
+                child: Column(
+                  children: [
+                    InkWell(
+                      onTap: (){
+                        setState(() {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      Individual_Screen2()));
+                        });
+                      },
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
+                        decoration: BoxDecoration(
+                          color: AppColors.appColor,
+                          // border: Border.all(
+                          //     color: AppColors.blackColor
+                          // ),
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Continue",
+                            style: CustomWidget(context: context)
+                                .CustomSizedTextStyle(
+                                14.0,
+                                AppColors.blackColor,
+                                FontWeight.w700,
+                                'FontRegular'),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
+                    SizedBox(height: 30.0,)
+                  ],
                 ),
-              ),
+              )
             ],
 
           ),

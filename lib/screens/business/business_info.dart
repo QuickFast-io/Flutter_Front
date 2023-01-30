@@ -64,7 +64,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 20.0),
+        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 15.0),
         color: AppColors.whiteColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -83,7 +83,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w500,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                   SizedBox(
@@ -99,9 +99,9 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                         textAlign: TextAlign.start,
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            15.0,
+                            16.0,
                             Colors.black,
-                            FontWeight.w600,
+                            FontWeight.w400,
                             'FontRegular'),
                       ),
                       value: "individual",
@@ -122,9 +122,9 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                         textAlign: TextAlign.start,
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            15.0,
+                            16.0,
                             Colors.black,
-                            FontWeight.w600,
+                            FontWeight.w400,
                             'FontRegular'),
                       ),
                       value: "business",
@@ -143,52 +143,61 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
               ),
             ),
 
-            InkWell(
-              onTap: (){
-                setState(() {
-                 if(accept == "individual"){
-                   setState(() {
-                     Navigator.of(context).push(
-                         MaterialPageRoute(
-                             builder: (context) =>
-                                 Individual_Screen()));
-                   });
+            Container(
+              child: Column(
+                children: [
+                  InkWell(
+                    onTap: (){
+                      setState(() {
+                        if(accept == "individual"){
+                          setState(() {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        Individual_Screen()));
+                          });
 
-                 }else if(accept == "business"){
-                   setState(() {
-                     Navigator.of(context).push(
-                         MaterialPageRoute(
-                             builder: (context) =>
-                                 BusinessInfo_Screen1()));
-                   });
+                        }else if(accept == "business"){
+                          setState(() {
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        BusinessInfo_Screen1()));
+                          });
 
-                 } else{
+                        } else{
 
-                 }
-                });
-              },
-              child: Container(
-                padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
-                decoration: BoxDecoration(
-                  color: AppColors.appColor,
-                  // border: Border.all(
-                  //     color: AppColors.blackColor
-                  // ),
-                  borderRadius: BorderRadius.circular(15.0),
-                ),
-                child: Center(
-                  child: Text(
-                    "Continue",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w700,
-                        'FontRegular'),
+                        }
+                      });
+                    },
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
+                      decoration: BoxDecoration(
+                        color: AppColors.appColor,
+                        // border: Border.all(
+                        //     color: AppColors.blackColor
+                        // ),
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Continue",
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              16.0,
+                              AppColors.blackColor,
+                              FontWeight.w500,
+                              'FontRegular'),
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(
+                    height: 30.0,
+                  )
+                ],
               ),
-            ),
+            )
           ],
 
         ),
