@@ -234,7 +234,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
       return StatefulBuilder(
           builder: (BuildContext context,StateSetter ssetState){
             return Container(
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).size.height * 0.75,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft:Radius.circular(40.0), ),
@@ -249,7 +249,10 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   Center(
                     child: GestureDetector(
                       onTap:(){
-                        Navigator.pop(context);
+                        ssetState(() {
+                          Navigator.pop(context);
+                        });
+
                       },
                       child: Container(
                         alignment: Alignment.center,
