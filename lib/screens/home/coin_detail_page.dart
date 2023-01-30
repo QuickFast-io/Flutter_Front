@@ -234,7 +234,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
       return StatefulBuilder(
           builder: (BuildContext context,StateSetter ssetState){
             return Container(
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).size.height * 0.75,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft:Radius.circular(40.0), ),
@@ -249,7 +249,10 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   Center(
                     child: GestureDetector(
                       onTap:(){
-                        Navigator.pop(context);
+                        ssetState(() {
+                          Navigator.pop(context);
+                        });
+
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -259,7 +262,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10.0,),
+                  SizedBox(height: 5.0,),
                   Align(
                     alignment: Alignment.center,
                     child: Column(
@@ -327,7 +330,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                               decoration: BoxDecoration(
                                 color: Colors.transparent,
                                 border: Border.all(color: Colors.black,width: 1.0),
-                                borderRadius: BorderRadius.circular(15.0),
+                                borderRadius: BorderRadius.circular(25.0),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -342,8 +345,8 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                                         'FontRegular'),
                                     textAlign: TextAlign.center,
                                   ),
-                                  SizedBox(width: 3.0,),
-                                  Icon(Icons.share,color: Colors.black,size: 12.0,),
+                                  SizedBox(width: 5.0,),
+                                  Icon(Icons.share_outlined,color: Colors.black,size: 12.0,),
                                 ],
                               ),
                             ),
@@ -356,7 +359,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                               decoration: BoxDecoration(
                                 color: AppColors.appColor,
                                 border: Border.all(color: AppColors.appColor,width: 1.0),
-                                borderRadius: BorderRadius.circular(15.0),
+                                borderRadius: BorderRadius.circular(25.0),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -371,7 +374,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                                         'FontRegular'),
                                     textAlign: TextAlign.center,
                                   ),
-                                  SizedBox(width: 3.0,),
+                                  SizedBox(width: 5.0,),
                                   Icon(Icons.copy,color: Colors.black,size: 12.0,),
                                 ],
                               ),
