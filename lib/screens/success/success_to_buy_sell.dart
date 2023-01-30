@@ -122,7 +122,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 ),
                 child: Center(
                   child: Text(
-                    "Countinue",
+                    "Continue",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,

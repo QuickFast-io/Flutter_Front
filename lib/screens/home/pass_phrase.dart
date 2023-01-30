@@ -36,30 +36,6 @@ class _PassphraseState extends State<Passphrase> {
     "radar"
   ];
 
-
-  List<Step> getSteps() {
-    return <Step>[
-      Step(
-        state: currentStep > 0 ? StepState.complete : StepState.indexed,
-        isActive: currentStep >= 0,
-        title: SizedBox(),
-        content: SizedBox(),
-      ),
-      Step(
-        state: currentStep > 1 ? StepState.complete : StepState.indexed,
-        isActive: currentStep >= 1,
-        title: SizedBox(),
-        content: SizedBox(),
-      ),
-      Step(
-        state: currentStep > 2 ? StepState.complete : StepState.indexed,
-        isActive: currentStep >= 2,
-        title: SizedBox(),
-        content: SizedBox(),
-      ),
-    ];
-  }
-
   @override
   void initState() {
     // TODO: implement initState
@@ -69,269 +45,163 @@ class _PassphraseState extends State<Passphrase> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {
-            setState(() {
-              if (proceedValue) {
-                proceedValue = false;
-                _processIndex = 2;
-              } else {
-                Navigator.pop(context);
-              }
-            });
-          },
-        ),
-        title: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              "assets/others/logo.png",
-              width: 24.0,
-              height: 24.0,
-              color: AppColors.appColor,
-            ),
-            Text(
-              AppLocalizations.instance.text("loc_app_name"),
-              style: CustomWidget(context: context).CustomSizedTextStyle(
-                  18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
-              textAlign: TextAlign.center,
-            ),
-          ],
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0.5,
-      ),
-      body: Stack(
-        children: [
-          passUI(),
-        ],
-      ),
-    );
-  }
-
-  passUI() {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height,
-      padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          EasyStepper(
-            activeStep: _processIndex,
-            lineLength: 80,
-            lineType: LineType.normal,
-            lineColor: AppColors.appColor,
-            stepShape: StepShape.circle,
-            stepBorderRadius: 15,
-            borderThickness: 5,
-            padding: 10,
-            stepRadius: 24,
-            disableScroll: true,
-            unreachedStepBackgroundColor: Colors.transparent,
-            unreachedStepBorderColor: Colors.black,
-            unreachedStepIconColor: Colors.black,
-            unreachedStepTextColor: Colors.black,
-            finishedStepBorderColor: AppColors.appColor,
-            finishedStepTextColor: AppColors.blackColor,
-            finishedStepBackgroundColor: AppColors.appColor,
-            activeStepIconColor: AppColors.blackColor,
-            finishedStepIconColor: AppColors.blackColor,
-            activeStepTextColor: AppColors.blackColor,
-            activeStepBorderColor: AppColors.appColor,
-            loadingAnimation: 'assets/loading_circle.json',
-            steps: const [
-              EasyStep(
-                icon: "1",
-                activeIcon: "1",
-                title: 'Create Wallet',
-              ),
-              EasyStep(
-                icon:"2",
-                activeIcon: "2",
-                title: 'Secure Wallet',
-              ),
-              EasyStep(
-                icon: "3",
-                activeIcon: "3",
-                title: 'Confirm Wallet',
-              ),
-            ],
-            onStepReached: (index) => setState(() {
-              print(index);
-
-            }
-           ),
-          ),
-          /*Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.appColor,
-                    ),
-                    padding: EdgeInsets.all(15.0),
-                    margin: EdgeInsets.only(
-                      top: 5.0,
-                      bottom: 5.0,
-                    ),
-                    child: Text(
-                      "1",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(14.0, AppColors.blackColor,
-                              FontWeight.w600, 'FontRegular'),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Container(
-                    width: 110.0,
-                    height: 1.5,
-                    color: AppColors.appColor,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.appColor,
-                    ),
-                    padding: EdgeInsets.all(15.0),
-                    margin: EdgeInsets.only(
-                      top: 5.0,
-                      bottom: 5.0,
-                    ),
-                    child: Text(
-                      "2",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(14.0, AppColors.blackColor,
-                              FontWeight.w600, 'FontRegular'),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Container(
-                    width: 110.0,
-                    height: 1.5,
-                    color: proceedValue ? AppColors.appColor : Colors.black,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.transparent,
-                      border: Border.all(color: Colors.black),
-                    ),
-                    padding: EdgeInsets.all(15.0),
-                    margin: EdgeInsets.only(
-                      top: 5.0,
-                      bottom: 5.0,
-                    ),
-                    child: Text(
-                      "3",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(14.0, AppColors.blackColor,
-                              FontWeight.w600, 'FontRegular'),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Create  Wallet",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(12.0, AppColors.blackColor,
-                              FontWeight.w400, 'FontRegular'),
-                      textAlign: TextAlign.start,
-                    ),
-                    Text(
-                      "Secure  Wallet",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(12.0, AppColors.blackColor,
-                              FontWeight.w400, 'FontRegular'),
-                      textAlign: TextAlign.center,
-                    ),
-                    Text(
-                      "Confirm  Wallet",
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(12, AppColors.blackColor,
-                              FontWeight.w400, 'FontRegular'),
-                      textAlign: TextAlign.end,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),*/
-          SizedBox(
-            height: 25.0,
-          ),
-          Expanded(
-              child: proceedValue ? confirmUI() : setPassUI()),
-          SizedBox(
-            height: 25.0,
-          ),
-          InkWell(
-            onTap: () {
-              if (checkedValue) {
+    return WillPopScope(
+      child: Scaffold(
+          backgroundColor: Colors.white,
+          appBar: AppBar(
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Colors.black),
+              onPressed: () {
                 setState(() {
-                  proceedValue = true;
-                  _processIndex = 3;
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PhraseConfirm()));
+                  if (proceedValue) {
+                    proceedValue = false;
+
+                    _processIndex = 2;
+                  } else {
+                    Navigator.pop(context);
+                  }
                 });
-              } else {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                    content: Text(
-                  "Please accept terms of passphrase",
+              },
+            ),
+            title: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  "assets/others/logo.png",
+                  width: 24.0,
+                  height: 24.0,
+                  color: AppColors.appColor,
+                ),
+                Text(
+                  AppLocalizations.instance.text("loc_app_name"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      14.0,
-                      AppColors.whiteColor,
+                      18.0,
+                      AppColors.blackColor,
                       FontWeight.w600,
                       'FontRegular'),
-                )));
-              }
-            },
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.only(
-                top: 15.0,
-                bottom: 15.0,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25.0),
-                color: AppColors.appColor,
-              ),
-              child: Text(
-                !proceedValue
-                    ? AppLocalizations.instance.text("loc_proceed")
-                    : AppLocalizations.instance.text("loc_confirm"),
-                style: CustomWidget(context: context).CustomSizedTextStyle(
-                    16.0,
-                    AppColors.blackColor,
-                    FontWeight.w600,
-                    'FontRegular'),
-                textAlign: TextAlign.center,
-              ),
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
+            centerTitle: true,
+            backgroundColor: Colors.white,
+            elevation: 0.5,
           ),
-          SizedBox(
-            height: 25.0,
-          ),
-        ],
-      ),
+          body: Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            color: AppColors.whiteColor,
+            padding: EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                EasyStepper(
+                  activeStep: _processIndex,
+                  lineLength: 80,
+                  lineType: LineType.normal,
+                  lineColor: AppColors.appColor,
+                  stepShape: StepShape.circle,
+                  stepBorderRadius: 15,
+                  borderThickness: 5,
+                  padding: 10,
+                  stepRadius: 24,
+                  disableScroll: true,
+                  unreachedStepBackgroundColor: Colors.transparent,
+                  unreachedStepBorderColor: Colors.black,
+                  unreachedStepIconColor: Colors.black,
+                  unreachedStepTextColor: Colors.black,
+                  finishedStepBorderColor: AppColors.appColor,
+                  finishedStepTextColor: AppColors.blackColor,
+                  finishedStepBackgroundColor: AppColors.appColor,
+                  activeStepIconColor: AppColors.blackColor,
+                  finishedStepIconColor: AppColors.blackColor,
+                  activeStepTextColor: AppColors.blackColor,
+                  activeStepBorderColor: AppColors.appColor,
+                  loadingAnimation: 'assets/loading_circle.json',
+                  steps: const [
+                    EasyStep(
+                      icon: "1",
+                      activeIcon: "1",
+                      title: 'Create Wallet',
+                    ),
+                    EasyStep(
+                      icon: "2",
+
+                      activeIcon: "2",
+                      title: 'Secure Wallet',
+                    ),
+                    EasyStep(
+                      icon: "3",
+                      activeIcon: "3",
+                      title: 'Confirm Wallet',
+                    ),
+                  ],
+                  onStepReached: (index) => setState(() {
+                    print(index);
+                  }),
+                ),
+                SizedBox(
+                  height: 25.0,
+                ),
+                Expanded(child: proceedValue ? confirmUI() : setPassUI()),
+                SizedBox(
+                  height: 25.0,
+                ),
+                InkWell(
+                  onTap: () {
+                    if (checkedValue) {
+                      setState(() {
+                        proceedValue = true;
+                        if (_processIndex == 3) {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PhraseConfirm()));
+                        } else {
+                          _processIndex = 3;
+                        }
+                      });
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(
+                        "Please accept terms of passphrase",
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(14.0, AppColors.whiteColor,
+                                FontWeight.w600, 'FontRegular'),
+                      )));
+                    }
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.only(
+                      top: 15.0,
+                      bottom: 15.0,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25.0),
+                      color: AppColors.appColor,
+                    ),
+                    child: Text(
+                      !proceedValue
+                          ? AppLocalizations.instance.text("loc_proceed")
+                          : AppLocalizations.instance.text("loc_confirm"),
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(16.0, AppColors.blackColor,
+                              FontWeight.w600, 'FontRegular'),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 25.0,
+                ),
+              ],
+            ),
+          )),
+      onWillPop: () async {
+        return false;
+      },
     );
   }
 
@@ -350,14 +220,14 @@ class _PassphraseState extends State<Passphrase> {
           SizedBox(
             height: 15.0,
           ),
-          Center(
-            child: Text(
-              AppLocalizations.instance.text("loc_phrase_description"),
-              style: CustomWidget(context: context).CustomSizedTextStyle(
-                  14.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
-              textAlign: TextAlign.center,
-            ),
+        Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),child:   Center(
+          child: Text(
+            AppLocalizations.instance.text("loc_phrase_description"),
+            style: CustomWidget(context: context).CustomSizedTextStyle(
+                14.0, AppColors.greyColor, FontWeight.w400, 'FontRegular'),
+            textAlign: TextAlign.center,
           ),
+        ),),
           Padding(
             padding: const EdgeInsets.only(
               top: 35.0,
@@ -379,7 +249,7 @@ class _PassphraseState extends State<Passphrase> {
                   padding: EdgeInsets.only(
                       top: 3.0, bottom: 3.0, right: 5.0, left: 5.0),
                   decoration: BoxDecoration(
-                    color: Color(0xFFf8f8f8),
+                    color: Color(0xFFF8F8F8),
                     borderRadius: BorderRadius.circular(25.0),
                   ),
                   alignment: Alignment.center,
@@ -414,11 +284,9 @@ class _PassphraseState extends State<Passphrase> {
                   children: [
                     Text(
                       "Copy",
-                      style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0,
-                          AppColors.blackColor,
-                          FontWeight.w600,
-                          'FontRegular'),
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(14.0, AppColors.blackColor,
+                              FontWeight.w600, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
@@ -446,11 +314,9 @@ class _PassphraseState extends State<Passphrase> {
                   children: [
                     Text(
                       "View QR",
-                      style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0,
-                          AppColors.blackColor,
-                          FontWeight.w600,
-                          'FontRegular'),
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(14.0, AppColors.blackColor,
+                              FontWeight.w600, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(
@@ -470,6 +336,7 @@ class _PassphraseState extends State<Passphrase> {
             height: 25.0,
           ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Checkbox(
                 value: this.checkedValue,
@@ -484,41 +351,20 @@ class _PassphraseState extends State<Passphrase> {
               SizedBox(
                 width: 5.0,
               ), //SizedBox
-              Text(
-                AppLocalizations.instance.text("loc_phrase_check_txt"),
-                style: CustomWidget(context: context)
-                    .CustomSizedTextStyle(
-                    12.0,
-                    AppColors.blackColor,
-                    FontWeight.w600,
-                    'FontRegular'),
-              ), //Text
+              Flexible(
+                child: Text(
+                  AppLocalizations.instance.text("loc_phrase_check_txt"),
+                  style: CustomWidget(context: context).CustomSizedTextStyle(
+                      12.0,
+                      AppColors.greyColor,
+                      FontWeight.w600,
+                      'FontRegular'),
+                ),
+              ),
               SizedBox(width: 10), //SizedBox
               /** Checkbox Widget **/
-
             ], //<Widget>[]
           ),
-         /* CheckboxListTile(
-            title: Transform.translate(
-              offset: const Offset(-20, 0),
-              child: Text(
-                AppLocalizations.instance.text("loc_phrase_check_txt"),
-                style: CustomWidget(context: context).CustomSizedTextStyle(
-                    12.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
-                textAlign: TextAlign.start,
-              ),
-            ),
-            checkColor: Colors.black,
-            value: checkedValue,
-            onChanged: (bool? newValue) {
-              setState(() {
-                checkedValue = newValue!;
-              });
-            },
-            activeColor: AppColors.appColor,
-            controlAffinity:
-                ListTileControlAffinity.leading, //  <-- leading Checkbox
-          ),*/
         ],
       ),
     );

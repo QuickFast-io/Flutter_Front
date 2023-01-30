@@ -274,7 +274,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 ),
                 child: Center(
                   child: Text(
-                    "Countinue",
+                    "Continue",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,

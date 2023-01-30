@@ -52,7 +52,7 @@ class _ChangePinState extends State<ChangePin> {
           });
         } else*/
 
-          if (title == "Set Pin") {
+        if (title == "Set Pin") {
           confirmValue = pinValues;
           setState(() {
             title = "Confirm Pin";
@@ -68,7 +68,8 @@ class _ChangePinState extends State<ChangePin> {
           if (confirmValue == pinValues) {
             /*loading=true;
             SubmitPin();*/
-            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>WalletSetup()));
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => WalletSetup()));
           } else {
             CustomWidget(context: context)
                 .custombar("Pin", "Pins do not match", false);
@@ -91,8 +92,7 @@ class _ChangePinState extends State<ChangePin> {
           pin4 = value;
         else if (pin5.isEmpty)
           pin5 = value;
-        else if (pin6.isEmpty)
-          pin6 = value;
+        else if (pin6.isEmpty) pin6 = value;
         pinValues = '$pin1$pin2$pin3$pin4$pin5$pin6';
         if (pinValues.length == 6) {
           //doLoginPin(pinValues);
@@ -146,25 +146,31 @@ class _ChangePinState extends State<ChangePin> {
                         ),
                         Text(
                           AppLocalizations.instance.text("loc_app_name"),
-                          style: CustomWidget(context: context).CustomSizedTextStyle(
-                              24.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(24.0, AppColors.blackColor,
+                                  FontWeight.w600, 'FontRegular'),
                           textAlign: TextAlign.center,
                         ),
                       ],
                     ),
                   ),
-
                   Container(
-                    padding: EdgeInsets.only(top: 65.0,bottom: 5.0,left: 5.0,right: 5.0),
+                    padding: EdgeInsets.only(
+                        top: 65.0, bottom: 5.0, left: 5.0, right: 5.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        SvgPicture.asset("assets/others/lock.svg",height: 22.0, ),
+                        SvgPicture.asset(
+                          "assets/others/lock.svg",
+                          height: 22.0,
+                        ),
                         // Icon(
                         //   Icons.lock_outline_rounded,
                         // ),
-                        SizedBox(width: 3.0,),
+                        SizedBox(
+                          width: 3.0,
+                        ),
                         Text(
                           title,
                           style: GoogleFonts.urbanist(
@@ -349,7 +355,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '1',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -371,8 +379,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -389,7 +397,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '2',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -411,8 +421,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -429,7 +439,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '3',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -456,8 +468,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -474,7 +486,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '4',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -496,8 +510,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -514,7 +528,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '5',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -536,8 +552,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -554,7 +570,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '6',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -581,8 +599,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -599,7 +617,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '7',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -621,8 +641,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -639,7 +659,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '8',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -661,8 +683,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -679,7 +701,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '9',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -719,8 +743,8 @@ class _ChangePinState extends State<ChangePin> {
                                     Colors.transparent,
                                   ),
                                   elevation:
-                                  MaterialStateProperty.resolveWith<double>(
-                                        (Set<MaterialState> states) {
+                                      MaterialStateProperty.resolveWith<double>(
+                                    (Set<MaterialState> states) {
                                       if (states.contains(
                                           MaterialState.pressed)) return 0.0;
                                       return 0.0;
@@ -737,7 +761,9 @@ class _ChangePinState extends State<ChangePin> {
                                     Text(
                                       '0',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 18.0),
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.black,
+                                          fontSize: 32.0),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],

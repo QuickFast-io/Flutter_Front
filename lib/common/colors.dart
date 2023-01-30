@@ -20,5 +20,6 @@ class AppColors {
   static const Color  buyColor =  Color(0xFF20d5aa);
   static const Color  buybackColor =  Color(0xFF102f31);
   static const Color  switchbackColor =  Color(0xFFf8f8f8);
+  static const Color  greyColor =  Color(0xFF404040);
 
 }

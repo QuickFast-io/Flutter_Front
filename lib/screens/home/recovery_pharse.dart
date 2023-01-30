@@ -74,9 +74,9 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
                   SvgPicture.asset("assets/others/phrase.svg",
-                    height: 100,),
+                    height: 80,),
 
-                  SizedBox(height: 25.0,),
+                  SizedBox(height: 35.0,),
                   Text(
                     "Backup Your \nRecovery Pharse",
                     style: CustomWidget(context: context)
@@ -88,19 +88,19 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 20.0,
                   ),
 
-                  Text(
-                    "If you delete the Rabbit app or lose your \ndevices, you'll need your recovery pharse \nto regain access to your assets.",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
-                        'FontRegular'),
-                    textAlign: TextAlign.center,
-                  ),
+                 Padding(padding: EdgeInsets.only(left: 15.0,right: 15.0),child:  Text(
+                   "If you delete the Rabbit App or lose your devices, you'll need your recovery phrase to regain access to your assets.",
+                   style: CustomWidget(context: context)
+                       .CustomSizedTextStyle(
+                       14.0,
+                       AppColors.greyColor,
+                       FontWeight.w400,
+                       'FontRegular'),
+                   textAlign: TextAlign.center,
+                 ),),
 
                   SizedBox(height: 100.0,),
                 ],
@@ -127,12 +127,12 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                 ),
                 child: Center(
                   child: Text(
-                    "Countinue",
+                    "Continue",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w700,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                 ),

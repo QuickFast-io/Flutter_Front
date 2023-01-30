@@ -33,103 +33,105 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       body: Container(
-        padding: EdgeInsets.fromLTRB(15.0, 5.0,15.0,15.0),
+        padding: EdgeInsets.fromLTRB(15.0, 0.0,15.0,0.0),
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         color:  AppColors.appColor,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 50.0,
+            Container(
+              height: MediaQuery.of(context).size.height*0.6,
+              child: Center(
+                child:    Image.asset('assets/others/logo.png', height: 100.0,),
+              ),
             ),
-            // SvgPicture.asset("assets/menu/logo.svg", height: 150.0,color: Colors.black,),
-            Image.asset('assets/others/logo.png', height: 150.0,),
-            SizedBox(
-              height: 50.0,
+
+            Container(
+              height: MediaQuery.of(context).size.height*0.3,
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 35.0, right: 35.0,bottom: 25.0),
+                    child: Text(
+                      AppLocalizations.instance.text("loc_welcome"),
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(
+                          28.0,
+                          AppColors.blackColor,
+                          FontWeight.w600,
+                          'FontRegular'),
+                    ),
+                  ),
+                  SizedBox(height: 15.0,),
+                  InkWell(
+                    onTap: (){
+                      setState(() {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    Home_Screen(index: -1,)));
+                      });
+                    },
+                    child: Container(
+
+                      padding: EdgeInsets.only(top: 15.0,bottom: 15.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xFF171717),
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          AppLocalizations.instance.text("loc_explore"),
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              16.0,
+                              AppColors.whiteColor,
+                              FontWeight.w600,
+                              'FontRegular'),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10.0,),
+                  InkWell(
+                    onTap: (){
+                      setState(() {
+
+                        Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    SetpinPage()));
+
+                      });
+                    },
+                    child: Container(
+                      padding: EdgeInsets.only(top: 15.0,bottom: 15.0),
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        border: Border.all(color: Color(0xFF171717), ),
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          AppLocalizations.instance.text("loc_create_wallet"),
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              16.0,
+                              AppColors.blackColor,
+                              FontWeight.w600,
+                              'FontRegular'),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 15.0,),
+                ],
+              ),
             ),
-           Container(
-             child: Column(
-               crossAxisAlignment: CrossAxisAlignment.center,
-               children: [
-                 Container(
-                   padding: EdgeInsets.only(left: 35.0, right: 35.0,bottom: 25.0),
-                   child: Text(
-                     AppLocalizations.instance.text("loc_welcome"),
-                     style: CustomWidget(context: context)
-                         .CustomSizedTextStyle(
-                         28.0,
-                         AppColors.blackColor,
-                         FontWeight.w600,
-                         'FontRegular'),
-                   ),
-                 ),
-                 SizedBox(height: 15.0,),
-                 InkWell(
-                   onTap: (){
-                     setState(() {
-                       Navigator.of(context).push(
-                           MaterialPageRoute(
-                               builder: (context) =>
-                                   Home_Screen(index: -1,)));
-                     });
-                   },
-                   child: Container(
-
-                     padding: EdgeInsets.only(top: 15.0,bottom: 15.0),
-                     decoration: BoxDecoration(
-                       color: Color(0xFF171717),
-                       borderRadius: BorderRadius.circular(15.0),
-                     ),
-                     child: Center(
-                       child: Text(
-                         AppLocalizations.instance.text("loc_explore"),
-                         style: CustomWidget(context: context)
-                             .CustomSizedTextStyle(
-                             16.0,
-                             AppColors.whiteColor,
-                             FontWeight.w600,
-                             'FontRegular'),
-                       ),
-                     ),
-                   ),
-                 ),
-                 SizedBox(height: 10.0,),
-                 InkWell(
-                   onTap: (){
-                     setState(() {
-
-                       Navigator.of(context).push(
-                           MaterialPageRoute(
-                               builder: (context) =>
-                                   SetpinPage()));
-
-                     });
-                   },
-                   child: Container(
-                     padding: EdgeInsets.only(top: 15.0,bottom: 15.0),
-                     decoration: BoxDecoration(
-                       color: Colors.transparent,
-                       border: Border.all(color: Color(0xFF171717), ),
-                       borderRadius: BorderRadius.circular(15.0),
-                     ),
-                     child: Center(
-                       child: Text(
-                         AppLocalizations.instance.text("loc_create_wallet"),
-                         style: CustomWidget(context: context)
-                             .CustomSizedTextStyle(
-                             16.0,
-                             AppColors.blackColor,
-                             FontWeight.w600,
-                             'FontRegular'),
-                       ),
-                     ),
-                   ),
-                 ),
-               ],
-             ),
-           ),
 
           ],
         ),
