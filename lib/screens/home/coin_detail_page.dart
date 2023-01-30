@@ -184,7 +184,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(35.0),
                   topLeft: Radius.circular(35.0)),
-              color: AppColors.backgroundColor,
+              color: AppColors.whiteColor,
             ),
             child:SingleChildScrollView(
               physics: ScrollPhysics(),

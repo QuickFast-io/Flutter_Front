@@ -43,7 +43,6 @@ dependencies:
   google_fonts:
   awesome_snackbar_content:
   country_calling_code_picker:
-  floating_bottom_navigation_bar:
   image_picker:
   roundcheckbox:
   flutter_paypal:

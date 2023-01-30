@@ -1,8 +1,9 @@
 import 'dart:io';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rabbit/common/bottom_nav/floating_navbar.dart';
+import 'package:rabbit/common/bottom_nav/floating_navbar_item.dart';
 import 'package:rabbit/common/custom_bottom_bar.dart';
 import 'package:rabbit/screens/home/chat_menu_screen.dart';
 import 'package:rabbit/screens/home/chat_screen.dart';
