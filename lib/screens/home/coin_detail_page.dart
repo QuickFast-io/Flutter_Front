@@ -241,19 +241,25 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                 color: Colors.transparent,
               ),
 
-              padding: EdgeInsets.only(right: 10.0,left: 10.0,top: 5.0),
+              padding: EdgeInsets.only(right: 15.0,left: 15.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 86.0,
-                      height: 3.0,
-                      color: Color(0xFF262626),
+                    child: GestureDetector(
+                      onTap:(){
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 86.0,
+                        height: 3.0,
+                        color: Color(0xFF262626),
+                      ),
                     ),
                   ),
+                  SizedBox(height: 10.0,),
                   Align(
                     alignment: Alignment.center,
                     child: Column(
@@ -309,7 +315,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                             'FontRegular'),
                         textAlign: TextAlign.start,
                       ),
-                      SizedBox(height: 15.0,),
+                      SizedBox(height: 25.0,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
