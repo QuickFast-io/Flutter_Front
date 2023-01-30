@@ -132,7 +132,7 @@ class CustomWidget {
   }
 
   CustomTextStyle(Color color, FontWeight weight, String family) {
-    return GoogleFonts.urbanist(
+    return GoogleFonts.inter(
       color: color,
       fontWeight: weight,
     );
@@ -140,7 +140,7 @@ class CustomWidget {
 
   CustomSizedTextStyle(
       double size, Color color, FontWeight weight, String family) {
-    return GoogleFonts.urbanist(
+    return GoogleFonts.inter(
       color: color,
       fontSize: size,
       decoration: TextDecoration.none,

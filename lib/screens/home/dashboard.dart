@@ -46,13 +46,14 @@ class _DashBoardState extends State<DashBoard>
           children: [
             Image.asset(
               "assets/others/logo.png",
-              width: 24.0,
-              height: 24.0,
+              width: 21.0,
+              height: 19.0,
             ),
+            SizedBox(width: 5.0,),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
               textAlign: TextAlign.center,
             ),
           ],
@@ -90,13 +91,13 @@ class _DashBoardState extends State<DashBoard>
               Text(
                 AppLocalizations.instance.text("loc_dash_title"),
                 style: CustomWidget(context: context).CustomSizedTextStyle(
-                    26.0,
+                    32.0,
                     AppColors.blackColor,
-                    FontWeight.w500,
+                    FontWeight.w400,
                     'FontRegular'),
               ),
               SizedBox(
-                height: 15.0,
+                height: 28.0,
               ),
               Container(
                 padding: EdgeInsets.all(10.0),
@@ -115,8 +116,8 @@ class _DashBoardState extends State<DashBoard>
                       children: [
                         Image.asset(
                           "assets/others/search.png",
-                          height: 12.0,
-                          width: 12.0,
+                          height: 14.0,
+                          width: 14.0,
                         ),
                         SizedBox(
                           width: 5.0,
@@ -138,7 +139,7 @@ class _DashBoardState extends State<DashBoard>
                         Text(
                           AppLocalizations.instance.text("loc_type"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(12.0, Color(0xFFb6b6b6),
+                              .CustomSizedTextStyle(12.0, Color(0xFF737373),
                               FontWeight.w400, 'FontRegular'),
                         ),
                         SizedBox(
@@ -146,11 +147,11 @@ class _DashBoardState extends State<DashBoard>
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Color(0xFFb6b6b6),
+                            color: Color(0xFF767676),
                             shape: BoxShape.circle,
                           ),
-                          height: 5.0,
-                          width: 5.0,
+                          height: 3.0,
+                          width: 3.0,
                         ),
                         SizedBox(
                           width: 5.0,
@@ -158,7 +159,7 @@ class _DashBoardState extends State<DashBoard>
                         Text(
                           AppLocalizations.instance.text("loc_price"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(12.0, Color(0xFFb6b6b6),
+                              .CustomSizedTextStyle(12.0,  Color(0xFF737373),
                               FontWeight.w400, 'FontRegular'),
                         ),
                         SizedBox(
@@ -166,11 +167,11 @@ class _DashBoardState extends State<DashBoard>
                         ),
                         Container(
                           decoration: BoxDecoration(
-                            color: Color(0xFFb6b6b6),
+                            color: Color(0xFF767676),
                             shape: BoxShape.circle,
                           ),
-                          height: 5.0,
-                          width: 5.0,
+                          height: 3.0,
+                          width: 3.0,
                         ),
                         SizedBox(
                           width: 5.0,
@@ -178,16 +179,16 @@ class _DashBoardState extends State<DashBoard>
                         Text(
                           AppLocalizations.instance.text("loc_feature"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(12.0, Color(0xFFb6b6b6),
+                              .CustomSizedTextStyle(12.0,  Color(0xFF737373),
                               FontWeight.w400, 'FontRegular'),
                         ),
                       ],
                     ),
                     Image.asset(
                       "assets/others/filter.png",
-                      height: 15.0,
-                      width: 15.0,
-                      color: Color(0xFF000000),
+                      height: 17.0,
+                      width: 17.0,
+                      color: Color(0xFF525252),
                     ),
                   ],
                 ),
@@ -205,7 +206,7 @@ class _DashBoardState extends State<DashBoard>
                       indicatorColor: Colors.black,
                       labelStyle: TextStyle(
                         fontSize: 14.0,
-                        fontWeight: FontWeight.w400,
+                        fontWeight: FontWeight.w500,
                       ),
                       labelColor: Colors.black,
                       isScrollable: false,
@@ -235,25 +236,27 @@ class _DashBoardState extends State<DashBoard>
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            width: 80.0,
+            width: 103.0,
+            height: 46.0,
             padding:
-                EdgeInsets.only(left: 12.0, right: 12.0, top: 8.0, bottom: 8.0),
+                EdgeInsets.only(left: 24.0, right: 24.0, top: 2.0, bottom: 2.0),
             decoration: BoxDecoration(
-              color: Color(0xFFb6b6b6),
-              borderRadius: BorderRadius.circular(25.0),
+              color: Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.circular(22.38),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset("assets/others/location.png",
-                    width: 20.0, height: 20.0),
+                    width: 17.0, height: 17.0),
+                SizedBox(width: 8.7,),
                 Text(
                   "Map",
                   style: CustomWidget(context: context).CustomSizedTextStyle(
                       14.0,
                       AppColors.blackColor,
-                      FontWeight.w600,
+                      FontWeight.w400,
                       'FontRegular'),
                   textAlign: TextAlign.center,
                 ),
@@ -298,7 +301,7 @@ class _DashBoardState extends State<DashBoard>
                     child: Text(
                       "Newyork",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          12.0, Colors.white, FontWeight.w400, 'FontRegular'),
+                          14.0, Colors.white, FontWeight.w400, 'FontRegular'),
                     ),
                   ),
                 ),

@@ -41,6 +41,17 @@ class _WalletState extends State<Wallet> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.appColor,
+      appBar: AppBar(
+        backgroundColor: AppColors.appColor,
+        elevation: 0.5,
+        automaticallyImplyLeading: false,
+        title: Text(
+         AppLocalizations.instance.text("loc_rabbit_wallet"),
+          style: CustomWidget(context: context).CustomSizedTextStyle(
+              18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
+        ),
+        centerTitle: true,
+      ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -60,17 +71,17 @@ class _WalletState extends State<Wallet> {
           height: 24.0,
         ),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                AppLocalizations.instance.text("your balance").toUpperCase(),
+                AppLocalizations.instance.text("loc_your_balance").toUpperCase(),
                 style: CustomWidget(context: context).CustomSizedTextStyle(
-                    14.0,
-                    AppColors.blackColor.withOpacity(0.5),
-                    FontWeight.w600,
+                    12.0,
+                    AppColors.blackColor,
+                    FontWeight.w400,
                     'FontRegular'),
                 textAlign: TextAlign.center,
               ),
@@ -84,9 +95,9 @@ class _WalletState extends State<Wallet> {
                   Text(
                     "\$ 40,990,245",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        34.0,
+                        38.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
@@ -96,11 +107,21 @@ class _WalletState extends State<Wallet> {
                       ".67",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(16.0, AppColors.blackColor,
-                              FontWeight.w600, 'FontRegular'),
+                              FontWeight.w500, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   )
                 ],
+              ),
+              SizedBox(
+                height: 5.0,
+              ),
+              Text(
+                "0.0034 BTC",
+                style: CustomWidget(context: context)
+                    .CustomSizedTextStyle(14.0, AppColors.blackColor,
+                    FontWeight.w400, 'FontRegular'),
+                textAlign: TextAlign.center,
               ),
               SizedBox(
                 height: 25.0,
@@ -152,7 +173,6 @@ class _WalletState extends State<Wallet> {
 
   Widget propertyUI() {
     return Container(
-      padding: EdgeInsets.all(5.0),
       child: ListView.builder(
           physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
@@ -234,7 +254,7 @@ class _WalletState extends State<Wallet> {
                       Row(
                         children: [
                           Image.asset("assets/others/bed.png",
-                              height: 24.0, width: 24.0),
+                              height: 17.0, width: 27.0),
                           SizedBox(
                             width: 5.0,
                           ),
@@ -242,7 +262,7 @@ class _WalletState extends State<Wallet> {
                             "2 bedrooms",
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(14.0, Color(0xFF696969),
-                                    FontWeight.w600, 'FontRegular'),
+                                    FontWeight.w400, 'FontRegular'),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -250,7 +270,7 @@ class _WalletState extends State<Wallet> {
                       Row(
                         children: [
                           Image.asset("assets/others/Kitchen.png",
-                              height: 24.0, width: 24.0),
+                              height: 17.0, width: 27.0),
                           SizedBox(
                             width: 5.0,
                           ),
@@ -258,7 +278,7 @@ class _WalletState extends State<Wallet> {
                             "2 Kitchen",
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(14.0, Color(0xFF696969),
-                                    FontWeight.w600, 'FontRegular'),
+                                FontWeight.w400, 'FontRegular'),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -266,7 +286,7 @@ class _WalletState extends State<Wallet> {
                       Row(
                         children: [
                           Image.asset("assets/others/Bathtub.png",
-                              height: 24.0, width: 24.0),
+                              height: 17.0, width: 27.0),
                           SizedBox(
                             width: 5.0,
                           ),
@@ -274,7 +294,7 @@ class _WalletState extends State<Wallet> {
                             "4000 Sq Ft",
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(14.0, Color(0xFF696969),
-                                    FontWeight.w600, 'FontRegular'),
+                                FontWeight.w400, 'FontRegular'),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -283,22 +303,29 @@ class _WalletState extends State<Wallet> {
                   ),
                   SizedBox(height: 10.0),
                   Text(
-                    "Exquisitely finished detached 6 \nBedroom mansion",
+                    "Exquisitely finished detached 6\nBedroom mansion",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         24.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(height: 5.0),
-                  Text(
-                    "123 Happy Street Alpharetta",
-                    style: CustomWidget(context: context).CustomSizedTextStyle(
-                        16.0,
-                        AppColors.blackColor,
-                        FontWeight.w400,
-                        'FontRegular'),
-                    textAlign: TextAlign.start,
+                  Row(
+                    children: [
+                      SvgPicture.asset("assets/others/locationpin.svg",width: 10.17,height: 14.87,),
+                      SizedBox(width: 6.0,),
+                      Text(
+                        "123 Happy Street Alpharetta",
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(
+                            16.0,
+                            AppColors.blackColor,
+                            FontWeight.w400,
+                            'FontRegular'),
+                        textAlign: TextAlign.start,
+                      ),
+                    ],
                   ),
                   SizedBox(height: 5.0),
                   Row(
@@ -308,15 +335,15 @@ class _WalletState extends State<Wallet> {
                       Text(
                         "cost : ",
                         style: CustomWidget(context: context)
-                            .CustomSizedTextStyle(14.0, Color(0xFF696969),
-                                FontWeight.w600, 'FontRegular'),
+                            .CustomSizedTextStyle(12.0, AppColors.blackColor,
+                                FontWeight.w400, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                       Text(
                         "\$ 8,560,000",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(18.0, Colors.black,
-                                FontWeight.w700, 'FontRegular'),
+                                FontWeight.w600, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -355,6 +382,7 @@ class _WalletState extends State<Wallet> {
                               Image.asset(
                                 transList[index].image.toString(),
                                 height: 35.0,
+                                width: 35.0,
                               ),
                               const SizedBox(width: 10.0,),
                               Container(
@@ -370,15 +398,15 @@ class _WalletState extends State<Wallet> {
                                               transList[index].name.toString(),
                                               style: CustomWidget(context: context)
                                                   .CustomSizedTextStyle(16.0, Colors.black,
-                                                  FontWeight.w500, 'FontRegular'),
+                                                  FontWeight.w400, 'FontRegular'),
                                               textAlign: TextAlign.center,
                                             ),
                                             const SizedBox(height: 5.0,),
                                             Text(
                                               "\$"+ transList[index].value.toString(),
                                               style: CustomWidget(context: context)
-                                                  .CustomSizedTextStyle(14.0, Colors.black.withOpacity(0.8),
-                                                  FontWeight.w500, 'FontRegular'),
+                                                  .CustomSizedTextStyle(14.0, Colors.black,
+                                                  FontWeight.w400, 'FontRegular'),
                                               textAlign: TextAlign.center,
                                             ),
                                           ],
@@ -390,8 +418,8 @@ class _WalletState extends State<Wallet> {
                                             Text(
                                               "\$"+transList[index].quantity.toString()+" "+transList[index].coin.toString(),
                                               style: CustomWidget(context: context)
-                                                  .CustomSizedTextStyle(15.0, Colors.black,
-                                                  FontWeight.w500, 'FontRegular'),
+                                                  .CustomSizedTextStyle(14.0, Colors.black,
+                                                  FontWeight.w400, 'FontRegular'),
                                               textAlign: TextAlign.center,
                                             ),
                                             const SizedBox(height: 5.0,),
@@ -399,7 +427,7 @@ class _WalletState extends State<Wallet> {
                                               "\$"+ transList[index].value.toString(),
                                               style: CustomWidget(context: context)
                                                   .CustomSizedTextStyle(14.0, Colors.black.withOpacity(0.8),
-                                                  FontWeight.w500, 'FontRegular'),
+                                                  FontWeight.w400, 'FontRegular'),
                                               textAlign: TextAlign.center,
                                             ),
                                           ],

@@ -29,13 +29,13 @@ class _TransferState extends State<Transfer> {
         title: Text(
           AppLocalizations.instance.text("loc_transfer"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
           textAlign: TextAlign.center,
         ),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Icon(Icons.history,color: Colors.black,size: 24.0,),
+            child: Icon(Icons.history,color: Colors.black,size: 21.0,),
           ),
         ],
         centerTitle: true,
@@ -45,7 +45,7 @@ class _TransferState extends State<Transfer> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(15.0),
         child: Stack(
           children: [
            transferUI(),
@@ -64,21 +64,21 @@ class _TransferState extends State<Transfer> {
           Text(
             "200 ETH",
             style: CustomWidget(context: context).CustomSizedTextStyle(
-                34.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                40.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 5.0,),
           Text(
             "="+"\$234,568.45",
             style: CustomWidget(context: context).CustomSizedTextStyle(
-                18.0, Color(0xFFacacac), FontWeight.w600, 'FontRegular'),
+                16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 10.0,),
           Text(
             "Sent to",
             style: CustomWidget(context: context).CustomSizedTextStyle(
-                16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 15.0,),
@@ -92,7 +92,7 @@ class _TransferState extends State<Transfer> {
       ),
     ):Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -107,13 +107,13 @@ class _TransferState extends State<Transfer> {
                   Text(
                     "200 ETH",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        34.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                        40.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
                   Text(
                     "="+"\$234,568.45",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        18.0, Color(0xFFacacac), FontWeight.w600, 'FontRegular'),
+                        16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -122,7 +122,7 @@ class _TransferState extends State<Transfer> {
             SizedBox(height: 15.0,),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -132,21 +132,21 @@ class _TransferState extends State<Transfer> {
                     Text(
                       "Asset",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                          14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 15.0,),
                     Text(
                       "From",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                          14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 15.0,),
                     Text(
                       "To",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                          14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -159,21 +159,21 @@ class _TransferState extends State<Transfer> {
                     Text(
                       "Etherum(ETH) -BEP20",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0, Color(0xFFacacac) , FontWeight.w600, 'FontRegular'),
+                          14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 15.0,),
                     Text(
                       "Rabbit Wallet(0x9ba8...f658)",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0, Color(0xFFacacac) , FontWeight.w600, 'FontRegular'),
+                          14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 15.0,),
                     Text(
                       "0x9ba84A2275c45...ca6588235189FDE716",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0, Color(0xFFacacac), FontWeight.w600, 'FontRegular'),
+                          14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -189,23 +189,23 @@ class _TransferState extends State<Transfer> {
             SizedBox(height: 15.0,),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Network fee",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                          14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 15.0,),
                     Text(
                       "Total",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                          14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -218,14 +218,14 @@ class _TransferState extends State<Transfer> {
                     Text(
                       "0.4566 ETH(\$5.35)",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0, Color(0xFFacacac) , FontWeight.w600, 'FontRegular'),
+                          14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 15.0,),
                     Text(
                       "195 ETH(\$234,568.45)",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
-                          14.0, Color(0xFFacacac) , FontWeight.w600, 'FontRegular'),
+                          14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   ],
