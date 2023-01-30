@@ -259,7 +259,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10.0,),
+                  SizedBox(height: 5.0,),
                   Align(
                     alignment: Alignment.center,
                     child: Column(
@@ -327,7 +327,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                               decoration: BoxDecoration(
                                 color: Colors.transparent,
                                 border: Border.all(color: Colors.black,width: 1.0),
-                                borderRadius: BorderRadius.circular(15.0),
+                                borderRadius: BorderRadius.circular(25.0),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -342,8 +342,8 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                                         'FontRegular'),
                                     textAlign: TextAlign.center,
                                   ),
-                                  SizedBox(width: 3.0,),
-                                  Icon(Icons.share,color: Colors.black,size: 12.0,),
+                                  SizedBox(width: 5.0,),
+                                  Icon(Icons.share_outlined,color: Colors.black,size: 12.0,),
                                 ],
                               ),
                             ),
@@ -356,7 +356,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                               decoration: BoxDecoration(
                                 color: AppColors.appColor,
                                 border: Border.all(color: AppColors.appColor,width: 1.0),
-                                borderRadius: BorderRadius.circular(15.0),
+                                borderRadius: BorderRadius.circular(25.0),
                               ),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -371,7 +371,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                                         'FontRegular'),
                                     textAlign: TextAlign.center,
                                   ),
-                                  SizedBox(width: 3.0,),
+                                  SizedBox(width: 5.0,),
                                   Icon(Icons.copy,color: Colors.black,size: 12.0,),
                                 ],
                               ),
