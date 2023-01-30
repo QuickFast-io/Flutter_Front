@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/localization/localizations.dart';
@@ -36,6 +37,7 @@ class _SetpinPageState extends State<SetpinPage> {
               height: 24.0,
               color: AppColors.appColor,
             ),
+            SizedBox(width: 3.0,),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
@@ -72,7 +74,7 @@ class _SetpinPageState extends State<SetpinPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 25.0),
-              Image.asset("assets/others/pin.png",height: 150.0,width: 150.0),
+              SvgPicture.asset("assets/others/pin.svg",height: 150.0,width: 150.0),
               SizedBox(height: 25.0),
               Text(
                 AppLocalizations.instance.text("loc_set_pin_title"),

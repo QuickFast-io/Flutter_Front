@@ -129,12 +129,12 @@ class _Home_ScreenState extends State<Home_Screen> {
           FloatingNavbarItem(
               customWidget: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: currentindex==0?Image.asset(
-                  "assets/menu_icons/home_active.png",
+                child: currentindex==0?SvgPicture.asset(
+                  "assets/menu_icons/home_active.svg",
                   height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/home.png",
-                  height:24.0 ,
+                ):SvgPicture.asset(
+                  "assets/menu_icons/home.svg",
+                  height:26.0 ,
                 ),
               ),
             title: 'Property',
@@ -142,12 +142,12 @@ class _Home_ScreenState extends State<Home_Screen> {
           FloatingNavbarItem(
               customWidget: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: currentindex==1?Image.asset(
-                  "assets/menu_icons/chat_active.png",
+                child: currentindex==1?SvgPicture.asset(
+                  "assets/menu_icons/chat_active.svg",
                     height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/chat.png",
-                  height:24.0 ,
+                ):SvgPicture.asset(
+                  "assets/menu_icons/chat.svg",
+                  height:26.0 ,
                 ),
               ),
             title: 'Chat',
@@ -160,10 +160,10 @@ class _Home_ScreenState extends State<Home_Screen> {
                   shape: BoxShape.circle,
                   color: AppColors.appColor,
                 ),
-                child:Image.asset(
-                  "assets/menu_icons/wallet.png",
-                  width: 24.0,
-                  height:24.0 ,
+                child:SvgPicture.asset(
+                  "assets/menu_icons/wallet.svg",
+                  width: 26.0,
+                  height: 26.0 ,
                   color: Colors.black,
                   fit: BoxFit.contain,
                 ),
@@ -172,12 +172,12 @@ class _Home_ScreenState extends State<Home_Screen> {
           FloatingNavbarItem(
               customWidget:Padding(
                 padding: const EdgeInsets.all(8.0),
-                child:currentindex==3?Image.asset(
-                  "assets/menu_icons/rabbit_active.png",
+                child:currentindex==3?SvgPicture.asset(
+                  "assets/menu_icons/rabbit_active.svg",
                   height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/rabbit.png",
-                  height:24.0 ,
+                ):SvgPicture.asset(
+                  "assets/menu_icons/rabbit.svg",
+                  height:26.0 ,
                 ),
               ),
             title: 'Rabbit',
@@ -185,12 +185,12 @@ class _Home_ScreenState extends State<Home_Screen> {
           FloatingNavbarItem(
               customWidget: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: currentindex==4?Image.asset(
-                  "assets/menu_icons/more_active.png",
+                child: currentindex==4?SvgPicture.asset(
+                  "assets/menu_icons/more_active.svg",
                   height:30.0 ,
-                ):Image.asset(
-                  "assets/menu_icons/more.png",
-                  height:24.0 ,
+                ):SvgPicture.asset(
+                  "assets/menu_icons/more.svg",
+                  height:26.0 ,
                 ),
               ),
             title: 'More',

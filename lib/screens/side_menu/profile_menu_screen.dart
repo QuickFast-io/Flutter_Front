@@ -58,7 +58,7 @@ class _ProfileMenu_ScreenState extends State<ProfileMenu_Screen> {
                           decoration: BoxDecoration(
                               color: Colors.orangeAccent,
                               borderRadius: BorderRadius.circular(10.0)),
-                          child: Image.asset("assets/images/group.png",
+                          child: Image.asset("assets/menu/group.png",
                             height: 30.0,),
                         ),
                         SizedBox(width: 15.0,),

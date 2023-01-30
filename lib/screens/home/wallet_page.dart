@@ -65,11 +65,14 @@ class _WalletState extends State<Wallet> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              SizedBox(
+                height: 15.0,
+              ),
               Text(
-                AppLocalizations.instance.text("your balance").toUpperCase(),
+                "your balance".toUpperCase(),
                 style: CustomWidget(context: context).CustomSizedTextStyle(
                     14.0,
-                    AppColors.blackColor.withOpacity(0.5),
+                    AppColors.blackColor,
                     FontWeight.w600,
                     'FontRegular'),
                 textAlign: TextAlign.center,
@@ -101,6 +104,18 @@ class _WalletState extends State<Wallet> {
                     ),
                   )
                 ],
+              ),
+              SizedBox(
+                height: 4.0,
+              ),
+              Text(
+                "0.0034 BTC",
+                style: CustomWidget(context: context).CustomSizedTextStyle(
+                    13.0,
+                    AppColors.blackColor,
+                    FontWeight.w600,
+                    'FontRegular'),
+                textAlign: TextAlign.center,
               ),
               SizedBox(
                 height: 25.0,

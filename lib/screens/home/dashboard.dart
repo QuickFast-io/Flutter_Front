@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/localization/localizations.dart';
@@ -49,6 +50,7 @@ class _DashBoardState extends State<DashBoard>
               width: 24.0,
               height: 24.0,
             ),
+            SizedBox(width: 5.0,),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
@@ -59,7 +61,7 @@ class _DashBoardState extends State<DashBoard>
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
-        elevation: 0.5,
+        elevation: 0.2,
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -102,9 +104,9 @@ class _DashBoardState extends State<DashBoard>
                 padding: EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                   color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(25.0),
+                  borderRadius: BorderRadius.circular(15.0),
                   border: Border.all(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.grey.withOpacity(0.1),
                   ),
                 ),
                 child: Row(
@@ -113,13 +115,18 @@ class _DashBoardState extends State<DashBoard>
                   children: [
                     Row(
                       children: [
-                        Image.asset(
-                          "assets/others/search.png",
-                          height: 12.0,
-                          width: 12.0,
+                        Icon(
+                          Icons.search_rounded,
+                          color: AppColors.blackColor,
+                          size: 22.0,
                         ),
+                        // SvgPicture.asset(
+                        //   "assets/menu/Icon.svg",
+                        //   height: 20.0,
+                        //   width: 20.0,
+                        // ),
                         SizedBox(
-                          width: 5.0,
+                          width: 10.0,
                         ),
                         Text(
                           AppLocalizations.instance.text("loc_location") +
@@ -183,10 +190,14 @@ class _DashBoardState extends State<DashBoard>
                         ),
                       ],
                     ),
+                    // Icon(
+                    //   Icons.filter_alt_outlined,
+                    //   color: AppColors.blackColor,
+                    // ),
                     Image.asset(
                       "assets/others/filter.png",
-                      height: 15.0,
-                      width: 15.0,
+                      height: 18.0,
+                      width: 18.0,
                       color: Color(0xFF000000),
                     ),
                   ],
@@ -197,7 +208,7 @@ class _DashBoardState extends State<DashBoard>
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height*0.58,
+                height: MediaQuery.of(context).size.height*0.56,
                 child: Column(
                   children: [
                     TabBar(
@@ -236,18 +247,20 @@ class _DashBoardState extends State<DashBoard>
           alignment: Alignment.bottomCenter,
           child: Container(
             width: 80.0,
+            margin: EdgeInsets.only(bottom: 15.0),
             padding:
                 EdgeInsets.only(left: 12.0, right: 12.0, top: 8.0, bottom: 8.0),
             decoration: BoxDecoration(
-              color: Color(0xFFb6b6b6),
+              color: AppColors.whiteColor,
               borderRadius: BorderRadius.circular(25.0),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset("assets/others/location.png",
+                SvgPicture.asset("assets/others/location.svg",
                     width: 20.0, height: 20.0),
+                SizedBox(width: 3.0,),
                 Text(
                   "Map",
                   style: CustomWidget(context: context).CustomSizedTextStyle(

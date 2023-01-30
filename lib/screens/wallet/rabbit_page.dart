@@ -31,6 +31,23 @@ class _RabbitScreenState extends State<RabbitScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 25.0,),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Image.asset("assets/others/logo.png",
+                    color: AppColors.appColor,
+                    height: 30,),
+                  SizedBox(width: 5.0,),
+                  Text(
+                    "Rabbit",
+                    style: CustomWidget(context: context).CustomSizedTextStyle(
+                        22.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  ),
+                ],
+              ),
+              SizedBox(height: 25.0,),
               Text(
                 AppLocalizations.instance.text("loc_welcome"),
                 style: CustomWidget(context: context)
@@ -46,9 +63,9 @@ class _RabbitScreenState extends State<RabbitScreen> {
                   AppLocalizations.instance.text("loc_welcome_description"),
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
-                      14.0,
-                      Color(0xFF696969),
-                      FontWeight.w600,
+                      18.0,
+                      AppColors.blackColor,
+                      FontWeight.w500,
                       'FontRegular'),
                   textAlign: TextAlign.center,
                 ),
@@ -56,7 +73,8 @@ class _RabbitScreenState extends State<RabbitScreen> {
             ],
           ),
 
-          Image.asset("assets/others/locker.png",width:250.0,height: 250.0,),
+          // SvgPicture.asset("assets/menu/wallet.svg",width:250.0,height: 250.0,),
+          Image.asset("assets/menu/wallet.png",),
 
           InkWell(
             onTap: (){

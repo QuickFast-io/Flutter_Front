@@ -73,7 +73,7 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
-                  SvgPicture.asset("assets/menu/backup.svg",
+                  SvgPicture.asset("assets/others/phrase.svg",
                     height: 100,),
 
                   SizedBox(height: 25.0,),
