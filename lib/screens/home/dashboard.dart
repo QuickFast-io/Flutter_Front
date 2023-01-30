@@ -309,7 +309,7 @@ class _DashBoardState extends State<DashBoard>
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: Text(
-                      "Newyork",
+                      "New York",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
                           12.0, Colors.white, FontWeight.w400, 'FontRegular'),
                     ),
@@ -350,7 +350,7 @@ class _DashBoardState extends State<DashBoard>
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    "Newyork",
+                    "New York",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         12.0, Colors.white, FontWeight.w400, 'FontRegular'),
                   ),

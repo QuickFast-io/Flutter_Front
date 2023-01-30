@@ -78,15 +78,16 @@ class _FloatingNavbarState extends State<FloatingNavbar> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
-            padding: widget.padding,
-            margin: widget.margin,
+
+
+
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(widget.borderRadius),
               color: widget.backgroundColor,
             ),
             width: widget.width,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 mainAxisSize: MainAxisSize.max,
@@ -138,6 +139,19 @@ ItemBuilder _defaultItemBuilder({
                 },
                 borderRadius: BorderRadius.circular(8),
                 child: Container(
+
+
+                  decoration: BoxDecoration(
+                    border: item.enableLineIndicator
+                        ? Border(
+                      top:  BorderSide(
+                        color: currentIndex == index
+                            ? Colors.black:Colors.white,
+                        width: 3,
+                      )
+                    )
+                        : null,
+                  ),
                   width: width.isFinite
                       ? (width / items.length - 8)
                       : MediaQuery.of(context).size.width / items.length - 24,

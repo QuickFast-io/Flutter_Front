@@ -53,7 +53,7 @@ class _WalletState extends State<Wallet> {
         centerTitle: true,
       ),
       body: Container(
-        color: AppColors.whiteColor,
+
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: Stack(
@@ -81,7 +81,7 @@ class _WalletState extends State<Wallet> {
                 height: 15.0,
               ),
               Text(
-                AppLocalizations.instance.text("your balance").toUpperCase(),
+                AppLocalizations.instance.text("loc_your_balance").toUpperCase(),
                 style: CustomWidget(context: context).CustomSizedTextStyle(
                     14.0,
                     AppColors.blackColor.withOpacity(0.5),
@@ -367,6 +367,7 @@ class _WalletState extends State<Wallet> {
 
   Widget transUI() {
     return Container(
+      margin: EdgeInsets.only(top: 15.0),
       child: transList.length > 0
           ? ListView.builder(
               shrinkWrap: true,

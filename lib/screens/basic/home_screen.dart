@@ -82,7 +82,7 @@ class _Home_ScreenState extends State<Home_Screen> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(child: Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      backgroundColor: AppColors.whiteColor,
 
       // appBar: currentindex==4|| currentindex==2?PreferredSize(child: Container(), preferredSize:Size(0.0,0.0)):AppBar(
       //   backgroundColor: AppColors.backgroundColor,
@@ -119,53 +119,12 @@ class _Home_ScreenState extends State<Home_Screen> {
         children: [screen,
         ],
       ),
-      // bottomNavigationBar: CustomLineIndicatorBottomNavbar(
-      //   selectedColor: Colors.blue,
-      //   unSelectedColor: Colors.black54,
-      //   backgroundColor: Colors.white,
-      //   currentIndex: currentindex,
-      //   unselectedIconSize: 15,
-      //   selectedIconSize: 20,
-      //   onTap: (index) {
-      //     setState(() {
-      //       currentindex = index;
-      //     });
-      //   },
-      //   enableLineIndicator: true,
-      //   lineIndicatorWidth: 3,
-      //   indicatorType: IndicatorType.Top,
-      //   // gradient: LinearGradient(
-      //   //   colors: [Colors.pink, Colors.yellow],
-      //   // ),
-      //   customBottomBarItems: [
-      //     CustomBottomBarItems(
-      //       label: 'Property',
-      //       icon: Icons.home,
-      //     ),
-      //     CustomBottomBarItems(
-      //       label: 'Chat',
-      //       icon: Icons.account_box_outlined,
-      //     ),
-      //     CustomBottomBarItems(
-      //         label: '', icon: Icons.calendar_today_outlined),
-      //     CustomBottomBarItems(
-      //       label: 'Rabbit',
-      //       icon: Icons.card_giftcard_rounded,
-      //     ),
-      //     CustomBottomBarItems(
-      //       label: 'Requests',
-      //       icon: Icons.list,
-      //     ),
-      //   ],
-      // ),
-
-
-
       bottomNavigationBar: FloatingNavbar(
-        backgroundColor: Color(0xFFEBF3FF),
+        backgroundColor:AppColors.whiteColor,
         selectedBackgroundColor: Colors.transparent,
         selectedItemColor: AppColors.blackColor,
         unselectedItemColor: AppColors.blackColor,
+
 
         onTap: (int val) {
           changeIndex(val);
@@ -173,6 +132,7 @@ class _Home_ScreenState extends State<Home_Screen> {
         currentIndex: currentindex,
         items: [
           FloatingNavbarItem(
+
               customWidget: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: currentindex==0?SvgPicture.asset(
@@ -184,6 +144,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
             title: 'Property',
+            enableLineIndicator: currentindex==0?true:false
           ),
           FloatingNavbarItem(
               customWidget: Padding(
@@ -197,6 +158,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
             title: 'Chat',
+              enableLineIndicator: currentindex==1?true:false
           ),
           FloatingNavbarItem(
               customWidget: Container(
@@ -213,7 +175,9 @@ class _Home_ScreenState extends State<Home_Screen> {
                   color: Colors.black,
                   fit: BoxFit.contain,
                 ),
+
               ),
+              enableLineIndicator:false
           ),
           FloatingNavbarItem(
               customWidget:Padding(
@@ -227,6 +191,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
             title: 'Rabbit',
+              enableLineIndicator: currentindex==3?true:false
           ),
           FloatingNavbarItem(
               customWidget: Padding(
@@ -240,6 +205,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 ),
               ),
             title: 'More',
+              enableLineIndicator: currentindex==4?true:false
           ),
         ],
       ),

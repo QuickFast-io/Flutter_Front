@@ -22,6 +22,7 @@ class _RabbitScreenState extends State<RabbitScreen> {
     return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
+      color: AppColors.whiteColor,
       padding: EdgeInsets.all(15.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

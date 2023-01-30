@@ -4,8 +4,10 @@ class FloatingNavbarItem {
   final String? title;
   final IconData? icon;
   final Widget? customWidget;
+  final bool enableLineIndicator;
 
-  FloatingNavbarItem({
+  FloatingNavbarItem( {
+    required this.enableLineIndicator,
     this.icon,
     this.title,
     this.customWidget,
