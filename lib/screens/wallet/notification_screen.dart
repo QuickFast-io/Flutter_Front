@@ -80,9 +80,9 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                     "Turn on notifications",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        30.0,
+                        32.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(
@@ -95,7 +95,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                         .CustomSizedTextStyle(
                         14.0,
                         AppColors.blackColor,
-                        FontWeight.w500,
+                        FontWeight.w400,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
@@ -132,7 +132,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                              .CustomSizedTextStyle(
                              16.0,
                              AppColors.blackColor,
-                             FontWeight.w700,
+                             FontWeight.w500,
                              'FontRegular'),
                        ),
                      ),
@@ -160,7 +160,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                              .CustomSizedTextStyle(
                              16.0,
                              AppColors.blackColor,
-                             FontWeight.w700,
+                             FontWeight.w500,
                              'FontRegular'),
                        ),
                      ),

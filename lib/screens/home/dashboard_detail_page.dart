@@ -312,9 +312,9 @@ class _DashboardDetailState extends State<DashboardDetail> {
                  textAlign: TextAlign.center,
                  style: CustomWidget(context: context)
                      .CustomSizedTextStyle(
-                     16.0,
+                     18.0,
                      AppColors.blackColor,
-                     FontWeight.w600,
+                     FontWeight.w400,
                      'FontRegular'),
                ),
 

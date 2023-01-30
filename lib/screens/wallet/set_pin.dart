@@ -41,7 +41,7 @@ class _SetpinPageState extends State<SetpinPage> {
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
               textAlign: TextAlign.center,
             ),
           ],
@@ -74,24 +74,24 @@ class _SetpinPageState extends State<SetpinPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(height: 25.0),
-              SvgPicture.asset("assets/others/pin.svg",height: 150.0,width: 150.0),
-              SizedBox(height: 25.0),
+              SvgPicture.asset("assets/others/pin.svg",height: 80.0,),
+              SizedBox(height: 35.0),
               Text(
                 AppLocalizations.instance.text("loc_set_pin_title"),
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
-                    24.0,
+                    32.0,
                     AppColors.blackColor,
-                    FontWeight.w600,
+                    FontWeight.w500,
                     'FontRegular'),
 
               ),
-              SizedBox(height: 15.0),
+              SizedBox(height: 10.0),
               Text(
                 AppLocalizations.instance.text("loc_set_pin_description"),
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
-                    16.0,
+                    14.0,
                     AppColors.blackColor,
                     FontWeight.w400,
                     'FontRegular'),
@@ -119,7 +119,7 @@ class _SetpinPageState extends State<SetpinPage> {
               style: CustomWidget(context: context).CustomSizedTextStyle(
                   16.0,
                   AppColors.blackColor,
-                  FontWeight.w600,
+                  FontWeight.w500,
                   'FontRegular'),
               textAlign: TextAlign.center,
             ),

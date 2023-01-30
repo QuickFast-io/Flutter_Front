@@ -52,7 +52,8 @@ class _WalletSetupState extends State<WalletSetup> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 15.0),
+        margin: EdgeInsets.only(bottom: 10.0),
         child: Stack(
           children: [
             walletUI(),
@@ -71,20 +72,20 @@ class _WalletSetupState extends State<WalletSetup> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 15.0),
+            SizedBox(height: 25.0),
             Text(
               AppLocalizations.instance.text("loc_wallet_setup"),
               style: CustomWidget(context: context)
                   .CustomSizedTextStyle(
-                  24.0,
+                  32.0,
                   AppColors.blackColor,
-                  FontWeight.w600,
+                  FontWeight.w500,
                   'FontRegular'),
 
             ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 10.0),
             Text(
-              AppLocalizations.instance.text("loc_set_pin_description"),
+              "Import your wallet or create a new one",
               style: CustomWidget(context: context)
                   .CustomSizedTextStyle(
                   14.0,
@@ -118,7 +119,7 @@ class _WalletSetupState extends State<WalletSetup> {
                   style: CustomWidget(context: context).CustomSizedTextStyle(
                       16.0,
                       AppColors.blackColor,
-                      FontWeight.w600,
+                      FontWeight.w500,
                       'FontRegular'),
                   textAlign: TextAlign.center,
                 ),
@@ -145,7 +146,7 @@ class _WalletSetupState extends State<WalletSetup> {
                   style: CustomWidget(context: context).CustomSizedTextStyle(
                       16.0,
                       AppColors.blackColor,
-                      FontWeight.w600,
+                      FontWeight.w500,
                       'FontRegular'),
                   textAlign: TextAlign.center,
                 ),

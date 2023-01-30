@@ -74,7 +74,7 @@ class _RabbitScreenState extends State<RabbitScreen> {
           ),
 
           // SvgPicture.asset("assets/menu/wallet.svg",width:250.0,height: 250.0,),
-          Image.asset("assets/menu/wallet.png",),
+          Image.asset("assets/menu/wallet.png",height: 300.0,),
 
           InkWell(
             onTap: (){

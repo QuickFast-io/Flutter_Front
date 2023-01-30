@@ -73,9 +73,9 @@ class _Offer_To_Seller_ScreenState extends State<Offer_To_Seller_Screen> {
                     "You've submitted your \noffer to the seller",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        28.0,
+                        32.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
@@ -87,9 +87,9 @@ class _Offer_To_Seller_ScreenState extends State<Offer_To_Seller_Screen> {
                     "You can communicate with the \nseller using the messaging icon.",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        15.0,
+                        16.0,
                         AppColors.blackColor,
-                        FontWeight.w500,
+                        FontWeight.w400,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
