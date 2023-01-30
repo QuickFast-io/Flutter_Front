@@ -17,6 +17,7 @@ class _TransferState extends State<Transfer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
@@ -46,6 +47,7 @@ class _TransferState extends State<Transfer> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(15.0),
+        color: Colors.white,
         child: Stack(
           children: [
            transferUI(),
@@ -74,7 +76,7 @@ class _TransferState extends State<Transfer> {
                 16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 10.0,),
+          SizedBox(height: 37.0,),
           Text(
             "Sent to",
             style: CustomWidget(context: context).CustomSizedTextStyle(
@@ -85,14 +87,14 @@ class _TransferState extends State<Transfer> {
           Text(
             "0x9ba84A2275c45...ca6588235189FDE716",
             style: CustomWidget(context: context).CustomSizedTextStyle(
-                14.0, Color(0xFFacacac), FontWeight.w600, 'FontRegular'),
+                14.0, Color(0xFFacacac), FontWeight.w500, 'FontRegular'),
             textAlign: TextAlign.center,
           ),
         ],
       ),
     ):Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
