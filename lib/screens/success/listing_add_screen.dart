@@ -12,7 +12,6 @@ class Listing_Add_Screen extends StatefulWidget {
 }
 
 class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
-
   bool tour = false;
   bool property = false;
 
@@ -21,17 +20,13 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
-        shape: Border(
-            bottom: BorderSide(
-                color: AppColors.appColor,
-                width: 2.0
-            )
-        ),
+        shape:
+            Border(bottom: BorderSide(color: AppColors.appColor, width: 2.0)),
         backgroundColor: AppColors.whiteColor,
         elevation: 0.0,
         leading: Padding(
             padding:
-            EdgeInsets.only(left: 9.0, bottom: 5.0, top: 5.0, right: 2.0),
+                EdgeInsets.only(left: 9.0, bottom: 5.0, top: 5.0, right: 2.0),
             child: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -39,33 +34,34 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
               child: Icon(
                 Icons.arrow_back_rounded,
                 color: AppColors.blackColor,
-
               ),
             )),
-
         actions: [
           InkWell(
-            onTap: (){
-              Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) =>
-                  ProfileMenu_Screen()), (Route<dynamic> route) => false);
+            onTap: () {
+              Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (context) => ProfileMenu_Screen()),
+                  (Route<dynamic> route) => false);
             },
             child: Container(
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
-              child:  Center(
+              child: Center(
                 child: Text(
                   "Cancel",
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      15.0,
+                      AppColors.blackColor,
+                      FontWeight.w500,
+                      'FontRegular'),
                 ),
               ),
             ),
           )
         ],
       ),
-      body:Container(
+      body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
         color: AppColors.whiteColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,43 +72,42 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(height: 15.0,),
-                  Text(
-                    "Listings Add Ons",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        26.0,
-                        AppColors.blackColor,
-                        FontWeight.w600,
-                        'FontRegular'),
+                  SizedBox(
+                    height: 15.0,
                   ),
-
+                  Padding(
+                    padding: EdgeInsets.only(left: 15.0, right: 15.0),
+                    child: Text(
+                      "Listings Add Ons",
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(26.0, AppColors.blackColor,
+                              FontWeight.w600, 'FontRegular'),
+                    ),
+                  ),
                   SizedBox(
                     height: 10.0,
                   ),
-
-                  Text(
-                    "Let us help you improve your listings",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.hintColor,
-                        FontWeight.w500,
-                        'FontRegular'),
+                  Padding(
+                    padding: EdgeInsets.only(left: 15.0, right: 15.0),
+                    child: Text(
+                      "Let us help you improve your listings",
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(14.0, AppColors.hintColor,
+                              FontWeight.w500, 'FontRegular'),
+                    ),
                   ),
-
                   Container(
                     height: 40.0,
                   ),
-
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Theme(data: ThemeData(
-                        primarySwatch: Colors.yellow,
-                        unselectedWidgetColor: Colors.grey, // Your color
-                      ),
+                      Theme(
+                          data: ThemeData(
+                            primarySwatch: Colors.yellow,
+                            unselectedWidgetColor: Colors.grey, // Your color
+                          ),
                           child: Checkbox(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
@@ -125,67 +120,66 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               });
                             },
                           )),
-                      Flexible(child: Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "List your property on MLS",
-                              style: CustomWidget(context: context)
-                                  .CustomSizedTextStyle(
-                                  15.0,
-                                  Colors.black,
-                                  FontWeight.w500,
-                                  'FontRegular'),
-
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Get seen by more people",
-                                  style: CustomWidget(context: context)
-                                      .CustomSizedTextStyle(
-                                      12.0,
-                                      AppColors.hintColor,
-                                      FontWeight.w500,
-                                      'FontRegular'),
-
-                                ),
-                                Text(
-                                  "\$ 1000 extra",
-                                  style: CustomWidget(context: context)
-                                      .CustomSizedTextStyle(
-                                      12.0,
-                                      Colors.black,
-                                      FontWeight.w500,
-                                      'FontRegular'),
-
-                                )
-                              ],
-                            )
-                          ],
+                      Flexible(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "List your property on MLS",
+                                style: CustomWidget(context: context)
+                                    .CustomSizedTextStyle(15.0, Colors.black,
+                                        FontWeight.w500, 'FontRegular'),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                           Padding(padding: EdgeInsets.only(right: 15.0),child:    Row(
+                             crossAxisAlignment: CrossAxisAlignment.start,
+                             mainAxisAlignment:
+                             MainAxisAlignment.spaceBetween,
+                             children: [
+                               Text(
+                                 "Get seen by more people",
+                                 style: CustomWidget(context: context)
+                                     .CustomSizedTextStyle(
+                                     12.0,
+                                     AppColors.hintColor,
+                                     FontWeight.w500,
+                                     'FontRegular'),
+                               ),
+                               Text(
+                                 "\$ 1000 extra",
+                                 style: CustomWidget(context: context)
+                                     .CustomSizedTextStyle(
+                                     12.0,
+                                     Colors.black,
+                                     FontWeight.w500,
+                                     'FontRegular'),
+                               )
+                             ],
+                           ),)
+                            ],
+                          ),
                         ),
-                      ),)
+                      )
 
                       //Checkbox
                     ],
                   ),
-
                   SizedBox(
                     height: 15.0,
                   ),
-
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Theme(data: ThemeData(
-                        primarySwatch: Colors.yellow,
-                        unselectedWidgetColor: Colors.grey, // Your color
-                      ),
+                      Theme(
+                          data: ThemeData(
+                            primarySwatch: Colors.yellow,
+                            unselectedWidgetColor: Colors.grey, // Your color
+                          ),
                           child: Checkbox(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
@@ -199,65 +193,63 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                             },
                           )),
 
-                      Flexible(child: Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Include a virtual tour",
-                              style: CustomWidget(context: context)
-                                  .CustomSizedTextStyle(
-                                  15.0,
-                                  Colors.black,
-                                  FontWeight.w500,
-                                  'FontRegular'),
+                      Flexible(
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 10.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Include a virtual tour",
+                                style: CustomWidget(context: context)
+                                    .CustomSizedTextStyle(15.0, Colors.black,
+                                        FontWeight.w500, 'FontRegular'),
+                              ),
+                              const SizedBox(
+                                height: 5.0,
+                              ),
+                              Padding(padding: EdgeInsets.only(right: 15.0),child:     Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment:
+                                MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    "Create a digital twin of your property",
+                                    style: CustomWidget(context: context)
+                                        .CustomSizedTextStyle(
+                                        12.0,
+                                        AppColors.hintColor,
+                                        FontWeight.w500,
+                                        'FontRegular'),
+                                  ),
+                                  Text(
+                                    "\$ 5000 extra",
+                                    style: CustomWidget(context: context)
+                                        .CustomSizedTextStyle(
+                                        12.0,
+                                        Colors.black,
+                                        FontWeight.w500,
+                                        'FontRegular'),
+                                  )
+                                ],
+                              ),)
 
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Create a digital twin of your property",
-                                  style: CustomWidget(context: context)
-                                      .CustomSizedTextStyle(
-                                      12.0,
-                                      AppColors.hintColor,
-                                      FontWeight.w500,
-                                      'FontRegular'),
-
-                                ),
-                                Text(
-                                  "\$ 5000 extra",
-                                  style: CustomWidget(context: context)
-                                      .CustomSizedTextStyle(
-                                      12.0,
-                                      Colors.black,
-                                      FontWeight.w500,
-                                      'FontRegular'),
-
-                                )
-                              ],
-                            )
-                          ],
+                            ],
+                          ),
                         ),
-                      ),)
-
+                      )
 
                       //Checkbox
                     ],
                   ),
-
                 ],
               ),
             ),
-
             SizedBox(
               height: 10.0,
             ),
             InkWell(
-              onTap: (){
+              onTap: () {
                 setState(() {
                   // Navigator.of(context).push(
                   //     MaterialPageRoute(
@@ -266,6 +258,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 });
               },
               child: Container(
+                margin: EdgeInsets.only(left: 15.0,right: 15.0,bottom: 25.0),
                 padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
                 decoration: BoxDecoration(
                   color: AppColors.appColor,
@@ -277,8 +270,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 child: Center(
                   child: Text(
                     "Continue",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
+                    style: CustomWidget(context: context).CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
                         FontWeight.w600,
@@ -287,9 +279,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 ),
               ),
             ),
-
           ],
-
         ),
       ),
     );
