@@ -76,11 +76,11 @@ class _Offers_Screen2State extends State<Offers_Screen2> {
             ),
 
             Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Icon(Icons.location_on_outlined,
-                  size: 20.0,
+                  size: 18.0,
                   color: AppColors.blackColor,
                 ),
                 SizedBox(width: 5.0,),
@@ -88,7 +88,7 @@ class _Offers_Screen2State extends State<Offers_Screen2> {
                   "123 Happy Street Alpharetta",
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
-                      11.0,
+                      14.0,
                       AppColors.blackColor,
                       FontWeight.w500,
                       'FontRegular'),
@@ -105,6 +105,7 @@ class _Offers_Screen2State extends State<Offers_Screen2> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      const SizedBox(width: 5.0,),
                       SvgPicture.asset("assets/menu/Sleeping bed.svg",
                         height: 22.0,
                       ),
@@ -333,7 +334,7 @@ class _Offers_Screen2State extends State<Offers_Screen2> {
                             ),
                             SizedBox(height: 10.0,),
                             Text(
-                              "Widthdraw",
+                              "Decline",
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
                                   13.0,
