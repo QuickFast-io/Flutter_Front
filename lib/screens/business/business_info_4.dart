@@ -67,7 +67,6 @@ class _BusinessInfo_Screen4State extends State<BusinessInfo_Screen4> {
                       height: 25.0,
                     ),
                   ],
-
                 ),
               ),
               SizedBox(height: 15.0,),
@@ -99,7 +98,6 @@ class _BusinessInfo_Screen4State extends State<BusinessInfo_Screen4> {
                   ),
                 ),
               ),
-
               SizedBox(height: 10.0,),
             ],
 
