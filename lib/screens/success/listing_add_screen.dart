@@ -219,7 +219,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Create a degital twin of your property",
+                                  "Create a digital twin of your property",
                                   style: CustomWidget(context: context)
                                       .CustomSizedTextStyle(
                                       12.0,
