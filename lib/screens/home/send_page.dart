@@ -304,7 +304,7 @@ class _SendScreenState extends State<SendScreen> {
               padding: EdgeInsets.only(top: 12.0,bottom: 12.0,left: 32.0,right: 32.0),
               decoration: BoxDecoration(
                 color: AppColors.appColor,
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(18.0),
               ),
               child: Center(
                 child: Text(
@@ -313,7 +313,7 @@ class _SendScreenState extends State<SendScreen> {
                       .CustomSizedTextStyle(
                       16.0,
                       AppColors.blackColor,
-                      FontWeight.w600,
+                      FontWeight.w400,
                       'FontRegular'),
                 ),
               ),
