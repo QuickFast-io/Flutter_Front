@@ -179,7 +179,6 @@ class _PropertyInfo_Screen7State extends State<PropertyInfo_Screen7> {
                 ),
               ),
             ),
-
           ],
 
         ),
