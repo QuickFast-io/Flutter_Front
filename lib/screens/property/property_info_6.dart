@@ -343,27 +343,43 @@ class _PropertyInfo_Screen6State extends State<PropertyInfo_Screen6> {
                               selectedOccupiedDate!.month,
                               selectedOccupiedDate!.day));
                     },
-                    child: Container(
-                      padding: EdgeInsets.fromLTRB(10.0, 13.0, 10.0, 13.0),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
-                          border: Border.all(color: AppColors.hintColor.withOpacity(0.3)),
-                          color: Colors.white
-                      ),
+                        child: Container(
+                      padding: EdgeInsets.fromLTRB(10.0,2.0, 10.0,5.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    border: Border.all(color: AppColors.hintColor.withOpacity(0.3)),
+                    color: Colors.white
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(child:  Container(
 
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            OccupiedController.text.toString(),
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                14.0,
-                                AppColors.blackColor,
-                                FontWeight.w500,
-                                'FontRegular'),
-                          ),
+
+                      child: TextField(
+                        controller: occupiedDateController,
+                        enabled: false,
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(
+                            14.0,
+                            AppColors.blackColor,
+                            FontWeight.w500,
+                            'FontRegular'),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "mm/dd//yy",
+                          hintStyle: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              14.0,
+                              AppColors.greyColor,
+                              FontWeight.w500,
+                              'FontRegular'),
+                        ),
+                      ),
+                      height: 42.0,
+                      margin: EdgeInsets.only(bottom: 2.0),
+                    ),),
                           Icon(
                             Icons.date_range_outlined,
                             size: 20.0,
@@ -413,25 +429,42 @@ class _PropertyInfo_Screen6State extends State<PropertyInfo_Screen6> {
                               selectedLeaseEpire!.day));
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(10.0, 13.0, 10.0, 13.0),
+                      padding: EdgeInsets.fromLTRB(10.0,2.0, 10.0,5.0),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        border: Border.all(color: AppColors.hintColor.withOpacity(0.3)),
-                        color: Colors.white
+                          borderRadius: BorderRadius.circular(20.0),
+                          border: Border.all(color: AppColors.hintColor.withOpacity(0.3)),
+                          color: Colors.white
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
-                            ExpiredController.text.toString(),
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                14.0,
-                                AppColors.blackColor,
-                                FontWeight.w500,
-                                'FontRegular'),
-                          ),
+                          Flexible(child:  Container(
+
+
+                            child: TextField(
+                              controller: expireDateController,
+                              enabled: false,
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(
+                                  14.0,
+                                  AppColors.blackColor,
+                                  FontWeight.w500,
+                                  'FontRegular'),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: "mm/dd//yy",
+                                hintStyle: CustomWidget(context: context)
+                                    .CustomSizedTextStyle(
+                                    14.0,
+                                    AppColors.greyColor,
+                                    FontWeight.w500,
+                                    'FontRegular'),
+                              ),
+                            ),
+                            height: 42.0,
+                            margin: EdgeInsets.only(bottom: 2.0),
+                          ),),
                           Icon(
                             Icons.date_range_outlined,
                             size: 20.0,
@@ -447,7 +480,7 @@ class _PropertyInfo_Screen6State extends State<PropertyInfo_Screen6> {
                   ),
 
                   Text(
-                    "Projected rent for this year(\$USD)",
+                    "Projected rent for this year (\$USD)",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
@@ -500,7 +533,7 @@ class _PropertyInfo_Screen6State extends State<PropertyInfo_Screen6> {
 
 
                   Text(
-                    "Total rent from last year(\$USD)",
+                    "Total rent from last year (\$USD)",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,

@@ -88,7 +88,7 @@ class _PropertyInfo_Screen5State extends State<PropertyInfo_Screen5> {
                 height: 10.0,
               ),
               Text(
-                "Upload pictures of the property to help potential buyers Visualize what it looks like.",
+                "Upload pictures of the property to help potential buyers visualize what it looks like.",
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
                     13.0,

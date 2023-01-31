@@ -147,7 +147,7 @@
   "loc_ssn": "Social Security Number ",
   "loc_passport": "Passport or Driver's License ",
   "loc_id": "ID Number ",
-  "loc_upload_id": "Upload Photo Id",
+  "loc_upload_id": "Upload Photo ID",
   "loc_upload_proof": "Upload Proof of Address",
   "loc_click_upload": "Click to upload a file",
   "loc_txt_png": "PNG, JPG up to 5MB",

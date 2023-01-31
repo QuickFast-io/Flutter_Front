@@ -4,6 +4,7 @@ import 'package:linear_progress_bar/linear_progress_bar.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
+import 'package:rabbit/common/textformfield_custom_limit.dart';
 import 'package:rabbit/screens/property/property_info_2.dart';
 import 'package:rabbit/screens/side_menu/profile_menu_screen.dart';
 
@@ -165,7 +166,8 @@ class _PropertyInfo_Screen1State extends State<PropertyInfo_Screen1> {
                   SizedBox(
                     height: 10.0,
                   ),
-                  TextFormFieldCustom(
+                  TextFormFieldCustomLimit(
+                    limit: 35,
                     onEditComplete: () {
                       addressFocus.unfocus();
                       FocusScope.of(context).requestFocus(zipFocus);

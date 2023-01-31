@@ -26,7 +26,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
   DateTime? selectedDate;
 
   List _selectedID = [
-    "Passport","Driving License", "Pan Card",
+
   ];
   String seectedIDValue= "";
 
@@ -35,7 +35,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    seectedIDValue = _selectedID.first;
+
   }
 
 
@@ -323,7 +323,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                             border: Border.all(color: AppColors.hintColor.withOpacity(0.3)),
                             borderRadius: BorderRadius.circular(20.0),
                           ),
-                          padding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
+                          padding: EdgeInsets.fromLTRB(10.0, 0.0, 10.0,0.0),
                           child: DropdownButton(
                             underline: Container(
                               height: 0.0,
@@ -350,7 +350,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                               });
                             },
                             hint: Text(
-                              "Select Category",
+                              "",
                               style: CustomWidget(context: context).CustomSizedTextStyle(
                                   12.0,
                                   AppColors.blackColor2,
@@ -361,7 +361,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                             value: seectedIDValue,
                             icon: const Icon(
                               Icons.arrow_drop_down,
-                              // color: AppColors.otherTextColor,
+                               color: AppColors.blackColor,
                             ),
                           ),
                         ),

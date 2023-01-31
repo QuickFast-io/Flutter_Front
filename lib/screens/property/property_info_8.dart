@@ -62,159 +62,166 @@ class _PropertyInfo_Screen8State extends State<PropertyInfo_Screen8> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
-          color: AppColors.whiteColor,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 15.0,),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
+        color: AppColors.whiteColor,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(height: 15.0,),
 
-              Text(
-                "Upload Property Survey Document",
-                style: CustomWidget(context: context)
-                    .CustomSizedTextStyle(
-                    24.0,
-                    AppColors.blackColor,
-                    FontWeight.w600,
-                    'FontRegular'),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                "Upload a copy of the property survey document to provide potential buyers with more information about the property's boundaries and layout.",
-                style: CustomWidget(context: context)
-                    .CustomSizedTextStyle(
-                    13.0,
-                    AppColors.hintColor,
-                    FontWeight.w500,
-                    'FontRegular'),
-              ),
-              SizedBox(
-                height: 25.0,
-              ),
-              Form(child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Upload survey document",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
-                        'FontRegular'),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-
-                  InkWell(
-                    onTap: () async {
-                    },
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.fromLTRB(10, 50.0, 10, 40.0),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                            color: AppColors
-                                .hintColor
-                                .withOpacity(0.2),
-                            width: 1.0),
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.transparent,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/menu/upload.png',
-                            height: 20.0,
-                            width: 20.0,
-                            color: AppColors.blackColor,
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            "Click to upload a file",
-                            textAlign: TextAlign.center,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                13.0,
-                                AppColors.blackColor,
-                                FontWeight.w600,
-                                'FontRegular'),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            "PNG, JPG up to 5MB",
-                            textAlign: TextAlign.center,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                13.0,
-                                AppColors.hintColor,
-                                FontWeight.w500,
-                                'FontRegular'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(
-                    height: 20.0,
-                  ),
-
-
-                ],
-              )),
-              Container(
-                height: 150.0,
-              ),
-
-              InkWell(
-                onTap: (){
-                  setState(() {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                PropertyInfo_Screen9()));
-                  });
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
-                  decoration: BoxDecoration(
-                    color: AppColors.appColor,
-                    // border: Border.all(
-                    //     color: AppColors.blackColor
-                    // ),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Continue",
+                Text(
+                  "Upload Property Survey Document",
+                  style: CustomWidget(context: context)
+                      .CustomSizedTextStyle(
+                      24.0,
+                      AppColors.blackColor,
+                      FontWeight.w600,
+                      'FontRegular'),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+                Text(
+                  "Upload a copy of the property survey document to provide potential buyers with more information about the property's boundaries and layout.",
+                  style: CustomWidget(context: context)
+                      .CustomSizedTextStyle(
+                      13.0,
+                      AppColors.hintColor,
+                      FontWeight.w500,
+                      'FontRegular'),
+                ),
+                SizedBox(
+                  height: 25.0,
+                ),
+                Form(child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Upload survey document",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
                           14.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+
+                    InkWell(
+                      onTap: () async {
+                      },
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.fromLTRB(10, 50.0, 10, 40.0),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                              color: AppColors
+                                  .hintColor
+                                  .withOpacity(0.2),
+                              width: 1.0),
+                          borderRadius: BorderRadius.circular(5.0),
+                          color: Colors.transparent,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/menu/upload.png',
+                              height: 20.0,
+                              width: 20.0,
+                              color: AppColors.blackColor,
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              "Click to upload a file",
+                              textAlign: TextAlign.center,
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(
+                                  13.0,
+                                  AppColors.blackColor,
+                                  FontWeight.w600,
+                                  'FontRegular'),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                            Text(
+                              "PNG, JPG up to 5MB",
+                              textAlign: TextAlign.center,
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(
+                                  13.0,
+                                  AppColors.hintColor,
+                                  FontWeight.w500,
+                                  'FontRegular'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 20.0,
+                    ),
+
+
+                  ],
+                )),
+                Container(
+                  height: 150.0,
+                ),
+
+
+              ],
+
+            ),
+            InkWell(
+              onTap: (){
+                setState(() {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              PropertyInfo_Screen9()));
+                });
+              },
+              child: Container(
+                margin: EdgeInsets.only(bottom: 25.0),
+                padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
+                decoration: BoxDecoration(
+                  color: AppColors.appColor,
+                  // border: Border.all(
+                  //     color: AppColors.blackColor
+                  // ),
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                child: Center(
+                  child: Text(
+                    "Continue",
+                    style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        14.0,
+                        AppColors.blackColor,
+                        FontWeight.w700,
+                        'FontRegular'),
                   ),
                 ),
               ),
-            ],
-
-          ),
-        ),
+            ),
+          ],
+        )
       ),
     );
   }

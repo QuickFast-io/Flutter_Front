@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
+import 'package:rabbit/common/textformfield_custom_limit.dart';
 import 'package:rabbit/screens/property/property_info_4.dart';
 import 'package:rabbit/screens/side_menu/profile_menu_screen.dart';
 
@@ -91,7 +92,7 @@ class _PropertyInfo_Screen3State extends State<PropertyInfo_Screen3> {
                 height: 10.0,
               ),
               Text(
-                "Write a detailed description ofthe property, including its features, layout, and any other important details.",
+                "Write a detailed description of the property, including its features, layout, and any other important details.",
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
                     13.0,
@@ -117,7 +118,8 @@ class _PropertyInfo_Screen3State extends State<PropertyInfo_Screen3> {
                   SizedBox(
                     height: 10.0,
                   ),
-                  TextFormFieldCustom(
+                  TextFormFieldCustomLimit(
+                    limit: 250,
                     onEditComplete: () {
                       propertyCommendFocus.unfocus();
                     },
@@ -134,7 +136,7 @@ class _PropertyInfo_Screen3State extends State<PropertyInfo_Screen3> {
                     focusNode: propertyCommendFocus,
                     maxlines: 20,
                     text: '',
-                    hintText: "Discribe the property to a potential buyer",
+                    hintText: "Describe the property to a potential buyer",
                     obscureText: false,
                     suffix: Container(
                       width: 0.0,

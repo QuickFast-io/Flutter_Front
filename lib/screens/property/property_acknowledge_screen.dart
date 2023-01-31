@@ -118,7 +118,7 @@ class _Property_Acknowledge_ScreenState extends State<Property_Acknowledge_Scree
                       height: 15.0,
                     ),
                     Text(
-                      "Please not that all transactions and agreements made through our platform are subject to applicable laws and regulations.",
+                      "Please note that all transactions and agreements made through our platform are subject to applicable laws and regulations.",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
                           14.0,
