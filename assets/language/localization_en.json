@@ -168,5 +168,6 @@
   "loc_wait_min":  "Wait a minute",
   "loc_wait_txt":  "We are hunting this information down",
   "loc_we_need": "We need more time",
-  "loc_we_need_txt": "We are going to need to take a closer look, please continue using Rabbit while we verify your identity"
+  "loc_we_need_txt": "We are going to need to take a closer look, please continue using Rabbit while we verify your identity",
+  "loc_dashboard_detailes_txt": "You haven't listed anyproperties,  but we can fix that."
 }
