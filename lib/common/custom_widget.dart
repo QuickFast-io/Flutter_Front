@@ -142,6 +142,7 @@ class CustomWidget {
       fontSize: size,
       decoration: TextDecoration.none,
       fontWeight: weight,
+
     );
   }
 

@@ -81,7 +81,7 @@ class _PropertyInfo_Screen9State extends State<PropertyInfo_Screen9> {
                   SizedBox(height: 15.0,),
 
                   Text(
-                    "Does more then one person or business own this property?",
+                    "Does more than one person or business own this property?",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         15.0,
@@ -160,6 +160,7 @@ class _PropertyInfo_Screen9State extends State<PropertyInfo_Screen9> {
                 });
               },
               child: Container(
+                margin: EdgeInsets.only(bottom: 20.0),
                 padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
                 decoration: BoxDecoration(
                   color: AppColors.appColor,
@@ -173,16 +174,16 @@ class _PropertyInfo_Screen9State extends State<PropertyInfo_Screen9> {
                     "Continue",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
+                        16.0,
                         AppColors.blackColor,
-                        FontWeight.w700,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                 ),
               ),
             ),
 
-            SizedBox(height: 10.0,),
+
           ],
 
         ),

@@ -308,55 +308,73 @@ class _WalletState extends State<Wallet> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10.0),
-                  Text(
-                    "Exquisitely finished detached 6Bedroom mansion",
-                    style: CustomWidget(context: context).CustomSizedTextStyle(
-                        24.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
-                        'FontRegular'),
-                  ),
-                  SizedBox(height: 5.0),
-                  Row(
+                  SizedBox(height: 20.0),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SvgPicture.asset("assets/others/locationpin.svg",width: 10.17,height: 14.87,),
-                      SizedBox(width: 6.0,),
                       Text(
-                        "123 Happy Street Alpharetta",
+                        AppLocalizations.instance.text("loc_detaile_txt_dis"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            16.0,
-                            AppColors.blackColor,
-                            FontWeight.w400,
+                            24.0,
+                            AppColors.blackColor2,
+
+                            FontWeight.w600,
                             'FontRegular'),
-                        textAlign: TextAlign.start,
                       ),
+                      SizedBox(height: 10.0),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SvgPicture.asset("assets/others/locations.svg",height: 15.0,),
+                          SizedBox(width: 5.0,),
+                          Text(
+                            AppLocalizations.instance.text("loc_detaile_txt_address"),
+                            style: CustomWidget(context: context)
+                                .CustomSizedTextStyle(
+                                16.0,
+                                AppColors.blackColor2,
+                                FontWeight.w400,
+                                'FontRegular'),
+                            textAlign: TextAlign.start,
+                          ),
+                        ],
+                      ),
+
                     ],
                   ),
-                  SizedBox(height: 5.0),
+                  SizedBox(height: 30.0,),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "cost : ",
+                        AppLocalizations.instance.text("loc_detaile_cost"),
                         style: CustomWidget(context: context)
-                            .CustomSizedTextStyle(14.0, Color(0xFF696969),
-                                FontWeight.w600, 'FontRegular'),
+                            .CustomSizedTextStyle(
+                            12.0,
+                            AppColors.blackColor2,
+                            FontWeight.w400,
+                            'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                       Text(
-                        "\$ 8,560,000",
+                        "\$"+ AppLocalizations.instance.text("loc_detaile_amount"),
                         style: CustomWidget(context: context)
-                            .CustomSizedTextStyle(18.0, Colors.black,
-                                FontWeight.w700, 'FontRegular'),
+                            .CustomSizedTextStyle(
+                            18.0,
+                            AppColors.blackColor2,
+                            FontWeight.w600,
+                            'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                     ],
                   ),
+
                   SizedBox(
-                    height: 10.0,
+                    height: 30.0,
                   ),
                 ],
               ),

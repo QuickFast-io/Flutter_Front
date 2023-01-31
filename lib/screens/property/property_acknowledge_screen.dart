@@ -94,7 +94,7 @@ class _Property_Acknowledge_ScreenState extends State<Property_Acknowledge_Scree
                     ),
 
                     Text(
-                      "Property Listing \nConfirmed",
+                      "Property Listing Confirmed",
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
                           28.0,
@@ -171,6 +171,8 @@ class _Property_Acknowledge_ScreenState extends State<Property_Acknowledge_Scree
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
                               value: accept,
+                              activeColor: AppColors.appColor,
+                              checkColor: AppColors.blackColor,
                               onChanged: (bool? value) {
                                 setState(() {
                                   accept = value!;
@@ -178,7 +180,7 @@ class _Property_Acknowledge_ScreenState extends State<Property_Acknowledge_Scree
                               },
                             )),
                         Flexible(child: Text(
-                          "I acknowledge that i have the complete rights to sell this property.",
+                          "I acknowledge that I have the complete rights to sell this property.",
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               12.0,
@@ -211,6 +213,8 @@ class _Property_Acknowledge_ScreenState extends State<Property_Acknowledge_Scree
                                   borderRadius: BorderRadius.circular(5.0),
                                 ),
                                 value: acknowledge,
+                                activeColor: AppColors.appColor,
+                                checkColor: AppColors.blackColor,
                                 onChanged: (bool? value) {
                                   setState(() {
                                     acknowledge = value!;
@@ -218,7 +222,7 @@ class _Property_Acknowledge_ScreenState extends State<Property_Acknowledge_Scree
                                 },
                               )),
                           Flexible(child: Text(
-                            "I confirm that i have read the Terms of Service and that i am held accountable to them.",
+                            "I confirm that I have read the Terms of Service and that i am held accountable to them.",
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 12.0,

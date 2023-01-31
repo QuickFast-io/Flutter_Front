@@ -183,7 +183,7 @@ class _DashboardDetailState extends State<DashboardDetail> {
                                  AppLocalizations.instance.text("loc_sml_txt1"),
                                  style: CustomWidget(context: context)
                                      .CustomSizedTextStyle(
-                                     14.0,
+                                     12.0,
                                      AppColors.blackColor2,
                                      FontWeight.w400,
                                      'FontRegular'),

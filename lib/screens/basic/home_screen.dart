@@ -48,6 +48,24 @@ class _Home_ScreenState extends State<Home_Screen> {
     ProfileMenu_Screen(),
 
   ];
+  // Row(
+  // children: [
+  // Icon(
+  // Icons.verified_outlined,
+  // color: Colors.white,
+  // ),
+  // SizedBox(
+  // width: 5.0,
+  // ),
+  // Text(
+  // "Verified",
+  // style: CustomWidget(context: context)
+  //     .CustomSizedTextStyle(14.0, Colors.white,
+  // FontWeight.w600, 'FontRegular'),
+  // textAlign: TextAlign.center,
+  // ),
+  // ],
+  // ),
 
   @override
   void initState() {

@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
+import 'package:rabbit/common/textformfield_custom_limit.dart';
 import 'package:rabbit/screens/individual/individual_screen_3.dart';
 
 class Individual_Screen2 extends StatefulWidget {
@@ -149,7 +150,7 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                           SizedBox(
                             height: 10.0,
                           ),
-                          TextFormFieldCustom(
+                          TextFormFieldCustomLimit(limit: 35,
                             onEditComplete: () {
                               addressFocus.unfocus();
                               FocusScope.of(context).requestFocus(suiteFocus);
@@ -436,7 +437,7 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                   });
                 },
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
+                  padding: const EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
                   decoration: BoxDecoration(
                     color: AppColors.appColor,
                     // border: Border.all(
