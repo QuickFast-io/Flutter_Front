@@ -35,7 +35,7 @@ class _Offers_Screen2State extends State<Offers_Screen2> {
         title: Text(
           "Offer",
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
 
 class Recovery_Pharse2 extends StatefulWidget {
@@ -51,11 +52,11 @@ class _Recovery_Pharse2State extends State<Recovery_Pharse2> {
             Image.asset("assets/others/logo.png",
               color: AppColors.appColor,
               height: 22,),
-            SizedBox(width: 5.0,),
+            SizedBox(width: 6.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
             ),
           ],
         ),
@@ -64,11 +65,11 @@ class _Recovery_Pharse2State extends State<Recovery_Pharse2> {
       body:  Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
+        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 5.0),
         color: AppColors.whiteColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               child: Column(
@@ -76,34 +77,34 @@ class _Recovery_Pharse2State extends State<Recovery_Pharse2> {
                 children: [
                   SizedBox(height: 15.0,),
                   Text(
-                    "Your Recovery Phrase",
+                    AppLocalizations.instance.text("loc_your_recovery"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         24.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
-                        'FontRegular'),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    "Enter your recovery phrase (usually 12 words) in the correct order. Separate each word with a single space only (no commas or any other punctuation)",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        13.0,
-                        AppColors.hintColor,
                         FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(
-                    height: 25.0,
+                    height: 8.0,
+                  ),
+                  Text(
+                    AppLocalizations.instance.text("loc_your_recovery_desc"),
+                    style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        14.0,
+                        AppColors.hintColor,
+                        FontWeight.w400,
+                        'FontRegular'),
+                  ),
+                  SizedBox(
+                    height: 40.0,
                   ),
                   Form(child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Recovery Pharse ",
+                       AppLocalizations.instance.text("loc_recovery_phrase"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
                             14.0,
@@ -112,7 +113,7 @@ class _Recovery_Pharse2State extends State<Recovery_Pharse2> {
                             'FontRegular'),
                       ),
                       SizedBox(
-                        height: 10.0,
+                        height: 5.0,
                       ),
                       TextFormFieldCustom(
                         onEditComplete: () {
@@ -179,16 +180,16 @@ class _Recovery_Pharse2State extends State<Recovery_Pharse2> {
                   // border: Border.all(
                   //     color: AppColors.blackColor
                   // ),
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(18.0),
                 ),
                 child: Center(
                   child: Text(
-                    "Import wallet",
+                    AppLocalizations.instance.text("loc_import_wallet"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
+                        16.0,
                         AppColors.blackColor,
-                        FontWeight.w700,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                 ),

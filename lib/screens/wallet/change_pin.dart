@@ -37,7 +37,7 @@ class _ChangePinState extends State<ChangePin> {
 
   Widget pinUI() {
     handleClick() {
-      if (pinValues.length > 0 && pinValues.length == 6) {
+      if (pinValues.length > 0 && pinValues.length == 5) {
         /*if (title == "Create Pin") {
           oldPinValue = pinValues;
           setState(() {
@@ -61,7 +61,7 @@ class _ChangePinState extends State<ChangePin> {
             pin3 = '';
             pin4 = '';
             pin5 = '';
-            pin6 = '';
+            // pin6 = '';
             pinValues = '';
           });
         } else if (title == "Confirm Pin") {
@@ -92,9 +92,9 @@ class _ChangePinState extends State<ChangePin> {
           pin4 = value;
         else if (pin5.isEmpty)
           pin5 = value;
-        else if (pin6.isEmpty) pin6 = value;
-        pinValues = '$pin1$pin2$pin3$pin4$pin5$pin6';
-        if (pinValues.length == 6) {
+        // else if (pin6.isEmpty) pin6 = value;
+        pinValues = '$pin1$pin2$pin3$pin4$pin5';
+        if (pinValues.length == 5) {
           //doLoginPin(pinValues);
           handleClick();
         } else {}
@@ -104,9 +104,9 @@ class _ChangePinState extends State<ChangePin> {
     removePinValue() {
       print(pin6);
       setState(() {
-        if (pin6.isNotEmpty)
-          pin6 = '';
-        else if (pin5.isNotEmpty)
+        // if (pin6.isNotEmpty)
+        //   pin6 = '';else
+        if (pin5.isNotEmpty)
           pin5 = '';
         else if (pin4.isNotEmpty)
           pin4 = '';
@@ -115,7 +115,7 @@ class _ChangePinState extends State<ChangePin> {
         else if (pin2.isNotEmpty)
           pin2 = '';
         else if (pin1.isNotEmpty) pin1 = '';
-        pinValues = '$pin1$pin2$pin3$pin4$pin5$pin6';
+        pinValues = '$pin1$pin2$pin3$pin4$pin5';
       });
     }
 
@@ -137,8 +137,7 @@ class _ChangePinState extends State<ChangePin> {
                       children: [
                         Image.asset(
                           "assets/others/logo.png",
-                          width: 45.0,
-                          height: 45.0,
+                          height: 73.0,
                           color: AppColors.blackColor,
                         ),
                         SizedBox(
@@ -148,7 +147,7 @@ class _ChangePinState extends State<ChangePin> {
                           AppLocalizations.instance.text("loc_app_name"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(24.0, AppColors.blackColor,
-                                  FontWeight.w600, 'FontRegular'),
+                                  FontWeight.w400, 'FontRegular'),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -163,7 +162,7 @@ class _ChangePinState extends State<ChangePin> {
                       children: [
                         SvgPicture.asset(
                           "assets/others/lock.svg",
-                          height: 22.0,
+                          height: 18.0,
                         ),
                         // Icon(
                         //   Icons.lock_outline_rounded,
@@ -173,11 +172,11 @@ class _ChangePinState extends State<ChangePin> {
                         ),
                         Text(
                           title,
-                          style: GoogleFonts.urbanist(
-                            color: Color(0xFF333333),
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.w600,
-                          ),
+                          style: CustomWidget(context: context).CustomSizedTextStyle(
+                              16.0,
+                              AppColors.blackColor,
+                              FontWeight.w400,
+                              'FontRegular'),
                         ),
                       ],
                     ),
@@ -199,7 +198,8 @@ class _ChangePinState extends State<ChangePin> {
                                 color: pin1.isEmpty
                                     ? Colors.white
                                     : AppColors.appColor,
-                                border: Border.all(color: Color(0xFF999999)),
+                                border: Border.all(color: pin1.isEmpty
+                                    ?Colors.black:AppColors.appColor,width: 2.0),
                                 borderRadius: new BorderRadius.only(
                                   topLeft: const Radius.circular(40.0),
                                   topRight: const Radius.circular(40.0),
@@ -211,14 +211,15 @@ class _ChangePinState extends State<ChangePin> {
                         new Container(
                           height: 30.0,
                           width: 30.0,
-                          margin: EdgeInsets.all(5),
+                          margin: EdgeInsets.only(left: 31.0),
                           color: Colors.transparent,
                           child: new Container(
                             decoration: new BoxDecoration(
                                 color: pin2.isEmpty
                                     ? Colors.white
                                     : AppColors.appColor,
-                                border: Border.all(color: Color(0xFF999999)),
+                                border: Border.all(color: pin2.isEmpty
+                                    ?Colors.black:AppColors.appColor,width: 2.0),
                                 borderRadius: new BorderRadius.only(
                                   topLeft: const Radius.circular(40.0),
                                   topRight: const Radius.circular(40.0),
@@ -230,14 +231,15 @@ class _ChangePinState extends State<ChangePin> {
                         new Container(
                           height: 30.0,
                           width: 30.0,
-                          margin: EdgeInsets.all(5),
+                          margin: EdgeInsets.only(left: 31.0),
                           color: Colors.transparent,
                           child: new Container(
                             decoration: new BoxDecoration(
                                 color: pin3.isEmpty
                                     ? Colors.white
                                     : AppColors.appColor,
-                                border: Border.all(color: Color(0xFF999999)),
+                                border: Border.all(color: pin3.isEmpty
+                                    ?Colors.black:AppColors.appColor,width: 2.0),
                                 borderRadius: new BorderRadius.only(
                                   topLeft: const Radius.circular(40.0),
                                   topRight: const Radius.circular(40.0),
@@ -249,14 +251,15 @@ class _ChangePinState extends State<ChangePin> {
                         new Container(
                           height: 30.0,
                           width: 30.0,
-                          margin: EdgeInsets.all(5),
+                          margin: EdgeInsets.only(left: 31.0),
                           color: Colors.transparent,
                           child: new Container(
                             decoration: new BoxDecoration(
                                 color: pin4.isEmpty
                                     ? Colors.white
                                     : AppColors.appColor,
-                                border: Border.all(color: Color(0xFF999999)),
+                                border: Border.all(color: pin4.isEmpty
+                                    ?Colors.black:AppColors.appColor,width: 2.0),
                                 borderRadius: new BorderRadius.only(
                                   topLeft: const Radius.circular(40.0),
                                   topRight: const Radius.circular(40.0),
@@ -268,14 +271,15 @@ class _ChangePinState extends State<ChangePin> {
                         new Container(
                           height: 30.0,
                           width: 30.0,
-                          margin: EdgeInsets.all(5),
+                          margin: EdgeInsets.only(left: 31.0),
                           color: Colors.transparent,
                           child: new Container(
                             decoration: new BoxDecoration(
                                 color: pin5.isEmpty
                                     ? Colors.white
                                     : AppColors.appColor,
-                                border: Border.all(color: Color(0xFF999999)),
+                                border: Border.all(color: pin5.isEmpty
+                                    ?Colors.black:AppColors.appColor,width: 2.0),
                                 borderRadius: new BorderRadius.only(
                                   topLeft: const Radius.circular(40.0),
                                   topRight: const Radius.circular(40.0),
@@ -284,7 +288,7 @@ class _ChangePinState extends State<ChangePin> {
                                 )),
                           ),
                         ),
-                        new Container(
+                        /*new Container(
                           height: 30.0,
                           width: 30.0,
                           margin: EdgeInsets.all(5),
@@ -294,7 +298,8 @@ class _ChangePinState extends State<ChangePin> {
                                 color: pin6.isEmpty
                                     ? Colors.white
                                     : AppColors.appColor,
-                                border: Border.all(color: Color(0xFF999999)),
+                                border: Border.all(color: pin6.isEmpty
+                                    ?Colors.black:AppColors.appColor,width: 2.0),
                                 borderRadius: new BorderRadius.only(
                                   topLeft: const Radius.circular(40.0),
                                   topRight: const Radius.circular(40.0),
@@ -302,7 +307,7 @@ class _ChangePinState extends State<ChangePin> {
                                   bottomRight: const Radius.circular(40.0),
                                 )),
                           ),
-                        ),
+                        ),*/
                       ],
                     ),
                   ),
@@ -354,10 +359,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '1',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -396,10 +402,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '2',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -438,10 +445,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '3',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -485,10 +493,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '4',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -527,10 +536,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '5',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -569,10 +579,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '6',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -616,10 +627,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '7',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -658,10 +670,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '8',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -700,10 +713,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '9',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -760,10 +774,11 @@ class _ChangePinState extends State<ChangePin> {
                                   children: <Widget>[
                                     Text(
                                       '0',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.black,
-                                          fontSize: 32.0),
+                                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                                          40.0,
+                                          AppColors.blackColor,
+                                          FontWeight.w400,
+                                          'FontRegular'),
                                       textAlign: TextAlign.center,
                                     ),
                                   ],
@@ -786,8 +801,9 @@ class _ChangePinState extends State<ChangePin> {
                                 }
                               },
                               icon: Icon(
-                                Icons.backspace,
-                                color: Colors.grey,
+                                Icons.backspace_outlined,
+                                color: Colors.black,
+                                size: 22.0,
                               ),
                             ),
                           ),

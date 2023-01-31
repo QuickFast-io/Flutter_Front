@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/side_menu/offers_screen2.dart';
 
 class Sellers_Terms_Screen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
               ),
             )),
         title: Text(
-          "Seller's Terms",
+          AppLocalizations.instance.text("loc_seller_terms"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
               18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
         ),
@@ -91,7 +92,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Sales Price",
+                              AppLocalizations.instance.text("loc_sales_pricel"),
                               textAlign: TextAlign.center,
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
@@ -120,7 +121,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Earnest Money",
+                              AppLocalizations.instance.text("loc_earnest_money"),
                               textAlign: TextAlign.center,
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
@@ -149,7 +150,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Closing Date",
+                              AppLocalizations.instance.text("loc_closing_date"),
                               textAlign: TextAlign.center,
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
@@ -178,7 +179,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Last Title Check",
+                              AppLocalizations.instance.text("loc_last_little"),
                               textAlign: TextAlign.center,
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
@@ -207,7 +208,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "Survey Provided",
+                              AppLocalizations.instance.text("loc_survey_provided"),
                               textAlign: TextAlign.center,
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
@@ -252,17 +253,18 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                         border: Border.all(
                             color: AppColors.blackColor
                         ),
-                        borderRadius: BorderRadius.circular(15.0),
+                        borderRadius: BorderRadius.circular(18.0),
                       ),
                       child: Center(
                         child: Text(
-                          "Make offer",
+                          AppLocalizations.instance.text("loc_make_offer"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               16.0,
                               AppColors.blackColor,
                               FontWeight.w500,
                               'FontRegular'),
+                          textAlign: TextAlign.center,
                         ),
                       ),
                     ),

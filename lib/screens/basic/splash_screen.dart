@@ -1,5 +1,7 @@
 
 import 'package:flutter_svg/svg.dart';
+import 'package:rabbit/screens/side_menu/offer_success.dart';
+import 'package:rabbit/screens/success/updated_terms_screen.dart';
 import 'package:rabbit/screens/wallet/change_pin.dart';
 import 'package:rabbit/screens/basic/register_screen.dart';
 import 'package:flutter/material.dart';
@@ -104,7 +106,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    SetpinPage()));
+                                    Updated_Terms_Screen()));
 
                       });
                     },

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/home/pass_phrase.dart';
 import 'package:rabbit/screens/home/recovery_pharse2.dart';
 
@@ -49,11 +50,11 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
             Image.asset("assets/others/logo.png",
               color: AppColors.appColor,
               height: 22,),
-            SizedBox(width: 5.0,),
+            SizedBox(width: 6.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
             ),
           ],
         ),
@@ -66,7 +67,7 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
         padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment. spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment. spaceAround,
           children: [
             Container(
               child: Column(
@@ -78,12 +79,22 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
 
                   SizedBox(height: 35.0,),
                   Text(
-                    "Backup Your \nRecovery Pharse",
+                    AppLocalizations.instance.text("loc_backup_your"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        30.0,
+                        32.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
+                        'FontRegular'),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    AppLocalizations.instance.text("loc_recovery_phrase"),
+                    style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        32.0,
+                        AppColors.blackColor,
+                        FontWeight.w500,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
@@ -91,8 +102,9 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                     height: 20.0,
                   ),
 
-                 Padding(padding: EdgeInsets.only(left: 15.0,right: 15.0),child:  Text(
-                   "If you delete the Rabbit App or lose your devices, you'll need your recovery phrase to regain access to your assets.",
+                 Padding(padding: EdgeInsets.only(left: 15.0,right: 15.0),child:
+                 Text(
+                   AppLocalizations.instance.text("loc_recovery_phrase_desc"),
                    style: CustomWidget(context: context)
                        .CustomSizedTextStyle(
                        14.0,
@@ -101,8 +113,6 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                        'FontRegular'),
                    textAlign: TextAlign.center,
                  ),),
-
-                  SizedBox(height: 100.0,),
                 ],
               ),
             ),
@@ -123,11 +133,11 @@ class _Recovery_PharseState extends State<Recovery_Pharse> {
                   // border: Border.all(
                   //     color: AppColors.blackColor
                   // ),
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(18.0),
                 ),
                 child: Center(
                   child: Text(
-                    "Continue",
+                    AppLocalizations.instance.text("loc_continue"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,

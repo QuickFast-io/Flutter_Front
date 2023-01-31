@@ -44,11 +44,10 @@ class CustomWidget {
                   children: [
                     Text(
                       title.toUpperCase(),
-                      style: TextStyle(
+                      style: GoogleFonts.inter(
                         fontSize: 16.0,
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'OpenSansBold',
                       ),
                     ),
                     Container(
@@ -58,10 +57,9 @@ class CustomWidget {
                     ),
                     Text(
                       message,
-                      style: TextStyle(
+                      style: GoogleFonts.inter(
                         fontSize: 13.0,
                         color: Colors.white,
-                        fontFamily: 'OpenSans',
                       ),
                     ),
                     SizedBox(
@@ -91,9 +89,8 @@ class CustomWidget {
                             alignment: Alignment.center,
                             child: Text(
                               "ok".toUpperCase(),
-                              style: TextStyle(
+                              style: GoogleFonts.inter(
                                   fontSize: 16,
-                                  fontFamily: "OpenSansBold",
                                   color: AppColors.whiteColor),
                               textAlign: TextAlign.center,
                             ),
@@ -170,8 +167,7 @@ class CustomWidget {
       width: MediaQuery.of(context).size.width,
       child: Center(
         child: Text(data,
-            style: TextStyle(
-              fontFamily: "FontRegular",
+            style: GoogleFonts.inter(
               color: color,
             )),
       ),

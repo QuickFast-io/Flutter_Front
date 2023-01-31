@@ -33,14 +33,15 @@ class _WalletSetupState extends State<WalletSetup> {
           children: [
             Image.asset(
               "assets/others/logo.png",
-              width: 24.0,
-              height: 24.0,
+              width: 25.0,
+              height: 25.0,
               color: AppColors.appColor,
             ),
+            SizedBox(width: 6.0,),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
               textAlign: TextAlign.center,
             ),
           ],
@@ -85,7 +86,7 @@ class _WalletSetupState extends State<WalletSetup> {
             ),
             SizedBox(height: 10.0),
             Text(
-              "Import your wallet or create a new one",
+              AppLocalizations.instance.text("loc_import_wallet_new"),
               style: CustomWidget(context: context)
                   .CustomSizedTextStyle(
                   14.0,
@@ -111,7 +112,7 @@ class _WalletSetupState extends State<WalletSetup> {
                   bottom: 15.0,
                 ),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
+                  borderRadius: BorderRadius.circular(18.0),
                   color: AppColors.appColor,
                 ),
                 child: Text(
@@ -137,12 +138,12 @@ class _WalletSetupState extends State<WalletSetup> {
                   bottom: 15.0,
                 ),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
+                  borderRadius: BorderRadius.circular(18.0),
                   border: Border.all(color: Colors.black,width: 1.0),
                   color: Colors.transparent,
                 ),
                 child: Text(
-                  AppLocalizations.instance.text("loc_import_wallet"),
+                  AppLocalizations.instance.text("loc_import_your_wallet"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
                       16.0,
                       AppColors.blackColor,
