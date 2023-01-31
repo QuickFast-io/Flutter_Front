@@ -99,7 +99,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                    widget.activeText.toString(),
                    style: TextStyle(
                        color: widget.activeTextColor,
-                       fontWeight: FontWeight.w700,
+                       fontWeight: FontWeight.w400,
                        fontSize: 14.0),
                  ),
                ],
@@ -109,7 +109,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                  widget.activeText.toString(),
                  style: TextStyle(
                      color: widget.activeTextColor,
-                     fontWeight: FontWeight.w700,
+                     fontWeight: FontWeight.w400,
                      fontSize: 14.0),
                ),
              ),
@@ -122,7 +122,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                  widget.activeText.toString(),
                  style: TextStyle(
                      color: widget.activeTextColor,
-                     fontWeight: FontWeight.w700,
+                     fontWeight: FontWeight.w400,
                      fontSize: 14.0),
                ),
              ],
@@ -132,7 +132,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                widget.activeText.toString(),
                style: TextStyle(
                    color: widget.inactiveColor,
-                   fontWeight: FontWeight.w700,
+                   fontWeight: FontWeight.w400,
                    fontSize: 15.0),
              ),
            ),
@@ -152,7 +152,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                           widget.inactiveText.toString(),
                           style: TextStyle(
                               color: widget.inactiveTextColor,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w400,
                               fontSize: 14.0),
                         ),
                       ],
@@ -162,7 +162,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                         widget.inactiveText.toString(),
                         style: TextStyle(
                             color: widget.inactiveTextColor,
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w400,
                             fontSize: 14.0),
                       ),
                     )
@@ -175,7 +175,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                         widget.inactiveText.toString(),
                         style: TextStyle(
                             color: widget.inactiveTextColor,
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.w400,
                             fontSize: 14.0),
                       ),
                     ],
@@ -185,7 +185,7 @@ class _CustomSwitchState extends State<CustomSwitch>
                           widget.inactiveText.toString(),
                           style: TextStyle(
                               color: widget.inactiveColor,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w400,
                               fontSize: 14.0),
                         ),
                       ),

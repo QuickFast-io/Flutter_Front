@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/wallet/set_pin.dart';
 
 class Notification_Screen extends StatefulWidget {
@@ -52,7 +53,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
             Text(
               "Rabbit",
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.darkblackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -75,9 +76,9 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                   SvgPicture.asset("assets/menu/bell.svg",
                     height: 100,),
 
-                  SizedBox(height: 20.0,),
+                  SizedBox(height: 35.0,),
                   Text(
-                    "Turn on notifications",
+                    AppLocalizations.instance.text("loc_noti_txt"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         32.0,
@@ -88,18 +89,16 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                   SizedBox(
                     height: 10.0,
                   ),
-
-                  Text(
-                    "Get updates on your account, new features and more. You can change this any time in settings.",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w400,
-                        'FontRegular'),
-                    textAlign: TextAlign.center,
+                  Padding(
+                    padding: EdgeInsets.only(left: 45.0, right: 45.0),
+                    child: Text(
+                      AppLocalizations.instance.text("loc_noti_txt_dis"),
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(14.0, AppColors.greyColor,
+                          FontWeight.w400, 'FontRegular'),
+                      textAlign: TextAlign.center,
+                    ),
                   ),
-
                   SizedBox(height: 100.0,),
                 ],
               ),
@@ -127,7 +126,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                      ),
                      child: Center(
                        child: Text(
-                         "Allow",
+                         AppLocalizations.instance.text("loc_allow"),
                          style: CustomWidget(context: context)
                              .CustomSizedTextStyle(
                              16.0,
@@ -149,17 +148,17 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                      decoration: BoxDecoration(
                        color: AppColors.whiteColor,
                        border: Border.all(
-                           color: AppColors.blackColor
+                           color: AppColors.lightgreyColor
                        ),
                        borderRadius: BorderRadius.circular(15.0),
                      ),
                      child: Center(
                        child: Text(
-                         "Deny",
+                           AppLocalizations.instance.text("loc_deny"),
                          style: CustomWidget(context: context)
                              .CustomSizedTextStyle(
                              16.0,
-                             AppColors.blackColor,
+                             AppColors.darkblackColor,
                              FontWeight.w500,
                              'FontRegular'),
                        ),
