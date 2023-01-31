@@ -14,7 +14,6 @@ class BusinessInfo_Screen extends StatefulWidget {
 }
 
 class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
-
   String? accept;
 
   @override
@@ -32,7 +31,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
         elevation: 0.15,
         leading: Padding(
             padding:
-            EdgeInsets.only(left: 2.0, bottom: 5.0, top: 5.0, right: 2.0),
+                EdgeInsets.only(left: 2.0, bottom: 5.0, top: 5.0, right: 2.0),
             child: InkWell(
               onTap: () {
                 Navigator.pop(context);
@@ -40,7 +39,6 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
               child: Icon(
                 Icons.arrow_back_rounded,
                 color: AppColors.blackColor,
-
               ),
             )),
         centerTitle: true,
@@ -49,14 +47,18 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset("assets/others/logo.png",
+            Image.asset(
+              "assets/others/logo.png",
               color: AppColors.appColor,
-              height: 22,),
-            SizedBox(width: 5.0,),
+              height: 22,
+            ),
+            SizedBox(
+              width: 5.0,
+            ),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
-              style: CustomWidget(context: context).CustomSizedTextStyle(
-                  20.0, AppColors.darkblackColor, FontWeight.w400, 'FontRegular'),
+              style: CustomWidget(context: context).CustomSizedTextStyle(20.0,
+                  AppColors.darkblackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -65,7 +67,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 15.0),
+        padding: EdgeInsets.fromLTRB(0.0, 5.0, 15.0, 0.0),
         color: AppColors.whiteColor,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,101 +78,92 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(height: 15.0,),
-
-                  Text(
-                    AppLocalizations.instance.text("loc_bus_question"),
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        16.0,
-                        AppColors.blackColor2,
-                        FontWeight.w400,
-                        'FontRegular'),
+                  SizedBox(
+                    height: 15.0,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0, right: 10.0),
+                    child: Text(
+                      AppLocalizations.instance.text("loc_bus_question"),
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(16.0, AppColors.blackColor2,
+                              FontWeight.w400, 'FontRegular'),
+                    ),
                   ),
                   SizedBox(
                     height: 10.0,
                   ),
-
-                  Theme(data: ThemeData(
-                    primarySwatch: Colors.yellow,
-                    unselectedWidgetColor: Colors.grey, // Your color
-                  ),
-                    child: RadioListTile(
-                      title: Text(
-                        AppLocalizations.instance.text("loc_individual_ans"),
-                        textAlign: TextAlign.start,
-                        style: CustomWidget(context: context)
-                            .CustomSizedTextStyle(
-                            16.0,
-                            AppColors.blackColor2,
-                            FontWeight.w400,
-                            'FontRegular'),
+                  ListTile(
+                    title: Text(
+                      AppLocalizations.instance.text("loc_individual_ans"),
+                      textAlign: TextAlign.start,
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(16.0, AppColors.blackColor2,
+                              FontWeight.w400, 'FontRegular'),
+                    ),
+                    leading: Transform.scale(
+                      scale: 1.5,
+                      child: Radio(
+                        value: AppLocalizations.instance
+                            .text("loc_individual_ans"),
+                        groupValue: accept,
+                        onChanged: (value) {
+                          setState(() {
+                            accept = value.toString();
+                          });
+                        },
+                        activeColor: AppColors.appColor,
                       ),
-                      value: "individual",
-                      groupValue: accept,
-                      onChanged: (value){
-                        setState(() {
-                          accept = value.toString();
-                        });
-                      },
-                    ),),
-
-                  Theme(data: ThemeData(
-                    primarySwatch: Colors.yellow,
-                    unselectedWidgetColor: Colors.grey, // Your color
+                    ),
                   ),
-                    child: RadioListTile(
-                      title: Text(
-                        AppLocalizations.instance.text("loc_business_ans"),
-                        textAlign: TextAlign.start,
-                        style: CustomWidget(context: context)
-                            .CustomSizedTextStyle(
-                            16.0,
-                            Colors.black,
-                            FontWeight.w400,
-                            'FontRegular'),
+                  ListTile(
+                    title: Text(
+                      AppLocalizations.instance.text("loc_business_ans"),
+                      textAlign: TextAlign.start,
+                      style: CustomWidget(context: context)
+                          .CustomSizedTextStyle(16.0, Colors.black,
+                              FontWeight.w400, 'FontRegular'),
+                    ),
+                    leading: Transform.scale(
+                      scale: 1.5,
+                      child: Radio(
+                        value:
+                            AppLocalizations.instance.text("loc_business_ans"),
+                        groupValue: accept,
+                        onChanged: (value) {
+                          setState(() {
+                            accept = value.toString();
+                          });
+                        },
+                        activeColor: AppColors.appColor,
                       ),
-                      value: "business",
-                      groupValue: accept,
-                      onChanged: (value){
-                        setState(() {
-                          accept = value.toString();
-                        });
-                      },
-                    ),),
-
+                    ),
+                  ),
                   SizedBox(
                     height: 25.0,
                   ),
                 ],
               ),
             ),
-
             Container(
+              padding: EdgeInsets.only(left: 20.0,right: 20.0),
               child: Column(
                 children: [
                   InkWell(
-                    onTap: (){
+                    onTap: () {
                       setState(() {
-                        if(accept == "individual"){
+                        print(accept);
+                        if (accept.toString().toLowerCase() == "individual") {
                           setState(() {
-                            Navigator.of(context).push(
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        Individual_Screen()));
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => Individual_Screen()));
                           });
-
-                        }else if(accept == "business"){
+                        } else if (accept.toString().toLowerCase() == "business") {
                           setState(() {
-                            Navigator.of(context).push(
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        BusinessInfo_Screen1()));
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => BusinessInfo_Screen1()));
                           });
-
-                        } else{
-
-                        }
+                        } else {}
                       });
                     },
                     child: Container(
@@ -186,11 +179,8 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                         child: Text(
                           AppLocalizations.instance.text("loc_continue"),
                           style: CustomWidget(context: context)
-                              .CustomSizedTextStyle(
-                              16.0,
-                              AppColors.blackColor,
-                              FontWeight.w500,
-                              'FontRegular'),
+                              .CustomSizedTextStyle(16.0, AppColors.blackColor,
+                                  FontWeight.w500, 'FontRegular'),
                         ),
                       ),
                     ),
@@ -202,7 +192,6 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
               ),
             )
           ],
-
         ),
       ),
     );

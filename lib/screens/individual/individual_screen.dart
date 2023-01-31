@@ -1,3 +1,4 @@
+import 'package:country_calling_code_picker/country.dart';
 import 'package:country_calling_code_picker/functions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +18,10 @@ class Individual_Screen extends StatefulWidget {
 
 class _Individual_ScreenState extends State<Individual_Screen> {
 
-  // Country? _selectedCountry;
+  Country? _selectedCountry;
   bool mobileVerify = true;
   bool countryB = false;
+
 
   FocusNode fnameFocus = FocusNode();
   FocusNode lnameFocus = FocusNode();
@@ -30,15 +32,33 @@ class _Individual_ScreenState extends State<Individual_Screen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController mobileController = TextEditingController();
 
-  // void initCountry() async {
-  //   final country = await getDefaultCountry(context);
-  //   setState(() {
-  //     _selectedCountry = country;
-  //     countryB = true;
-  //
-  //   });
-  // }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    initCountry();
+  }
 
+  void initCountry() async {
+    final country = await getDefaultCountry(context);
+    setState(() {
+      _selectedCountry = country;
+      countryB = true;
+
+    });
+  }
+
+
+  void _onPressedShowBottomSheet() async {
+    final country = await showCountryPickerSheets(
+      context,
+    );
+    if (country != null) {
+      setState(() {
+        _selectedCountry = country;
+      });
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -300,79 +320,99 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                           SizedBox(
                             height: 10.0,
                           ),
-                          // Row(
-                          //   children: [
-                          //     Container(
-                          //         padding: const EdgeInsets.only(
-                          //             left: 10.0, right: 10.0, top: 14.0, bottom: 14.0),
-                          //         decoration: BoxDecoration(
-                          //           border: Border.all(
-                          //               color: AppColors.appColor,
-                          //               width: 1.0),
-                          //           color: AppColors.appColor,
-                          //           borderRadius: BorderRadius.only(
-                          //             topLeft: Radius.circular(5.0),
-                          //             bottomLeft: Radius.circular(5.0),
-                          //           ),
-                          //         ),
-                          //         child: Row(
-                          //           children: [
-                          //             InkWell(
-                          //               onTap: _onPressedShowBottomSheet,
-                          //               child: Row(
-                          //                 children: [
-                          //                   Text(
-                          //                     countryB
-                          //                         ? _selectedCountry!.callingCode.toString()
-                          //                         : "+1",
-                          //                     style: CustomWidget(context: context)
-                          //                         .CustomTextStyle(
-                          //                         Theme.of(context).splashColor,
-                          //                         FontWeight.normal,
-                          //                         'FontRegular'),
-                          //                   ),
-                          //                   const SizedBox(
-                          //                     width: 3.0,
-                          //                   ),
-                          //                   const Icon(
-                          //                     Icons.keyboard_arrow_down_outlined,
-                          //                     size: 15.0,
-                          //                     color: AppColors.backgroundColor,
-                          //                   )
-                          //                 ],
-                          //               ),
-                          //             ),
-                          //             const SizedBox(
-                          //               width: 10.0,
-                          //             ),
-                          //           ],
-                          //         )),
-                          //     Flexible(
-                          //       child: TextFormField(
-                          //         controller: mobileController,
-                          //         focusNode: mobileFocus,
-                          //         maxLines: 1,
-                          //         enabled: mobileVerify,
-                          //         textInputAction: TextInputAction.next,
-                          //         keyboardType: TextInputType.number,
-                          //         style: CustomWidget(context: context).CustomTextStyle(
-                          //             Theme.of(context).splashColor,
-                          //             FontWeight.w400,
-                          //             'FontRegular'),
-                          //         decoration: InputDecoration(
-                          //           contentPadding: const EdgeInsets.only(
-                          //               left: 12, right: 0, top: 2, bottom: 2),
-                          //           hintText: "Please enter Mobile",
-                          //           suffixIcon: Container(
-                          //             height: 0.0,
-                          //             ),
-                          //           ),
-                          //           ),
-                          //         )
-                          //       ),
-                          //     ),
-                          //   ],
-                          // ),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15.0),
+                              border: Border.all(color: AppColors.hintColor,width: 1.0)
+                            ),
+                            padding: EdgeInsets.only(left: 3.0,right: 3.0),
+                            child:  Row(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+
+                                    padding: const EdgeInsets.only(
+                                        left: 10.0, right: 10.0, top: 14.0, bottom: 14.0),
+
+                                    child: Row(
+                                      children: [
+                                        InkWell(
+                                          onTap: _onPressedShowBottomSheet,
+                                          child: Row(
+                                            children: [
+                                              countryB
+                                                  ?    Image.asset(
+                                                _selectedCountry!.flag.toString(),
+                                                package: "country_calling_code_picker",
+                                                height: 15.0,
+                                                width: 25.0,
+                                              ):Container(width: 0.0,),
+                                              Text(
+                                                countryB
+                                                    ? _selectedCountry!.callingCode.toString()
+                                                    : "+1",
+                                                style: CustomWidget(context: context)
+                                                    .CustomTextStyle(
+                                                    AppColors.blackColor,
+                                                    FontWeight.normal,
+                                                    'FontRegular'),
+                                              ),
+                                              const SizedBox(
+                                                width: 3.0,
+                                              ),
+                                              const Icon(
+                                                Icons.keyboard_arrow_down_outlined,
+                                                size: 15.0,
+                                                color: AppColors.blackColor,
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 10.0,
+                                        ),
+                                      ],
+                                    ),
+                                width: 100,),
+
+                               Container(
+                                 child: Flexible(
+                                   flex: 1,
+                                   child:  TextFormField(
+                                     controller: mobileController,
+                                     focusNode: mobileFocus,
+
+                                     enabled: true,
+                                     textInputAction: TextInputAction.next,
+                                     keyboardType: TextInputType.number,
+                                     style: CustomWidget(context: context).CustomSizedTextStyle(
+                                         20.0,
+                                         AppColors.blackColor,
+                                         FontWeight.w400,
+                                         'FontRegular'),
+                                     decoration: InputDecoration(
+                                       contentPadding: const EdgeInsets.only(
+                                           left: 12, right: 0, top: 2, bottom: 2),
+                                       hintText: "Please enter Mobile",
+                                       suffixIcon: Container(
+                                         height: 0.0,
+                                       ),
+
+                                       border: InputBorder.none,
+                                       enabledBorder: InputBorder.none,
+                                       focusedBorder: InputBorder.none,
+                                       errorBorder:InputBorder.none,
+
+                                     ),
+                                   ),
+                                 ),
+                               )],
+                            ),
+                          ),
+
+
 
                           SizedBox(
                             height: 20.0,

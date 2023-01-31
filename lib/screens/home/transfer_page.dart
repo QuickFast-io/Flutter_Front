@@ -51,7 +51,7 @@ class _TransferState extends State<Transfer> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.all(15.0),
+
         color: Colors.white,
         child: Stack(
           children: [
@@ -97,41 +97,46 @@ class _TransferState extends State<Transfer> {
           ),
         ],
       ),
-    ):Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+    ):
+    Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Align(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "200 ETH",
-                style: CustomWidget(context: context).CustomSizedTextStyle(
-                    40.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
-                textAlign: TextAlign.center,
-              ),
-              Text(
-                "="+"\$234,568.45",
-                style: CustomWidget(context: context).CustomSizedTextStyle(
-                    16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 20.0,right: 20.0),
-          child: Column(
-            children: [
-              Row(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const SizedBox(height: 50.0,),
+            Align(
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Text(
+                    "200 ETH",
+                    style: CustomWidget(context: context).CustomSizedTextStyle(
+                        40.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "="+"\$234,568.45",
+                    style: CustomWidget(context: context).CustomSizedTextStyle(
+                        16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 50.0,),
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0,right: 20.0),
+              child: Column(
+                children: [
+
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -140,40 +145,44 @@ class _TransferState extends State<Transfer> {
                             14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 24.0,),
+                      Text(
+                        "Etherum (ETH) - BEP20",
+                        style: CustomWidget(context: context).CustomSizedTextStyle(
+                            14.0, AppColors.hintColor2, FontWeight.w400, 'FontRegular'),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30.0,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Text(
                         AppLocalizations.instance.text("loc_from"),
                         style: CustomWidget(context: context).CustomSizedTextStyle(
                             14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 24.0,),
+                      Text(
+                        "Rabbit Wallet (0x9ba8...f658)",
+                        style: CustomWidget(context: context).CustomSizedTextStyle(
+                            14.0,AppColors.hintColor2, FontWeight.w400, 'FontRegular'),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30.0,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Text(
                         AppLocalizations.instance.text("loc_to"),
                         style: CustomWidget(context: context).CustomSizedTextStyle(
                             14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
-                    ],
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Text(
-                        "Etherum(ETH) -BEP20",
-                        style: CustomWidget(context: context).CustomSizedTextStyle(
-                            14.0, AppColors.hintColor2, FontWeight.w400, 'FontRegular'),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 24.0,),
-                      Text(
-                        "Rabbit Wallet(0x9ba8...f658)",
-                        style: CustomWidget(context: context).CustomSizedTextStyle(
-                            14.0,AppColors.hintColor2, FontWeight.w400, 'FontRegular'),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 24.0,),
                       Text(
                         "0x9ba84A2275c45...ca6588235189FDE716",
                         style: CustomWidget(context: context).CustomSizedTextStyle(
@@ -182,21 +191,20 @@ class _TransferState extends State<Transfer> {
                       ),
                     ],
                   ),
-                ],
-              ),
-              SizedBox(height: 15.0,),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 0.5,
-                color:Color(0xFFacacac) ,
-              ),
-              SizedBox(height: 15.0,),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+
+
+
+                  const  SizedBox(height: 30.0,),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 0.5,
+                    color:Color(0xFFacacac) ,
+                  ),
+                  const  SizedBox(height: 30.0,),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -205,41 +213,42 @@ class _TransferState extends State<Transfer> {
                             14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 24.0,),
+                      Text(
+                        "0.4566 ETH (\$5.35)",
+                        style: CustomWidget(context: context).CustomSizedTextStyle(
+                            14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 30.0,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Text(
                         AppLocalizations.instance.text("loc_total"),
                         style: CustomWidget(context: context).CustomSizedTextStyle(
                             14.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
-                    ],
-                  ),
-                  SizedBox(height: 15.0,),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
                       Text(
-                        "0.4566 ETH(\$5.35)",
-                        style: CustomWidget(context: context).CustomSizedTextStyle(
-                            14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 24.0,),
-                      Text(
-                        "195 ETH(\$234,568.45)",
+                        "195 ETH (\$234,568.45)",
                         style: CustomWidget(context: context).CustomSizedTextStyle(
                             14.0, Color(0xFF525252) , FontWeight.w400, 'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
                     ],
                   ),
+
                 ],
               ),
-            ],
-          ),
-        ),
+            ),
 
+
+
+          ],
+        ),
         InkWell(
           onTap: (){
             setState(() {
@@ -252,6 +261,7 @@ class _TransferState extends State<Transfer> {
             });
           },
           child: Container(
+            margin: EdgeInsets.only(bottom: 40.0,right: 20.0,left: 20.0),
             padding: EdgeInsets.only(top: 15.0,bottom: 15.0),
             decoration: BoxDecoration(
               color: AppColors.appColor,
@@ -270,7 +280,6 @@ class _TransferState extends State<Transfer> {
             ),
           ),
         ),
-
       ],
     );
   }
