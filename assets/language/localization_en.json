@@ -105,8 +105,12 @@
   "loc_business_ans": "Business",
   "loc_indi_head": "Provide Personal Information",
   "loc_indi_head2": "Provide Location Details",
+  "loc_indi_head3": "Provide your Identity Information",
+  "loc_indi_head4": "Upload Photo ID",
   "loc_indi_txt1":"Pease enter your legal personal information, including your name, email, and phone number.",
   "loc_indi_txt2": "Please provide your location details, including your city, state, zip code, and address.",
+  "loc_indi_txt3": "Please enter your identity information, including your social security number, date of birth, and any other relevant identification details.",
+  "loc_indi_txt4": "To complete the identity Verification process, please upload your government issued photo ID and proof of address",
   "loc_first_name": "First Name",
   "loc_second_name": "Last Name",
   "loc_email_add": "Email Address ",
@@ -115,5 +119,13 @@
   "loc_suite_no": "Suite or Number ",
   "loc_city":  "City",
   "loc_state": "State ",
-  "loc_zip": "Zip "
+  "loc_zip": "Zip ",
+  "loc_dob": "Date of Birth",
+  "loc_ssn": "Social Scurity Number ",
+  "loc_passport": "Passport or Driver's License ",
+  "loc_id": "ID Number ",
+  "loc_upload_id": "Upload Photo Id",
+  "loc_upload_proof": "Upload Proof of Address",
+  "loc_click_upload": "Click to upload a file",
+  "loc_txt_png": "PNG, JPG up to 5MB"
 }

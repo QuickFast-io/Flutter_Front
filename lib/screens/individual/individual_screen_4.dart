@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/individual/individual_screen_5.dart';
+import 'package:rabbit/screens/success/success_to_buy_sell.dart';
 
 class Individual_Screen4 extends StatefulWidget {
   const Individual_Screen4({Key? key}) : super(key: key);
@@ -39,9 +41,9 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
               ),
             )),
         title: Text(
-          "Individual",
+          AppLocalizations.instance.text("loc_individual_ans"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor2, FontWeight.w500, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -53,9 +55,9 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor2, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -74,24 +76,24 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
               SizedBox(height: 15.0,),
 
               Text(
-                "Upload Photo ID",
+                AppLocalizations.instance.text("loc_indi_head4"),
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
                     24.0,
-                    AppColors.blackColor,
-                    FontWeight.w600,
+                    AppColors.blackColor2,
+                    FontWeight.w500,
                     'FontRegular'),
               ),
               SizedBox(
                 height: 10.0,
               ),
               Text(
-                "To complete the identity Verification process, please upload your government issued photo ID and proof of address",
+                AppLocalizations.instance.text("loc_indi_txt4"),
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
-                    13.0,
-                    AppColors.hintColor,
-                    FontWeight.w500,
+                    14.0,
+                    AppColors.greyColor,
+                    FontWeight.w400,
                     'FontRegular'),
               ),
               SizedBox(
@@ -101,7 +103,7 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Upload Photo Id",
+                    AppLocalizations.instance.text("loc_upload_id"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
@@ -134,34 +136,34 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
                         children: [
                           Image.asset(
                             'assets/menu/upload.png',
-                            height: 20.0,
-                            width: 20.0,
+                            height: 22.0,
+                            width: 22.0,
                             color: AppColors.blackColor,
                           ),
                           SizedBox(
                             height: 10.0,
                           ),
                           Text(
-                            "Click to upload a file",
+                            AppLocalizations.instance.text("loc_click_upload"),
                             textAlign: TextAlign.center,
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
-                                13.0,
+                                16.0,
                                 AppColors.blackColor,
-                                FontWeight.w600,
+                                FontWeight.w500,
                                 'FontRegular'),
                           ),
                           SizedBox(
                             height: 10.0,
                           ),
                           Text(
-                            "PNG, JPG up to 5MB",
+                            AppLocalizations.instance.text("loc_txt_png"),
                             textAlign: TextAlign.center,
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
-                                13.0,
-                                AppColors.hintColor,
-                                FontWeight.w500,
+                                14.0,
+                                AppColors.greyColor,
+                                FontWeight.w400,
                                 'FontRegular'),
                           ),
                         ],
@@ -174,7 +176,7 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
                   ),
 
                   Text(
-                    "Upload Proof of Address",
+                    AppLocalizations.instance.text("loc_upload_proof"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
@@ -207,34 +209,34 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
                         children: [
                           Image.asset(
                             'assets/menu/upload.png',
-                            height: 20.0,
-                            width: 20.0,
+                            height: 22.0,
+                            width: 22.0,
                             color: AppColors.blackColor,
                           ),
                           SizedBox(
                             height: 10.0,
                           ),
                           Text(
-                            "Click to upload a file",
+                            AppLocalizations.instance.text("loc_click_upload"),
                             textAlign: TextAlign.center,
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
-                                13.0,
+                                16.0,
                                 AppColors.blackColor,
-                                FontWeight.w600,
+                                FontWeight.w500,
                                 'FontRegular'),
                           ),
                           SizedBox(
                             height: 10.0,
                           ),
                           Text(
-                            "PNG, JPG up to 5MB",
+                            AppLocalizations.instance.text("loc_txt_png"),
                             textAlign: TextAlign.center,
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
-                                13.0,
-                                AppColors.hintColor,
-                                FontWeight.w500,
+                                14.0,
+                                AppColors.greyColor,
+                                FontWeight.w400,
                                 'FontRegular'),
                           ),
                         ],
@@ -255,7 +257,7 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
                     Navigator.of(context).push(
                         MaterialPageRoute(
                             builder: (context) =>
-                                Individual_Screen5()));
+                                Success_To_Buy_Sell_Property()));
                   });
                 },
                 child: Container(
@@ -269,12 +271,12 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
                   ),
                   child: Center(
                     child: Text(
-                      "Confirm",
+                      AppLocalizations.instance.text("loc_confirm"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          14.0,
+                          16.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),
