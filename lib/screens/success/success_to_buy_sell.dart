@@ -66,7 +66,6 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 children: [
                   Image.asset("assets/menu/succcesss.png",
                     height: 150,),
-
                   SizedBox(height: 20.0,),
                   Text(
                     "Success",
@@ -80,7 +79,6 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                   SizedBox(
                     height: 10.0,
                   ),
-
                   Text(
                     "Your details has been verified!",
                     style: CustomWidget(context: context)
