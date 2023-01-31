@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class BusinessInfo_Screen4 extends StatefulWidget {
   const BusinessInfo_Screen4({Key? key}) : super(key: key);
@@ -34,31 +35,34 @@ class _BusinessInfo_Screen4State extends State<BusinessInfo_Screen4> {
                     SizedBox(height: 15.0,),
                     Image.asset("assets/others/logo.png",
                       color: AppColors.appColor,
-                      height: 80,),
+                      height: 70,),
                     SizedBox(height: 25.0,),
 
                     Text(
-                      "We need more time",
+
+                        AppLocalizations.instance.text("loc_we_need"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          30.0,
+                          32.0,
                           AppColors.blackColor,
-                          FontWeight.w600,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                     SizedBox(
                       height: 10.0,
                     ),
-                    Text(
-                      "We are going to need to take a closer \nlook, please continue using Rabbit while \nwe verify your identity",
+                    Padding(padding: EdgeInsets.only(left:40.0, right:40.0,),
+                        child: Text(
+
+                      AppLocalizations.instance.text("loc_we_need_txt"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          13.0,
-                          AppColors.blackColor,
-                          FontWeight.w500,
+                          14.0,
+                          AppColors.greyColor,
+                          FontWeight.w400,
                           'FontRegular'),
                       textAlign: TextAlign.center,
-                    ),
+                    ),),
                     SizedBox(
                       height: 25.0,
                     ),
@@ -84,12 +88,12 @@ class _BusinessInfo_Screen4State extends State<BusinessInfo_Screen4> {
                   ),
                   child: Center(
                     child: Text(
-                      "Continue",
+                      AppLocalizations.instance.text("loc_continue"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          14.0,
+                          16.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),

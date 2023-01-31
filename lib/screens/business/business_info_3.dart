@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/business/business_info_4.dart';
 
 class BusinessInfo_Screen3 extends StatefulWidget {
@@ -39,9 +40,9 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
               ),
             )),
         title: Text(
-          "Business",
+          AppLocalizations.instance.text("loc_business_ans"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor2, FontWeight.w500, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -53,9 +54,9 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor2, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -82,24 +83,24 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                       SizedBox(height: 15.0,),
 
                       Text(
-                        "Upload Your Business Legal Documents",
+                        AppLocalizations.instance.text("loc_bus_head3"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
                             24.0,
-                            AppColors.blackColor,
-                            FontWeight.w600,
+                            AppColors.blackColor2,
+                            FontWeight.w500,
                             'FontRegular'),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
                       Text(
-                        "To complete the KYC process, please upload the necessary legal document to verify your business.",
+                        AppLocalizations.instance.text("loc_bus_txt3"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            13.0,
-                            AppColors.hintColor,
-                            FontWeight.w500,
+                            14.0,
+                            AppColors.smalltext2Color,
+                            FontWeight.w400,
                             'FontRegular'),
                       ),
                       SizedBox(
@@ -109,7 +110,7 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Articles of Incorporation",
+                      AppLocalizations.instance.text("loc_art_incorp"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -142,34 +143,34 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                                 children: [
                                   Image.asset(
                                     'assets/menu/upload.png',
-                                    height: 20.0,
-                                    width: 20.0,
+                                    height: 22.0,
+                                    width: 22.0,
                                     color: AppColors.blackColor,
                                   ),
                                   SizedBox(
                                     height: 10.0,
                                   ),
                                   Text(
-                                    "Click to upload a file",
+                                    AppLocalizations.instance.text("loc_click_upload"),
                                     textAlign: TextAlign.center,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
-                                        13.0,
+                                        16.0,
                                         AppColors.blackColor,
-                                        FontWeight.w600,
+                                        FontWeight.w500,
                                         'FontRegular'),
                                   ),
                                   SizedBox(
                                     height: 10.0,
                                   ),
                                   Text(
-                                    "PNG, JPG up to 5MB",
+                                    AppLocalizations.instance.text("loc_txt_png"),
                                     textAlign: TextAlign.center,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
-                                        13.0,
-                                        AppColors.hintColor,
-                                        FontWeight.w500,
+                                        14.0,
+                                        AppColors.greyColor,
+                                        FontWeight.w400,
                                         'FontRegular'),
                                   ),
                                 ],
@@ -182,7 +183,8 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                           ),
 
                           Text(
-                            "Tax Returns (Past two years)",
+
+                              AppLocalizations.instance.text("loc_tax_txt"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -215,34 +217,34 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                                 children: [
                                   Image.asset(
                                     'assets/menu/upload.png',
-                                    height: 20.0,
-                                    width: 20.0,
+                                    height: 22.0,
+                                    width: 22.0,
                                     color: AppColors.blackColor,
                                   ),
                                   SizedBox(
                                     height: 10.0,
                                   ),
                                   Text(
-                                    "Click to upload a file",
+                                    AppLocalizations.instance.text("loc_click_upload"),
                                     textAlign: TextAlign.center,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
-                                        13.0,
+                                        16.0,
                                         AppColors.blackColor,
-                                        FontWeight.w600,
+                                        FontWeight.w500,
                                         'FontRegular'),
                                   ),
                                   SizedBox(
                                     height: 10.0,
                                   ),
                                   Text(
-                                    "PNG, JPG up to 5MB",
+                                    AppLocalizations.instance.text("loc_txt_png"),
                                     textAlign: TextAlign.center,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
-                                        13.0,
-                                        AppColors.hintColor,
-                                        FontWeight.w500,
+                                        14.0,
+                                        AppColors.greyColor,
+                                        FontWeight.w400,
                                         'FontRegular'),
                                   ),
                                 ],
@@ -254,7 +256,8 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                           ),
 
                           Text(
-                            "Other Documents",
+
+                              AppLocalizations.instance.text("loc_other_doc"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -287,34 +290,34 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                                 children: [
                                   Image.asset(
                                     'assets/menu/upload.png',
-                                    height: 20.0,
-                                    width: 20.0,
+                                    height: 22.0,
+                                    width: 22.0,
                                     color: AppColors.blackColor,
                                   ),
                                   SizedBox(
                                     height: 10.0,
                                   ),
                                   Text(
-                                    "Click to upload a file",
+                                    AppLocalizations.instance.text("loc_click_upload"),
                                     textAlign: TextAlign.center,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
-                                        13.0,
+                                        16.0,
                                         AppColors.blackColor,
-                                        FontWeight.w600,
+                                        FontWeight.w500,
                                         'FontRegular'),
                                   ),
                                   SizedBox(
                                     height: 10.0,
                                   ),
                                   Text(
-                                    "PNG, JPG up to 5MB",
+                                    AppLocalizations.instance.text("loc_txt_png"),
                                     textAlign: TextAlign.center,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
-                                        13.0,
-                                        AppColors.hintColor,
-                                        FontWeight.w500,
+                                        14.0,
+                                        AppColors.greyColor,
+                                        FontWeight.w400,
                                         'FontRegular'),
                                   ),
                                 ],
@@ -349,12 +352,12 @@ class _BusinessInfo_Screen3State extends State<BusinessInfo_Screen3> {
                   ),
                   child: Center(
                     child: Text(
-                      "Confirm",
+                      AppLocalizations.instance.text("loc_confirm"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          14.0,
+                          16.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),

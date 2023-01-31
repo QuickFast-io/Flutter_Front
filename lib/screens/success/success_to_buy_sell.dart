@@ -65,10 +65,10 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
                   Image.asset("assets/menu/succcesss.png",
-                    height: 150,),
-                  SizedBox(height: 20.0,),
+                    height: 180,),
+                  SizedBox(height: 15.0,),
                   Text(
-                    "Success",
+                      AppLocalizations.instance.text("loc_success"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         32.0,
@@ -77,27 +77,28 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                         'FontRegular'),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 5.0,
                   ),
                   Text(
-                    "Your details has been verified!",
+                      AppLocalizations.instance.text("loc_verify_details"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
+                        16.0,
+                        AppColors.smalltext2Color,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 25.0,
                   ),
                   Text(
-                    "Now you can buy or sell properties",
-                    style: CustomWidget(context: context)
+
+                      AppLocalizations.instance.text("loc_verify_txt"),
+              style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
+                        16.0,
+                        AppColors.greyColor,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
 
@@ -121,12 +122,12 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 ),
                 child: Center(
                   child: Text(
-                    "Continue",
+                    AppLocalizations.instance.text("loc_continue"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w700,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                 ),
