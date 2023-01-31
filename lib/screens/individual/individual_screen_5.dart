@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class Individual_Screen5 extends StatefulWidget {
   const Individual_Screen5({Key? key}) : super(key: key);
@@ -37,12 +38,12 @@ class _Individual_Screen5State extends State<Individual_Screen5> {
                   SizedBox(height: 25.0,),
 
                   Text(
-                    "Wait a minute",
+                    AppLocalizations.instance.text("loc_wait_min"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        30.0,
-                        AppColors.blackColor,
-                        FontWeight.w600,
+                        32.0,
+                        AppColors.blackColor2,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(
@@ -50,12 +51,12 @@ class _Individual_Screen5State extends State<Individual_Screen5> {
                   ),
 
                   Text(
-                    "We are hunting this information down",
+                    AppLocalizations.instance.text("loc_wait_txt"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        13.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
+                        14.0,
+                        AppColors.greyColor,
+                        FontWeight.w400,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),

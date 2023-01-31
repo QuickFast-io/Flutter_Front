@@ -124,7 +124,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
                             14.0,
-                            AppColors.hintColor,
+                            AppColors.greyColor,
                             FontWeight.w400,
                             'FontRegular'),
                       ),

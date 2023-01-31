@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
 import 'package:rabbit/screens/business/business_info_2.dart';
 
@@ -67,9 +68,9 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
               ),
             )),
         title: Text(
-          "Business",
+          AppLocalizations.instance.text("loc_business_ans"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor2, FontWeight.w500, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -81,9 +82,9 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor2, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -109,24 +110,25 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                       SizedBox(height: 15.0,),
 
                       Text(
-                        "Enter Your Business Information and Location",
+                          AppLocalizations.instance.text("loc_bus_head"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            25.0,
-                            AppColors.blackColor,
-                            FontWeight.w600,
+                            24.0,
+                            AppColors.blackColor2,
+                            FontWeight.w500,
                             'FontRegular'),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
                       Text(
-                        "Please enter your business's information and location, including the entity name and address.",
+
+                          AppLocalizations.instance.text("loc_bus_txt1"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            13.0,
-                            AppColors.hintColor,
-                            FontWeight.w500,
+                            14.0,
+                            AppColors.smalltext2Color,
+                            FontWeight.w400,
                             'FontRegular'),
                       ),
                       SizedBox(
@@ -136,7 +138,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Entity Name ",
+                      AppLocalizations.instance.text("loc_entity_name"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -188,7 +190,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                           ),
 
                           Text(
-                            "Entity Address ",
+                            AppLocalizations.instance.text("loc_entity_add"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -239,7 +241,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                           ),
 
                           Text(
-                            "City",
+                            AppLocalizations.instance.text("loc_city"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -285,7 +287,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                                 "Select Category",
                                 style: CustomWidget(context: context).CustomSizedTextStyle(
                                     12.0,
-                                    Theme.of(context).errorColor,
+                                    AppColors.blackColor2,
                                     FontWeight.w500,
                                     'FontRegular'),
                               ),
@@ -302,7 +304,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                           ),
 
                           Text(
-                            "State ",
+                            AppLocalizations.instance.text("loc_state"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -348,7 +350,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                                 "Select Category",
                                 style: CustomWidget(context: context).CustomSizedTextStyle(
                                     12.0,
-                                    Theme.of(context).errorColor,
+                                    AppColors.blackColor2,
                                     FontWeight.w500,
                                     'FontRegular'),
                               ),
@@ -365,7 +367,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                           ),
 
                           Text(
-                            "Zip ",
+                            AppLocalizations.instance.text("loc_zip"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -446,12 +448,12 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                   ),
                   child: Center(
                     child: Text(
-                      "Continue",
+                      AppLocalizations.instance.text("loc_continue"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          14.0,
+                          16.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),

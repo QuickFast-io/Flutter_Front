@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
 import 'package:rabbit/screens/individual/individual_screen_4.dart';
 
@@ -100,9 +101,9 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
               ),
             )),
         title: Text(
-          "Individual",
+          AppLocalizations.instance.text("loc_individual_ans"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor2, FontWeight.w500, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -114,9 +115,9 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor2, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -142,24 +143,24 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                     SizedBox(height: 15.0,),
 
                     Text(
-                      "Provide your Identity Information",
+                      AppLocalizations.instance.text("loc_indi_head3"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
                           24.0,
-                          AppColors.blackColor,
-                          FontWeight.w600,
+                          AppColors.blackColor2,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                     SizedBox(
                       height: 10.0,
                     ),
                     Text(
-                      "Please enter your identity information, including your social security number, date of birth, and any other relevant identification details.",
+                      AppLocalizations.instance.text("loc_indi_txt3"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          13.0,
-                          AppColors.hintColor,
-                          FontWeight.w500,
+                          14.0,
+                          AppColors.greyColor,
+                          FontWeight.w400,
                           'FontRegular'),
                     ),
                     SizedBox(
@@ -170,7 +171,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                       children: [
 
                         Text(
-                          "Date of Birth",
+                          AppLocalizations.instance.text("loc_dob"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
@@ -237,7 +238,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                         ),
 
                         Text(
-                          "Social Scurity Number ",
+                          AppLocalizations.instance.text("loc_ssn"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
@@ -288,7 +289,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                         ),
 
                         Text(
-                          "Passport or Driver's License ",
+                          AppLocalizations.instance.text("loc_passport"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
@@ -334,7 +335,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                               "Select Category",
                               style: CustomWidget(context: context).CustomSizedTextStyle(
                                   12.0,
-                                  Theme.of(context).errorColor,
+                                  AppColors.blackColor2,
                                   FontWeight.w500,
                                   'FontRegular'),
                             ),
@@ -351,7 +352,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                         ),
 
                         Text(
-                          "ID Number ",
+                          AppLocalizations.instance.text("loc_id"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
@@ -426,12 +427,12 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                   ),
                   child: Center(
                     child: Text(
-                      "Continue",
+                      AppLocalizations.instance.text("loc_continue"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          14.0,
+                          16.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),

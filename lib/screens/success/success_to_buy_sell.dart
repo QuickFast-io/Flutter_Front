@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class Success_To_Buy_Sell_Property extends StatefulWidget {
   const Success_To_Buy_Sell_Property({Key? key}) : super(key: key);
@@ -41,9 +42,9 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
               height: 22,),
             SizedBox(width: 5.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.darkblackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -64,41 +65,41 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
                   Image.asset("assets/menu/succcesss.png",
-                    height: 150,),
-
-                  SizedBox(height: 20.0,),
+                    height: 180,),
+                  SizedBox(height: 15.0,),
                   Text(
-                    "Success",
+                      AppLocalizations.instance.text("loc_success"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        28.0,
-                        AppColors.blackColor,
-                        FontWeight.w600,
-                        'FontRegular'),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-
-                  Text(
-                    "Your details has been verified!",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
+                        32.0,
+                        AppColors.blackColor2,
                         FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(
-                    height: 20.0,
+                    height: 5.0,
                   ),
+
                   Text(
-                    "Now you can buy or sell properties",
+                      AppLocalizations.instance.text("loc_verify_details"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
+                        16.0,
+                        AppColors.smalltext2Color,
+                        FontWeight.w400,
+                        'FontRegular'),
+                  ),
+                  SizedBox(
+                    height: 25.0,
+                  ),
+                  Text(
+
+                      AppLocalizations.instance.text("loc_verify_txt"),
+              style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        16.0,
+                        AppColors.greyColor,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
 
@@ -122,12 +123,12 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 ),
                 child: Center(
                   child: Text(
-                    "Continue",
+                    AppLocalizations.instance.text("loc_continue"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w700,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                 ),
