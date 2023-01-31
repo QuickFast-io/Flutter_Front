@@ -50,7 +50,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
     return Column(
       children: [
         SizedBox(
-          height: 20.0,
+          height: 30.0,
         ),
         Expanded(
           flex: 3,
@@ -61,7 +61,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
               Image.asset(
                 widget.coinDetails!.image.toString(),
                 width: 80.0,
-                height: 60.0,
+                height: 40.0,
               ),
               SizedBox(
                 height: 24.0,
@@ -75,7 +75,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                         " " +
                         widget.coinDetails!.coin.toString(),
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        51.0,
+                       45.0,
                         AppColors.blackColor,
                         FontWeight.w600,
                         'FontRegular'),
@@ -191,7 +191,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
           height: 10.0,
         ),
         Expanded(
-          flex: 5,
+          flex: 7,
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
@@ -253,7 +253,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
           return StatefulBuilder(
               builder: (BuildContext context, StateSetter ssetState) {
             return Container(
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.78,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -264,9 +264,10 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
               ),
               padding: EdgeInsets.only(right: 15.0, left: 15.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: 8.0,),
                   Center(
                     child: GestureDetector(
                       onTap: () {
@@ -283,7 +284,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                     ),
                   ),
                   SizedBox(
-                    height: 5.0,
+                    height: 25.0,
                   ),
                   Align(
                     alignment: Alignment.center,
@@ -299,22 +300,26 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
-                          height: 10.0,
+                          height: 25.0,
                         ),
                         Image.asset(
                           "assets/others/qr.png",
-                          height: 296.0,
-                          width: 296.0,
+                          height: 250.0,
+                          width: 250.0,
+                          fit: BoxFit.fill,
                         ),
                         SizedBox(
 
-                          child: Text(
-                            "Send only ETH to this address,sending any other asset will result in permanent loss",
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(14.0, Color(0xFF737373),
-                                    FontWeight.w400, 'FontRegular'),
-                            textAlign: TextAlign.center,
-                          ),
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 25.0,right: 25.0,),
+                            child: Text(
+                              "Send only ETH to this address,sending any other asset will result in permanent loss",
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(14.0, Color(0xFF737373),
+                                  FontWeight.w400, 'FontRegular'),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
                         ),
                       ],
                     ),
@@ -323,6 +328,9 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(
+                        height: 35.0,
+                      ),
                       Text(
                         "Wallet  address",
                         style: CustomWidget(context: context)
@@ -341,7 +349,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                         textAlign: TextAlign.start,
                       ),
                       SizedBox(
-                        height: 25.0,
+                        height: 35.0,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
