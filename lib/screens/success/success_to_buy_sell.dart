@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class Success_To_Buy_Sell_Property extends StatefulWidget {
   const Success_To_Buy_Sell_Property({Key? key}) : super(key: key);
@@ -41,9 +42,9 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
               height: 22,),
             SizedBox(width: 5.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.darkblackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -71,9 +72,9 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                     "Success",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        28.0,
-                        AppColors.blackColor,
-                        FontWeight.w600,
+                        32.0,
+                        AppColors.blackColor2,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(

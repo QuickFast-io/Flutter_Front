@@ -426,8 +426,6 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                   ),
                 ),
               ),
-
-
               InkWell(
                 onTap: (){
                   setState(() {
