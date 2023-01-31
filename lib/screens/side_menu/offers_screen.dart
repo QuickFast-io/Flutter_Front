@@ -225,7 +225,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/Bathtub.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "4000 "+AppLocalizations.instance.text("loc_square_fit"),
+                            "4,000 "+AppLocalizations.instance.text("loc_square_fit"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -369,7 +369,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/Bathtub.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "4000 "+AppLocalizations.instance.text("loc_square_fit"),
+                            "4,000 "+AppLocalizations.instance.text("loc_square_fit"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,

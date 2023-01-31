@@ -22,7 +22,7 @@ class AppColors {
   static const Color  sellbackColor =  Color(0xFF2e232b);
   static const Color  buyColor =  Color(0xFF20d5aa);
   static const Color  buybackColor =  Color(0xFF102f31);
-  static const Color  switchbackColor =  Color(0xFFf8f8f8);
+  static const Color  switchbackColor =  Color(0xffefdede);
   static const Color  greyColor =  Color(0xFF404040);
   static const Color  lightgreyColor =  Color(0xFF1E1E1E);
   static const Color  smalltext1Color =  Color(0xFF242424);

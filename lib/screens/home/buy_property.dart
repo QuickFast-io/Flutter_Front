@@ -107,7 +107,7 @@ class _BuyPropertyState extends State<BuyProperty> {
                         Image.asset("assets/others/Bathtub.png",height: 17.0,width: 27.0),
                         SizedBox(width: 5.0,),
                         Text(
-                          "4000 Sq Ft",
+                          "4,000 Sq Ft",
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               13.0,

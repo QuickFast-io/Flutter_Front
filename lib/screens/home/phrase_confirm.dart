@@ -71,7 +71,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
                 ), //Checkbox//SizedBox
                 Flexible(
                     child: Container(
-                  margin: EdgeInsets.only(top: 15.0),
+                  margin: EdgeInsets.only(top: 12.0),
                   child: Text(
                     'I acknowledge and accept the wallet terms of use',
                     style: CustomWidget(context: context).CustomSizedTextStyle(
@@ -107,7 +107,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
                     child: Container(
                   margin: EdgeInsets.only(top: 10.0),
                   child: Text(
-                    'I understand my digital assets are held and  controlled on this device.Rabbit has no custody  access or control over my asset.',
+                    'I understand my digital assets are held and  controlled on this device. Rabbit has no custody  access or control over my asset.',
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         14.0,
                         AppColors.blackColor,
@@ -140,7 +140,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
                     child: Container(
                   margin: EdgeInsets.only(top: 10.0),
                   child: Text(
-                    'Rabbit can never recover my assets for me.it is my responsibility to maintain my 12 words recovery phrase. If I lose my recovery phrase,I it can\'t be recovered',
+                    'Rabbit can never recover my assets for me. It is my responsibility to maintain my 12 word recovery phrase. If I lose my recovery phrase, I it can\'t be recovered',
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         14.0,
                         AppColors.blackColor,

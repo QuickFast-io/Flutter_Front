@@ -22,7 +22,6 @@ class _SendScreenState extends State<SendScreen> {
   TextEditingController amountController = TextEditingController();
   TextEditingController networkController = TextEditingController();
   List _selectedNetwork = [
-    "ETH","BEP","BTC"
   ];
   String selectedValue= "";
 
@@ -30,7 +29,7 @@ class _SendScreenState extends State<SendScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    selectedValue=_selectedNetwork.first;
+   // selectedValue=_selectedNetwork.first;
   }
 
   @override
@@ -50,7 +49,7 @@ class _SendScreenState extends State<SendScreen> {
           },
         ),
         title: Text(
-          AppLocalizations.instance.text("loc_send")+widget.coinDetails!.coin.toString(),
+          AppLocalizations.instance.text("loc_send")+" "+widget.coinDetails!.coin.toString(),
           style: CustomWidget(context: context).CustomSizedTextStyle(
               18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
           textAlign: TextAlign.center,
@@ -96,7 +95,7 @@ class _SendScreenState extends State<SendScreen> {
                   height: 10.0,
                 ),
                 Text(
-                  "Send"+ widget.coinDetails!.coin.toString()+" to crypto address ",
+                  "Send "+ widget.coinDetails!.coin.toString()+" to crypto address ",
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
                       14.0,
@@ -137,7 +136,7 @@ class _SendScreenState extends State<SendScreen> {
                   focusNode: addressFocus,
                   maxlines: 1,
                   text: '',
-                  hintText: "Long press and paste,Address,ENS etc..",
+                  hintText: "Long press and paste, Address, ENS etc..",
                   obscureText: false,
                   suffix:Padding(
                     padding: EdgeInsets.only(right: 10.0),
@@ -214,7 +213,7 @@ class _SendScreenState extends State<SendScreen> {
                       "Select correct network",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
                           12.0,
-                          Theme.of(context).errorColor,
+                       AppColors.hintColor,
                           FontWeight.w500,
                           'FontRegular'),
                     ),

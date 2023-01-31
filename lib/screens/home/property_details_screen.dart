@@ -135,7 +135,7 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                   Image.asset("assets/others/Bathtub.png",height: 24.0,width: 24.0),
                   SizedBox(width: 5.0,),
                   Text(
-                    "4000 Sq Ft",
+                    "4,000 Sq Ft",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,

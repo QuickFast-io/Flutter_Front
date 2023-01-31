@@ -97,7 +97,7 @@ class _WalletState extends State<Wallet> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "\$ 40,990,245",
+                    "\$40,990,245",
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         34.0,
                         AppColors.blackColor,
@@ -106,7 +106,7 @@ class _WalletState extends State<Wallet> {
                     textAlign: TextAlign.center,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 5.0),
+                    padding: EdgeInsets.only(top: 10.0),
                     child: Text(
                       ".67",
                       style: CustomWidget(context: context)
@@ -298,7 +298,7 @@ class _WalletState extends State<Wallet> {
                             width: 5.0,
                           ),
                           Text(
-                            "4000 Sq Ft",
+                            "4,000 Sq Ft",
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(14.0, Color(0xFF696969),
                                 FontWeight.w400, 'FontRegular'),
@@ -423,7 +423,7 @@ class _WalletState extends State<Wallet> {
                                           crossAxisAlignment: CrossAxisAlignment.end,
                                           children: [
                                             Text(
-                                              "\$"+transList[index].quantity.toString()+" "+transList[index].coin.toString(),
+                                              transList[index].quantity.toString()+" "+transList[index].coin.toString(),
                                               style: CustomWidget(context: context)
                                                   .CustomSizedTextStyle(14.0, Colors.black,
                                                   FontWeight.w400, 'FontRegular'),

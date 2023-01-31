@@ -129,7 +129,6 @@ class _PassphraseState extends State<Passphrase> {
                     ),
                     EasyStep(
                       icon: "2",
-
                       activeIcon: "2",
                       title: 'Secure Wallet',
                     ),
@@ -218,16 +217,25 @@ class _PassphraseState extends State<Passphrase> {
             ),
           ),
           SizedBox(
-            height: 15.0,
+            height: 10.0,
           ),
-        Padding(padding: EdgeInsets.only(left: 20.0,right: 20.0),child:   Center(
-          child: Text(
-            AppLocalizations.instance.text("loc_phrase_description"),
-            style: CustomWidget(context: context).CustomSizedTextStyle(
-                14.0, AppColors.greyColor, FontWeight.w400, 'FontRegular'),
-            textAlign: TextAlign.center,
+          Container(
+            width: MediaQuery.of(context).size.width,
+            child: Center(
+              child: Padding(
+                padding: EdgeInsets.only(left: 45.0, right: 45.0),
+                child: Text(
+                  AppLocalizations.instance.text("loc_phrase_description"),
+                  style: CustomWidget(context: context).CustomSizedTextStyle(
+                      14.0,
+                      AppColors.greyColor,
+                      FontWeight.w400,
+                      'FontRegular'),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
           ),
-        ),),
           Padding(
             padding: const EdgeInsets.only(
               top: 35.0,
@@ -341,6 +349,9 @@ class _PassphraseState extends State<Passphrase> {
               Checkbox(
                 value: this.checkedValue,
                 checkColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(3.0),
+                ),
                 activeColor: AppColors.appColor,
                 onChanged: (bool? value) {
                   setState(() {
