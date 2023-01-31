@@ -118,6 +118,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               borderRadius: BorderRadius.circular(5.0),
                             ),
                             value: property,
+                            checkColor: AppColors.blackColor,
                             onChanged: (bool? value) {
                               setState(() {
                                 property = value!;
@@ -189,6 +190,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5.0),
                             ),
+                            checkColor: AppColors.blackColor,
                             value: tour,
                             onChanged: (bool? value) {
                               setState(() {

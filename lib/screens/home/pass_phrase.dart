@@ -348,7 +348,7 @@ class _PassphraseState extends State<Passphrase> {
             children: <Widget>[
               Checkbox(
                 value: this.checkedValue,
-                checkColor: Colors.white,
+                checkColor: Colors.black,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(3.0),
                 ),

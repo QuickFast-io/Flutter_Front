@@ -200,7 +200,7 @@ class _BusinessInfo_Screen2State extends State<BusinessInfo_Screen2> {
                                     selectedIncopDate!.day));
                           },
                           child: Container(
-                            padding: EdgeInsets.fromLTRB(10.0, 13.0, 10.0, 13.0),
+                            padding: EdgeInsets.fromLTRB(10.0,2.0, 10.0,5.0),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20.0),
                                 border: Border.all(color: AppColors.hintColor.withOpacity(0.3)),
@@ -210,15 +210,32 @@ class _BusinessInfo_Screen2State extends State<BusinessInfo_Screen2> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  inCopController.text.toString(),
-                                  style: CustomWidget(context: context)
-                                      .CustomSizedTextStyle(
-                                      14.0,
-                                      AppColors.blackColor,
-                                      FontWeight.w500,
-                                      'FontRegular'),
-                                ),
+                               Flexible(child:  Container(
+
+
+                                 child: TextField(
+                                   controller: inCopController,
+                                   enabled: false,
+                                   style: CustomWidget(context: context)
+                                       .CustomSizedTextStyle(
+                                       14.0,
+                                       AppColors.blackColor,
+                                       FontWeight.w500,
+                                       'FontRegular'),
+                                   decoration: InputDecoration(
+                                     border: InputBorder.none,
+                                     hintText: "mm/dd//yy",
+                                     hintStyle: CustomWidget(context: context)
+                                         .CustomSizedTextStyle(
+                                         14.0,
+                                         AppColors.greyColor,
+                                         FontWeight.w500,
+                                         'FontRegular'),
+                                   ),
+                                 ),
+                                 height: 42.0,
+                                 margin: EdgeInsets.only(bottom: 2.0),
+                               ),),
                                 Icon(
                                   Icons.date_range_outlined,
                                   size: 20.0,

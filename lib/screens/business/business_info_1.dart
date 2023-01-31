@@ -4,6 +4,7 @@ import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
 import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
+import 'package:rabbit/common/textformfield_custom_limit.dart';
 import 'package:rabbit/screens/business/business_info_2.dart';
 
 class BusinessInfo_Screen1 extends StatefulWidget {
@@ -201,7 +202,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                           SizedBox(
                             height: 10.0,
                           ),
-                          TextFormFieldCustom(
+                          TextFormFieldCustomLimit(limit: 35,
                             onEditComplete: () {
                               addressFocus.unfocus();
                               FocusScope.of(context).requestFocus(zipFocus);
