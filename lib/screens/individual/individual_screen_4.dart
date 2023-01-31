@@ -64,227 +64,225 @@ class _Individual_Screen4State extends State<Individual_Screen4> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
-          color: AppColors.whiteColor,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 15.0,),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
+        color: AppColors.whiteColor,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 15.0,),
 
-              Text(
-                AppLocalizations.instance.text("loc_indi_head4"),
-                style: CustomWidget(context: context)
-                    .CustomSizedTextStyle(
-                    24.0,
-                    AppColors.blackColor2,
-                    FontWeight.w500,
-                    'FontRegular'),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                AppLocalizations.instance.text("loc_indi_txt4"),
-                style: CustomWidget(context: context)
-                    .CustomSizedTextStyle(
-                    14.0,
-                    AppColors.greyColor,
-                    FontWeight.w400,
-                    'FontRegular'),
-              ),
-              SizedBox(
-                height: 25.0,
-              ),
-              Form(child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    AppLocalizations.instance.text("loc_upload_id"),
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
-                        'FontRegular'),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
+            Text(
+              AppLocalizations.instance.text("loc_indi_head4"),
+              style: CustomWidget(context: context)
+                  .CustomSizedTextStyle(
+                  24.0,
+                  AppColors.blackColor2,
+                  FontWeight.w500,
+                  'FontRegular'),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text(
+              AppLocalizations.instance.text("loc_indi_txt4"),
+              style: CustomWidget(context: context)
+                  .CustomSizedTextStyle(
+                  14.0,
+                  AppColors.greyColor,
+                  FontWeight.w400,
+                  'FontRegular'),
+            ),
+            SizedBox(
+              height: 25.0,
+            ),
+            Form(child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppLocalizations.instance.text("loc_upload_id"),
+                  style: CustomWidget(context: context)
+                      .CustomSizedTextStyle(
+                      14.0,
+                      AppColors.blackColor,
+                      FontWeight.w500,
+                      'FontRegular'),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
 
-                  InkWell(
-                    onTap: () async {
-                    },
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.fromLTRB(10, 50.0, 10, 40.0),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                            color: AppColors
-                                .hintColor
-                                .withOpacity(0.2),
-                            width: 1.0),
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.transparent,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/menu/upload.png',
-                            height: 22.0,
-                            width: 22.0,
-                            color: AppColors.blackColor,
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            AppLocalizations.instance.text("loc_click_upload"),
-                            textAlign: TextAlign.center,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                16.0,
-                                AppColors.blackColor,
-                                FontWeight.w500,
-                                'FontRegular'),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            AppLocalizations.instance.text("loc_txt_png"),
-                            textAlign: TextAlign.center,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                14.0,
-                                AppColors.greyColor,
-                                FontWeight.w400,
-                                'FontRegular'),
-                          ),
-                        ],
-                      ),
+                InkWell(
+                  onTap: () async {
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.fromLTRB(10, 50.0, 10, 40.0),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: AppColors
+                              .hintColor
+                              .withOpacity(0.2),
+                          width: 1.0),
+                      borderRadius: BorderRadius.circular(5.0),
+                      color: Colors.transparent,
                     ),
-                  ),
-
-                  SizedBox(
-                    height: 20.0,
-                  ),
-
-                  Text(
-                    AppLocalizations.instance.text("loc_upload_proof"),
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
-                        'FontRegular'),
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-
-                  InkWell(
-                    onTap: () async {
-                    },
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.fromLTRB(10, 50.0, 10, 40.0),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                            color: AppColors
-                                .hintColor
-                                .withOpacity(0.2),
-                            width: 1.0),
-                        borderRadius: BorderRadius.circular(5.0),
-                        color: Colors.transparent,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/menu/upload.png',
-                            height: 22.0,
-                            width: 22.0,
-                            color: AppColors.blackColor,
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            AppLocalizations.instance.text("loc_click_upload"),
-                            textAlign: TextAlign.center,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                16.0,
-                                AppColors.blackColor,
-                                FontWeight.w500,
-                                'FontRegular'),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text(
-                            AppLocalizations.instance.text("loc_txt_png"),
-                            textAlign: TextAlign.center,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                14.0,
-                                AppColors.greyColor,
-                                FontWeight.w400,
-                                'FontRegular'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-
-
-                ],
-              )),
-              Container(
-                height: 100.0,
-              ),
-
-              InkWell(
-                onTap: (){
-                  setState(() {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                Success_To_Buy_Sell_Property()));
-                  });
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
-                  decoration: BoxDecoration(
-                    color: AppColors.appColor,
-                    // border: Border.all(
-                    //     color: AppColors.blackColor
-                    // ),
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      AppLocalizations.instance.text("loc_confirm"),
-                      style: CustomWidget(context: context)
-                          .CustomSizedTextStyle(
-                          16.0,
-                          AppColors.blackColor,
-                          FontWeight.w500,
-                          'FontRegular'),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/menu/upload.png',
+                          height: 22.0,
+                          width: 22.0,
+                          color: AppColors.blackColor,
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          AppLocalizations.instance.text("loc_click_upload"),
+                          textAlign: TextAlign.center,
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              16.0,
+                              AppColors.blackColor,
+                              FontWeight.w500,
+                              'FontRegular'),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          AppLocalizations.instance.text("loc_txt_png"),
+                          textAlign: TextAlign.center,
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              14.0,
+                              AppColors.greyColor,
+                              FontWeight.w400,
+                              'FontRegular'),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ),
-            ],
 
-          ),
+                SizedBox(
+                  height: 20.0,
+                ),
+
+                Text(
+                  AppLocalizations.instance.text("loc_upload_proof"),
+                  style: CustomWidget(context: context)
+                      .CustomSizedTextStyle(
+                      14.0,
+                      AppColors.blackColor,
+                      FontWeight.w500,
+                      'FontRegular'),
+                ),
+                SizedBox(
+                  height: 10.0,
+                ),
+
+                InkWell(
+                  onTap: () async {
+                  },
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.fromLTRB(10, 50.0, 10, 40.0),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: AppColors
+                              .hintColor
+                              .withOpacity(0.2),
+                          width: 1.0),
+                      borderRadius: BorderRadius.circular(5.0),
+                      color: Colors.transparent,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/menu/upload.png',
+                          height: 22.0,
+                          width: 22.0,
+                          color: AppColors.blackColor,
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          AppLocalizations.instance.text("loc_click_upload"),
+                          textAlign: TextAlign.center,
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              16.0,
+                              AppColors.blackColor,
+                              FontWeight.w500,
+                              'FontRegular'),
+                        ),
+                        SizedBox(
+                          height: 10.0,
+                        ),
+                        Text(
+                          AppLocalizations.instance.text("loc_txt_png"),
+                          textAlign: TextAlign.center,
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(
+                              14.0,
+                              AppColors.greyColor,
+                              FontWeight.w400,
+                              'FontRegular'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+
+              ],
+            )),
+            Container(
+              height: 100.0,
+            ),
+
+            InkWell(
+              onTap: (){
+                setState(() {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              Success_To_Buy_Sell_Property()));
+                });
+              },
+              child: Container(
+                padding: EdgeInsets.fromLTRB(5.0, 15.0, 5.0, 15.0),
+                decoration: BoxDecoration(
+                  color: AppColors.appColor,
+                  // border: Border.all(
+                  //     color: AppColors.blackColor
+                  // ),
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                child: Center(
+                  child: Text(
+                    AppLocalizations.instance.text("loc_confirm"),
+                    style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        16.0,
+                        AppColors.blackColor,
+                        FontWeight.w500,
+                        'FontRegular'),
+                  ),
+                ),
+              ),
+            ),
+          ],
+
         ),
       ),
     );
