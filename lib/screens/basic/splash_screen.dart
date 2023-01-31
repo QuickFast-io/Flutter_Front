@@ -106,7 +106,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    Updated_Terms_Screen()));
+                                    SetpinPage()));
 
                       });
                     },
