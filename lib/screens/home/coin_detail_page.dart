@@ -191,7 +191,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
           height: 10.0,
         ),
         Expanded(
-          flex: 7,
+          flex: 6,
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,

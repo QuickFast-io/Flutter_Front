@@ -92,7 +92,7 @@ class _Sellers_Terms_ScreenState extends State<Sellers_Terms_Screen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              AppLocalizations.instance.text("loc_sales_pricel"),
+                              AppLocalizations.instance.text("loc_sales_price"),
                               textAlign: TextAlign.center,
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(

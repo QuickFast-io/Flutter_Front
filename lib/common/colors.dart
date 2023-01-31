@@ -14,6 +14,7 @@ class AppColors {
   static const Color buttonColor =  Color(0xFFfd0528);
   static const Color textColor =  Color(0xFF8B9CAE);
   static const Color hintColor =  Color(0xFFA3A3A3);
+  static const Color hintColor2 =  Color(0xFF525252);
   static const Color dashtextColor =  Color(0xFF404659);
   static const Color dash1textColor =  Color(0xFFb1b9cc);
   static const Color widgetBackColor =  Color(0xFF1c2130);
