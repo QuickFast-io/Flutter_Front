@@ -33,15 +33,15 @@ class _SetpinPageState extends State<SetpinPage> {
           children: [
             Image.asset(
               "assets/others/logo.png",
-              width: 24.0,
-              height: 24.0,
+              width: 25.0,
+              height: 25.0,
               color: AppColors.appColor,
             ),
-            SizedBox(width: 3.0,),
+            SizedBox(width: 6.0,),
             Text(
               AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
               textAlign: TextAlign.center,
             ),
           ],
@@ -111,7 +111,7 @@ class _SetpinPageState extends State<SetpinPage> {
               bottom: 15.0,
             ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25.0),
+              borderRadius: BorderRadius.circular(18.0),
               color: AppColors.appColor,
             ),
             child: Text(

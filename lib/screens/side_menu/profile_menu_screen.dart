@@ -28,15 +28,6 @@ class _ProfileMenu_ScreenState extends State<ProfileMenu_Screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
-      appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
-        elevation: 0.0,
-        title: Text(
-          "Profile".toUpperCase(),
-          style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
-        ),
-      ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,

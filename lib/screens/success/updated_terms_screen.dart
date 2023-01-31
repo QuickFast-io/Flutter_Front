@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/side_menu/offer_success.dart';
 
 class Updated_Terms_Screen extends StatefulWidget {
@@ -35,9 +36,9 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
         ),
         centerTitle: true,
         title: Text(
-          "Updated  terms",
+            AppLocalizations.instance.text("loc_make_offer"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
         ),
         //
       ),
@@ -68,8 +69,8 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                 width: 35.0,
                                 padding : EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 5.0),
                                 decoration: BoxDecoration(
-                                  color: Colors.orangeAccent,
-                                  borderRadius: BorderRadius.circular(10.0),
+                                  color: Color(0xFF12E3A4),
+                                  borderRadius: BorderRadius.circular(7.0),
                                   // image: DecorationImage(
                                   //   image: AssetImage("assets/images/group.png",),
                                   //   fit: BoxFit.cover,
@@ -77,8 +78,14 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                 ),
 
                                 child: Center(
-                                  child: Image.asset("assets/images/group.png",
-                                    height: 20.0,),
+                                  child: Text("A",
+                                    style: CustomWidget(context: context)
+                                        .CustomSizedTextStyle(
+                                        9.0,
+                                        AppColors.blackColor,
+                                        FontWeight.w500,
+                                        'FontRegular'),
+                                  ),
                                 ),
                               ),
                               SizedBox(width: 15.0,),
@@ -88,13 +95,13 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Caption Jack",
+                                    "Assune",
                                     textAlign: TextAlign.start,
                                     style: CustomWidget(context: context)
                                         .CustomSizedTextStyle(
                                         14.0,
                                         AppColors.blackColor,
-                                        FontWeight.w600,
+                                        FontWeight.w500,
                                         'FontRegular'),
                                     overflow: TextOverflow.ellipsis,
                                   ),
@@ -110,7 +117,7 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                               .CustomSizedTextStyle(
                                               14.0,
                                               AppColors.hintColor,
-                                              FontWeight.w500,
+                                              FontWeight.w400,
                                               'FontRegular'),
                                           overflow: TextOverflow.ellipsis,
                                         ),
@@ -118,7 +125,7 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                       SizedBox(width: 8.0,),
                                       Icon(Icons.copy,
                                         color: Colors.black,
-                                        size: 14.0,
+                                        size: 12.0,
                                       )
                                     ],
                                   )
@@ -145,13 +152,13 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Seller's price",
+                          AppLocalizations.instance.text("loc_sellers_price"),
                           textAlign: TextAlign.start,
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
                               AppColors.blackColor,
-                              FontWeight.w600,
+                              FontWeight.w400,
                               'FontRegular'),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -176,7 +183,7 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                     .CustomSizedTextStyle(
                                     14.0,
                                     AppColors.blackColor,
-                                    FontWeight.w600,
+                                    FontWeight.w400,
                                     'FontRegular'),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -205,13 +212,13 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Earnest money",
+                          AppLocalizations.instance.text("loc_earnest_money"),
                           textAlign: TextAlign.start,
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
                               AppColors.blackColor,
-                              FontWeight.w600,
+                              FontWeight.w400,
                               'FontRegular'),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -236,7 +243,7 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                     .CustomSizedTextStyle(
                                     14.0,
                                     AppColors.blackColor,
-                                    FontWeight.w600,
+                                    FontWeight.w400,
                                     'FontRegular'),
                                 overflow: TextOverflow.ellipsis,
                               ),
@@ -265,13 +272,13 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Total",
+                         AppLocalizations.instance.text("loc_total"),
                           textAlign: TextAlign.start,
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               14.0,
                               AppColors.blackColor,
-                              FontWeight.w600,
+                              FontWeight.w400,
                               'FontRegular'),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -289,7 +296,7 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                                 .CustomSizedTextStyle(
                                 14.0,
                                 AppColors.blackColor,
-                                FontWeight.w600,
+                                FontWeight.w500,
                                 'FontRegular'),
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -318,18 +325,18 @@ class _Updated_Terms_ScreenState extends State<Updated_Terms_Screen> {
                 decoration: BoxDecoration(
                   color: AppColors.whiteColor,
                   border: Border.all(
-                      color: AppColors.blackColor
+                      color: AppColors.blackColor,width: 1.0,
                   ),
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(18.0),
                 ),
                 child: Center(
                   child: Text(
-                    "Make offer",
+                    AppLocalizations.instance.text("loc_make_offer"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                 ),

@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class Success_Deal_Screen extends StatefulWidget {
   const Success_Deal_Screen({Key? key}) : super(key: key);
@@ -40,11 +42,11 @@ class _Success_Deal_ScreenState extends State<Success_Deal_Screen> {
             Image.asset("assets/others/logo.png",
               color: AppColors.appColor,
               height: 22,),
-            SizedBox(width: 5.0,),
+            SizedBox(width: 6.0,),
             Text(
-              "Rabbit",
+             AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -57,42 +59,38 @@ class _Success_Deal_ScreenState extends State<Success_Deal_Screen> {
         padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment. spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment. spaceAround,
           children: [
             Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
-                  Image.asset("assets/menu/succcesss.png",
-                    height: 150,),
-                  SizedBox(height: 20.0,),
+                  Image.asset("assets/menu/succcesss.png",height: 160.0),
+                  SizedBox(height: 24.0,),
                   Text(
-                    "Congratulations",
+                   AppLocalizations.instance.text("loc_congratsl"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        28.0,
-                        AppColors.blackColor,
-                        FontWeight.w600,
-                        'FontRegular'),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
-
-                  Text(
-                    "Deal was successful!",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        15.0,
+                        32.0,
                         AppColors.blackColor,
                         FontWeight.w500,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
-
-                  SizedBox(height: 100.0,),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  Text(
+                    AppLocalizations.instance.text("loc_deal_text"),
+                    style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        16.0,
+                        AppColors.blackColor,
+                        FontWeight.w400,
+                        'FontRegular'),
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
             ),
@@ -110,16 +108,16 @@ class _Success_Deal_ScreenState extends State<Success_Deal_Screen> {
                   // border: Border.all(
                   //     color: AppColors.blackColor
                   // ),
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(18.0),
                 ),
                 child: Center(
                   child: Text(
-                    "Continue",
+                   AppLocalizations.instance.text("loc_con"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                 ),

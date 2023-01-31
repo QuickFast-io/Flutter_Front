@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_switch.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class Offers_Screen extends StatefulWidget {
   const Offers_Screen({Key? key}) : super(key: key);
@@ -43,9 +44,9 @@ class _Offers_ScreenState extends State<Offers_Screen> {
             )),
 
         title: Text(
-          "Offers",
+          AppLocalizations.instance.text("loc_offer"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              18.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -167,7 +168,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                             ),
                             padding: EdgeInsets.only(top: 8.0,bottom: 8.0,left: 15.0,right: 15.0),
                             child: Text(
-                              "Response required",
+                              AppLocalizations.instance.text("loc_response_required"),
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
                                   12.0,
@@ -192,7 +193,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/bed.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "2 bedrooms",
+                            "2 "+AppLocalizations.instance.text("loc_bedroom"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -208,7 +209,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/Kitchen.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "2 Kitchen",
+                            "2 "+AppLocalizations.instance.text("loc_kitchen"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -224,7 +225,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/Bathtub.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "4000 Sq Ft",
+                            "4000 "+AppLocalizations.instance.text("loc_square_fit"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -237,37 +238,43 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 19.0),
                   Text(
-                    "Exquisitely finished detached 6 \nBedroom mansion",
+                    "Exquisitely finished detached 6 Bedroom mansion",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        24.0,
+                        26.0,
                         AppColors.blackColor,
                         FontWeight.w600,
                         'FontRegular'),
                   ),
-                  SizedBox(height: 5.0),
-                  Text(
-                    "123 Happy Street Alpharetta",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        16.0,
-                        AppColors.blackColor,
-                        FontWeight.w400,
-                        'FontRegular'),
-                    textAlign: TextAlign.start,
-                  ),
-                  SizedBox(height: 5.0),
+                  SizedBox(height: 6.0),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SvgPicture.asset("assets/others/locationpin.svg",width: 10.17,height: 14.87,),
+                      SizedBox(width: 6.0,),
+                      Text(
+                        "123 Happy Street Alpharetta",
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(
+                            16.0,
+                            AppColors.blackColor,
+                            FontWeight.w400,
+                            'FontRegular'),
+                        textAlign: TextAlign.start,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 24.0),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "cost : ",
+                        "Cost : ",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            14.0,
+                            12.0,
                             Color(0xFF696969),
                             FontWeight.w600,
                             'FontRegular'),
@@ -279,7 +286,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                             .CustomSizedTextStyle(
                             18.0,
                             Colors.black,
-                            FontWeight.w700,
+                            FontWeight.w600,
                             'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
@@ -330,7 +337,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/bed.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "2 bedrooms",
+                            "2 "+AppLocalizations.instance.text("loc_bedroom"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -346,7 +353,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/Kitchen.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "2 Kitchen",
+                            "2 "+AppLocalizations.instance.text("loc_kitchen"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -362,7 +369,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                           Image.asset("assets/others/Bathtub.png",height: 24.0,width: 24.0),
                           SizedBox(width: 5.0,),
                           Text(
-                            "4000 Sq Ft",
+                            "4000 "+AppLocalizations.instance.text("loc_square_fit"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -375,37 +382,43 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 19.0),
                   Text(
-                    "Exquisitely finished detached 6 \nBedroom mansion",
+                    "Exquisitely finished detached 6 Bedroom mansion",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        24.0,
+                        26.0,
                         AppColors.blackColor,
                         FontWeight.w600,
                         'FontRegular'),
                   ),
-                  SizedBox(height: 5.0),
-                  Text(
-                    "123 Happy Street Alpharetta",
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
-                        16.0,
-                        AppColors.blackColor,
-                        FontWeight.w400,
-                        'FontRegular'),
-                    textAlign: TextAlign.start,
-                  ),
-                  SizedBox(height: 5.0),
+                  SizedBox(height: 6.0),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SvgPicture.asset("assets/others/locationpin.svg",width: 10.17,height: 14.87,),
+                      SizedBox(width: 6.0,),
+                      Text(
+                        "123 Happy Street Alpharetta",
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(
+                            16.0,
+                            AppColors.blackColor,
+                            FontWeight.w400,
+                            'FontRegular'),
+                        textAlign: TextAlign.start,
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 24.0),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        "cost : ",
+                        "Cost : ",
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            14.0,
+                            12.0,
                             Color(0xFF696969),
                             FontWeight.w600,
                             'FontRegular'),
@@ -417,7 +430,7 @@ class _Offers_ScreenState extends State<Offers_Screen> {
                             .CustomSizedTextStyle(
                             18.0,
                             Colors.black,
-                            FontWeight.w700,
+                            FontWeight.w600,
                             'FontRegular'),
                         textAlign: TextAlign.center,
                       ),
