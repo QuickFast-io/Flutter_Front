@@ -93,7 +93,7 @@ class _Recovery_Pharse2State extends State<Recovery_Pharse2> {
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
-                        AppColors.hintColor,
+                        AppColors.greyColor,
                         FontWeight.w400,
                         'FontRegular'),
                   ),

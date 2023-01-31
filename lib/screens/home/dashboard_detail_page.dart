@@ -382,16 +382,16 @@ class _DashboardDetailState extends State<DashboardDetail> {
                  height: 20.0,
                ),
 
-               Text(
-                 "You haven't listed anyproperties,  but we can fix that.",
+               Padding(padding: EdgeInsets.only(left: 40.0, right: 40.0) ,child: Text(
+                 AppLocalizations.instance.text("loc_dashboard_detailes_txt"),
                  textAlign: TextAlign.center,
                  style: CustomWidget(context: context)
                      .CustomSizedTextStyle(
                      18.0,
-                     AppColors.blackColor,
+                     AppColors.blackColor2,
                      FontWeight.w400,
                      'FontRegular'),
-               ),
+               ),),
 
              ],
            ),
