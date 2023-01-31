@@ -63,8 +63,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
                           28.0,
-                          AppColors.blackColor,
-                          FontWeight.w600,
+                          AppColors.blackColor2,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),
@@ -91,8 +91,8 @@ class _SplashScreenState extends State<SplashScreen> {
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               16.0,
-                              AppColors.whiteColor,
-                              FontWeight.w600,
+                              AppColors.whiteColor2,
+                              FontWeight.w500,
                               'FontRegular'),
                         ),
                       ),
@@ -124,7 +124,7 @@ class _SplashScreenState extends State<SplashScreen> {
                               .CustomSizedTextStyle(
                               16.0,
                               AppColors.blackColor,
-                              FontWeight.w600,
+                              FontWeight.w500,
                               'FontRegular'),
                         ),
                       ),

@@ -228,7 +228,6 @@ class _Home_ScreenState extends State<Home_Screen> {
   }
 
   changeIndex(int index) {
-    print(index-1);
     setState(() {
       currentindex = index;
       headerTitle = titleheader[currentindex];

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/country.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
 import 'package:rabbit/screens/individual/individual_screen_2.dart';
 
@@ -65,9 +66,9 @@ class _Individual_ScreenState extends State<Individual_Screen> {
               ),
             )),
         title: Text(
-          "Individual",
+          AppLocalizations.instance.text("loc_individual_ans"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor2, FontWeight.w500, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -79,9 +80,9 @@ class _Individual_ScreenState extends State<Individual_Screen> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor2, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -107,11 +108,11 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                       SizedBox(height: 15.0,),
 
                       Text(
-                        "Provide Personal Information",
+                        AppLocalizations.instance.text("loc_indi_head"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
                             24.0,
-                            AppColors.blackColor,
+                            AppColors.blackColor2,
                             FontWeight.w500,
                             'FontRegular'),
                       ),
@@ -119,7 +120,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                         height: 10.0,
                       ),
                       Text(
-                        "Pease enter your legal personal information, including your name, email, and phone number.",
+                        AppLocalizations.instance.text("loc_indi_txt1"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
                             14.0,
@@ -134,7 +135,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "First Name ",
+                            AppLocalizations.instance.text("loc_first_name"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -186,7 +187,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                           ),
 
                           Text(
-                            "Last Name ",
+                            AppLocalizations.instance.text("loc_second_name"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -237,7 +238,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                           ),
 
                           Text(
-                            "Email Address",
+                            AppLocalizations.instance.text("loc_email_add"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -266,7 +267,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                             focusNode: emailFocus,
                             maxlines: 1,
                             text: '',
-                            hintText: "First,last name@",
+                            hintText: "First, last name@",
                             obscureText: false,
                             suffix: Container(
                               width: 0.0,
@@ -288,7 +289,7 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                           ),
 
                           Text(
-                            "Phone ",
+                            AppLocalizations.instance.text("loc_phone"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -411,12 +412,12 @@ class _Individual_ScreenState extends State<Individual_Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "Continue",
+                            AppLocalizations.instance.text("loc_continue"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
-                                14.0,
+                                16.0,
                                 AppColors.blackColor,
-                                FontWeight.w700,
+                                FontWeight.w500,
                                 'FontRegular'),
                           ),
                         ),

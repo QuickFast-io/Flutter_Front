@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/common/textformfield_custom.dart';
 import 'package:rabbit/screens/individual/individual_screen_3.dart';
 
@@ -67,9 +68,9 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
               ),
             )),
         title: Text(
-          "Individual",
+          AppLocalizations.instance.text("loc_individual_ans"),
           style: CustomWidget(context: context).CustomSizedTextStyle(
-              16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+              18.0, AppColors.blackColor2, FontWeight.w500, 'FontRegular'),
         ),
         centerTitle: true,
         actions: [
@@ -81,9 +82,9 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor2, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -109,24 +110,24 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                       SizedBox(height: 15.0,),
 
                       Text(
-                        "Provide Location Details",
+                        AppLocalizations.instance.text("loc_indi_head2"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            25.0,
-                            AppColors.blackColor,
-                            FontWeight.w600,
+                            24.0,
+                            AppColors.blackColor2,
+                            FontWeight.w500,
                             'FontRegular'),
                       ),
                       SizedBox(
                         height: 10.0,
                       ),
                       Text(
-                        "Please provide your location details, including your city, state, zip code, and address.",
+                        AppLocalizations.instance.text("loc_indi_txt2"),
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
-                            13.0,
-                            AppColors.hintColor,
-                            FontWeight.w500,
+                            14.0,
+                            AppColors.greyColor,
+                            FontWeight.w400,
                             'FontRegular'),
                       ),
                       SizedBox(
@@ -137,7 +138,7 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                         children: [
 
                           Text(
-                            "Address ",
+                            AppLocalizations.instance.text("loc_addres"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -188,7 +189,7 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                           ),
 
                           Text(
-                            "Suite or Number ",
+                            AppLocalizations.instance.text("loc_suite_no"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -239,10 +240,8 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                             height: 20.0,
                           ),
 
-
-
                           Text(
-                            "City",
+                            AppLocalizations.instance.text("loc_city"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -305,7 +304,7 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                           ),
 
                           Text(
-                            "State ",
+                            AppLocalizations.instance.text("loc_state"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -368,7 +367,7 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                           ),
 
                           Text(
-                            "Zip ",
+                            AppLocalizations.instance.text("loc_zip"),
                             style: CustomWidget(context: context)
                                 .CustomSizedTextStyle(
                                 14.0,
@@ -449,12 +448,12 @@ class _Individual_Screen2State extends State<Individual_Screen2> {
                   ),
                   child: Center(
                     child: Text(
-                      "Continue",
+                      AppLocalizations.instance.text("loc_continue"),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(
-                          14.0,
+                          16.0,
                           AppColors.blackColor,
-                          FontWeight.w700,
+                          FontWeight.w500,
                           'FontRegular'),
                     ),
                   ),

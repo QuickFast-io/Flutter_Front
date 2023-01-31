@@ -9,7 +9,8 @@ import 'package:rabbit/screens/home/wallet_page.dart';
 
 class CoinDetailsPage extends StatefulWidget {
   Tag? coinDetails;
-   CoinDetailsPage({Key? key,required this.coinDetails}) : super(key: key);
+
+  CoinDetailsPage({Key? key, required this.coinDetails}) : super(key: key);
 
   @override
   State<CoinDetailsPage> createState() => _CoinDetailsPageState();
@@ -45,11 +46,11 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
     );
   }
 
-  Widget coinDetailUI(){
+  Widget coinDetailUI() {
     return Column(
       children: [
         SizedBox(
-          height: 20.0,
+          height: 30.0,
         ),
         Expanded(
           flex: 3,
@@ -57,7 +58,11 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset(widget.coinDetails!.image.toString(),width: 80.0,height: 60.0,),
+              Image.asset(
+                widget.coinDetails!.image.toString(),
+                width: 80.0,
+                height: 40.0,
+              ),
               SizedBox(
                 height: 24.0,
               ),
@@ -66,9 +71,11 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                   widget.coinDetails!.quantity.toString()+" "+ widget.coinDetails!.coin.toString(),
+                    widget.coinDetails!.quantity.toString() +
+                        " " +
+                        widget.coinDetails!.coin.toString(),
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        51.0,
+                       45.0,
                         AppColors.blackColor,
                         FontWeight.w600,
                         'FontRegular'),
@@ -77,10 +84,10 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   Padding(
                     padding: EdgeInsets.only(top: 12.0),
                     child: Text(
-                      "\$ "+ widget.coinDetails!.value.toString(),
+                      "\$ " + widget.coinDetails!.value.toString(),
                       style: CustomWidget(context: context)
                           .CustomSizedTextStyle(14.0, AppColors.blackColor,
-                          FontWeight.w400, 'FontRegular'),
+                              FontWeight.w400, 'FontRegular'),
                       textAlign: TextAlign.center,
                     ),
                   )
@@ -94,21 +101,20 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(
-                    onTap: (){
-                      Navigator.of(context).push(
-                  MaterialPageRoute(
-                      builder: (context) =>
-                          SendScreen(coinDetails: widget.coinDetails!,)));
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => SendScreen(
+                                coinDetails: widget.coinDetails!,
+                              )));
                     },
                     child: Container(
-                      width: 137.0,
-                      height: 45.0,
+                      width: MediaQuery.of(context).size.width*0.35,
                       decoration: BoxDecoration(
                         color: Colors.transparent,
-                        border: Border.all(color:Colors.black ),
+                        border: Border.all(color: Colors.black),
                         borderRadius: BorderRadius.circular(25.0),
                       ),
-                      padding: EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 8.0),
+                      padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -116,34 +122,40 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                           Icon(
                             Icons.north_east_outlined,
                             color: Colors.black,
-                            size: 19.0,
+                            size: 16.0,
                           ),
-                          SizedBox(width: 3.0,),
+                          SizedBox(
+                            width: 3.0,
+                          ),
                           Text(
-                            "Send".toUpperCase(),
+                            "SEND".toUpperCase(),
                             style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(15.0, AppColors.blackColor,
-                                FontWeight.w400, 'FontRegular'),
+                                .CustomSizedTextStyle(
+                                    15.0,
+                                    AppColors.blackColor,
+                                    FontWeight.w400,
+                                    'FontRegular'),
                             textAlign: TextAlign.center,
                           ),
                         ],
                       ),
                     ),
                   ),
-                  SizedBox(width: 15.0,),
+                  SizedBox(
+                    width: 15.0,
+                  ),
                   InkWell(
-                    onTap: (){
+                    onTap: () {
                       showDepoist();
                     },
                     child: Container(
-                      width: 137.0,
-                      height: 45.0,
+                      width: MediaQuery.of(context).size.width*0.35,
                       decoration: BoxDecoration(
                         color: Colors.transparent,
-                        border: Border.all(color:Colors.black ),
+                        border: Border.all(color: Colors.black),
                         borderRadius: BorderRadius.circular(25.0),
                       ),
-                      padding: EdgeInsets.fromLTRB(24.0, 8.0, 24.0, 8.0),
+                      padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -153,12 +165,17 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                             color: Colors.black,
                             size: 16.0,
                           ),
-                          SizedBox(width: 3.0,),
+                          SizedBox(
+                            width: 3.0,
+                          ),
                           Text(
                             "Receive".toUpperCase(),
                             style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(15.0, AppColors.blackColor,
-                                FontWeight.w400, 'FontRegular'),
+                                .CustomSizedTextStyle(
+                                    15.0,
+                                    AppColors.blackColor,
+                                    FontWeight.w400,
+                                    'FontRegular'),
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -167,7 +184,6 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   ),
                 ],
               ),
-
             ],
           ),
         ),
@@ -175,7 +191,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
           height: 10.0,
         ),
         Expanded(
-          flex: 5,
+          flex: 7,
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
@@ -186,7 +202,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   topLeft: Radius.circular(35.0)),
               color: AppColors.whiteColor,
             ),
-            child:SingleChildScrollView(
+            child: SingleChildScrollView(
               physics: ScrollPhysics(),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -195,7 +211,8 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   Container(
                     height: 160.0,
                   ),
-                  SvgPicture.asset("assets/menu/box.svg",
+                  SvgPicture.asset(
+                    "assets/menu/box.svg",
                     height: 100.0,
                   ),
                   SizedBox(
@@ -204,8 +221,7 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                   Text(
                     "No Transactions",
                     textAlign: TextAlign.center,
-                    style: CustomWidget(context: context)
-                        .CustomSizedTextStyle(
+                    style: CustomWidget(context: context).CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
                         FontWeight.w600,
@@ -220,39 +236,44 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
     );
   }
 
-  showDepoist(){
+  showDepoist() {
     showModalBottomSheet(
-      isScrollControlled: true,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft:Radius.circular(40.0), ),
-      ),
+        isScrollControlled: true,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topRight: Radius.circular(40.0),
+            topLeft: Radius.circular(40.0),
+          ),
+        ),
         barrierColor: Colors.white.withOpacity(0),
         backgroundColor: Colors.white,
         enableDrag: true,
         context: context,
-        builder: (BuildContext con){
-      return StatefulBuilder(
-          builder: (BuildContext context,StateSetter ssetState){
+        builder: (BuildContext con) {
+          return StatefulBuilder(
+              builder: (BuildContext context, StateSetter ssetState) {
             return Container(
-              height: MediaQuery.of(context).size.height * 0.75,
+              height: MediaQuery.of(context).size.height * 0.78,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(topRight: Radius.circular(40.0),topLeft:Radius.circular(40.0), ),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(40.0),
+                  topLeft: Radius.circular(40.0),
+                ),
                 color: Colors.transparent,
               ),
-
-              padding: EdgeInsets.only(right: 15.0,left: 15.0),
+              padding: EdgeInsets.only(right: 15.0, left: 15.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: 8.0,),
                   Center(
                     child: GestureDetector(
-                      onTap:(){
+                      onTap: () {
                         ssetState(() {
                           Navigator.pop(context);
                         });
-
                       },
                       child: Container(
                         alignment: Alignment.center,
@@ -262,7 +283,9 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 5.0,),
+                  SizedBox(
+                    height: 25.0,
+                  ),
                   Align(
                     alignment: Alignment.center,
                     child: Column(
@@ -270,27 +293,33 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Deposit "+widget.coinDetails!.coin,
-                          style: CustomWidget(context: context).CustomSizedTextStyle(
-                              24.0,
-                              AppColors.blackColor,
-                              FontWeight.w600,
-                              'FontRegular'),
+                          "Deposit " + widget.coinDetails!.coin,
+                          style: CustomWidget(context: context)
+                              .CustomSizedTextStyle(24.0, AppColors.blackColor,
+                                  FontWeight.w600, 'FontRegular'),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 10.0,),
-                        Image.asset("assets/others/qr.png",height: 296.0,width: 296.0,),
                         SizedBox(
-                          width: 291.0,
-                          child: Text(
-                            "Send only ETH to this address,sending any\nother asset will result in permanent loss",
-                            style: CustomWidget(context: context).CustomSizedTextStyle(
-                                14.0,
-                                Color(0xFF737373),
-                                FontWeight.w400,
-                                'FontRegular'),
-                            textAlign: TextAlign.center,
-                          ),
+                          height: 25.0,
+                        ),
+                        Image.asset(
+                          "assets/others/qr.png",
+                          height: 250.0,
+                          width: 250.0,
+                          fit: BoxFit.fill,
+                        ),
+                        SizedBox(
+
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 25.0,right: 25.0,),
+                            child: Text(
+                              "Send only ETH to this address,sending any other asset will result in permanent loss",
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(14.0, Color(0xFF737373),
+                                  FontWeight.w400, 'FontRegular'),
+                              textAlign: TextAlign.center,
+                            ),
+                          )
                         ),
                       ],
                     ),
@@ -299,26 +328,29 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      SizedBox(
+                        height: 35.0,
+                      ),
                       Text(
                         "Wallet  address",
-                        style: CustomWidget(context: context).CustomSizedTextStyle(
-                            14.0,
-                            AppColors.blackColor,
-                            FontWeight.w500,
-                            'FontRegular'),
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(14.0, AppColors.blackColor,
+                                FontWeight.w500, 'FontRegular'),
                         textAlign: TextAlign.start,
                       ),
-                      SizedBox(height: 5.0,),
+                      SizedBox(
+                        height: 5.0,
+                      ),
                       Text(
                         "0x9ba84A2275c45......ca6588235189FDE76",
-                        style: CustomWidget(context: context).CustomSizedTextStyle(
-                            16.0,
-                            Color(0xFF737373),
-                            FontWeight.w400,
-                            'FontRegular'),
+                        style: CustomWidget(context: context)
+                            .CustomSizedTextStyle(16.0, Color(0xFF737373),
+                                FontWeight.w400, 'FontRegular'),
                         textAlign: TextAlign.start,
                       ),
-                      SizedBox(height: 25.0,),
+                      SizedBox(
+                        height: 35.0,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -326,10 +358,15 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                           Flexible(
                             child: Container(
                               width: MediaQuery.of(context).size.width,
-                              padding: EdgeInsets.only(top: 10.0,bottom: 10.0,left: 25.0,right: 25.0),
+                              padding: EdgeInsets.only(
+                                  top: 10.0,
+                                  bottom: 10.0,
+                                  left: 25.0,
+                                  right: 25.0),
                               decoration: BoxDecoration(
                                 color: Colors.transparent,
-                                border: Border.all(color: Colors.black,width: 1.0),
+                                border:
+                                    Border.all(color: Colors.black, width: 1.0),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
                               child: Row(
@@ -338,27 +375,41 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                                 children: [
                                   Text(
                                     "Share",
-                                    style: CustomWidget(context: context).CustomSizedTextStyle(
-                                        14.0,
-                                        Colors.black,
-                                        FontWeight.w500,
-                                        'FontRegular'),
+                                    style: CustomWidget(context: context)
+                                        .CustomSizedTextStyle(
+                                            14.0,
+                                            Colors.black,
+                                            FontWeight.w500,
+                                            'FontRegular'),
                                     textAlign: TextAlign.center,
                                   ),
-                                  SizedBox(width: 5.0,),
-                                  Icon(Icons.share_outlined,color: Colors.black,size: 12.0,),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Icon(
+                                    Icons.share_outlined,
+                                    color: Colors.black,
+                                    size: 12.0,
+                                  ),
                                 ],
                               ),
                             ),
                           ),
-                          SizedBox(width: 10.0,),
+                          SizedBox(
+                            width: 10.0,
+                          ),
                           Flexible(
                             child: Container(
                               width: MediaQuery.of(context).size.width,
-                              padding: EdgeInsets.only(top: 10.0,bottom: 10.0,left: 25.0,right: 25.0),
+                              padding: EdgeInsets.only(
+                                  top: 10.0,
+                                  bottom: 10.0,
+                                  left: 25.0,
+                                  right: 25.0),
                               decoration: BoxDecoration(
                                 color: AppColors.appColor,
-                                border: Border.all(color: AppColors.appColor,width: 1.0),
+                                border: Border.all(
+                                    color: AppColors.appColor, width: 1.0),
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
                               child: Row(
@@ -367,15 +418,22 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                                 children: [
                                   Text(
                                     "Copy",
-                                    style: CustomWidget(context: context).CustomSizedTextStyle(
-                                        14.0,
-                                        Colors.black,
-                                        FontWeight.w500,
-                                        'FontRegular'),
+                                    style: CustomWidget(context: context)
+                                        .CustomSizedTextStyle(
+                                            14.0,
+                                            Colors.black,
+                                            FontWeight.w500,
+                                            'FontRegular'),
                                     textAlign: TextAlign.center,
                                   ),
-                                  SizedBox(width: 5.0,),
-                                  Icon(Icons.copy,color: Colors.black,size: 12.0,),
+                                  SizedBox(
+                                    width: 5.0,
+                                  ),
+                                  Icon(
+                                    Icons.copy,
+                                    color: Colors.black,
+                                    size: 12.0,
+                                  ),
                                 ],
                               ),
                             ),
@@ -384,14 +442,10 @@ class _CoinDetailsPageState extends State<CoinDetailsPage> {
                       )
                     ],
                   ),
-
                 ],
               ),
             );
-          }
-      );
-
-    });
+          });
+        });
   }
-
 }

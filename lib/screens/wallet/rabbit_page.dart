@@ -42,9 +42,9 @@ class _RabbitScreenState extends State<RabbitScreen> {
                     height: 30,),
                   SizedBox(width: 5.0,),
                   Text(
-                    "Rabbit",
+                    AppLocalizations.instance.text("loc_app_name"),
                     style: CustomWidget(context: context).CustomSizedTextStyle(
-                        22.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                        25.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
                   ),
                 ],
               ),
@@ -53,9 +53,9 @@ class _RabbitScreenState extends State<RabbitScreen> {
                 AppLocalizations.instance.text("loc_welcome"),
                 style: CustomWidget(context: context)
                     .CustomSizedTextStyle(
-                    34.0,
+                    32.0,
                     AppColors.blackColor,
-                    FontWeight.w600,
+                    FontWeight.w500,
                     'FontRegular'),
               ),
               Padding(
@@ -64,9 +64,9 @@ class _RabbitScreenState extends State<RabbitScreen> {
                   AppLocalizations.instance.text("loc_welcome_description"),
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
-                      18.0,
-                      AppColors.blackColor,
-                      FontWeight.w500,
+                      16.0,
+                      AppColors.greyColor,
+                      FontWeight.w400,
                       'FontRegular'),
                   textAlign: TextAlign.center,
                 ),
@@ -100,7 +100,7 @@ class _RabbitScreenState extends State<RabbitScreen> {
                       .CustomSizedTextStyle(
                       16.0,
                       AppColors.blackColor,
-                      FontWeight.w600,
+                      FontWeight.w500,
                       'FontRegular'),
                 ),
               ),

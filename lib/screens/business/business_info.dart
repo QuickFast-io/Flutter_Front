@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/business/business_info_1.dart';
 import 'package:rabbit/screens/individual/individual_screen.dart';
 
@@ -53,9 +54,9 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
               height: 22,),
             SizedBox(width: 5.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.darkblackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -78,11 +79,11 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                   SizedBox(height: 15.0,),
 
                   Text(
-                    "Is this for a business or personal?",
+                    AppLocalizations.instance.text("loc_bus_question"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
-                        AppColors.blackColor,
+                        AppColors.blackColor2,
                         FontWeight.w400,
                         'FontRegular'),
                   ),
@@ -95,12 +96,13 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                     unselectedWidgetColor: Colors.grey, // Your color
                   ),
                     child: RadioListTile(
-                      title: Text("Individual",
+                      title: Text(
+                        AppLocalizations.instance.text("loc_individual_ans"),
                         textAlign: TextAlign.start,
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
                             16.0,
-                            Colors.black,
+                            AppColors.blackColor2,
                             FontWeight.w400,
                             'FontRegular'),
                       ),
@@ -118,7 +120,8 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                     unselectedWidgetColor: Colors.grey, // Your color
                   ),
                     child: RadioListTile(
-                      title: Text("Business",
+                      title: Text(
+                        AppLocalizations.instance.text("loc_business_ans"),
                         textAlign: TextAlign.start,
                         style: CustomWidget(context: context)
                             .CustomSizedTextStyle(
@@ -181,7 +184,7 @@ class _BusinessInfo_ScreenState extends State<BusinessInfo_Screen> {
                       ),
                       child: Center(
                         child: Text(
-                          "Continue",
+                          AppLocalizations.instance.text("loc_continue"),
                           style: CustomWidget(context: context)
                               .CustomSizedTextStyle(
                               16.0,
