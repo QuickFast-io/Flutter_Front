@@ -99,33 +99,35 @@ class _TransferState extends State<Transfer> {
       ),
     ):Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Align(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "200 ETH",
-                style: CustomWidget(context: context).CustomSizedTextStyle(
-                    40.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
-                textAlign: TextAlign.center,
-              ),
-              Text(
-                "="+"\$234,568.45",
-                style: CustomWidget(context: context).CustomSizedTextStyle(
-                    16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
-                textAlign: TextAlign.center,
-              ),
-            ],
-          ),
-        ),
         Padding(
-          padding: const EdgeInsets.only(left: 20.0,right: 20.0),
+          padding: const EdgeInsets.only(left: 10.0,right: 10.0),
           child: Column(
             children: [
+              Align(
+                alignment: Alignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 45.0),
+                    Text(
+                      "200 ETH",
+                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                          40.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      "="+"\$234,568.45",
+                      style: CustomWidget(context: context).CustomSizedTextStyle(
+                          16.0, Color(0xFF525252), FontWeight.w400, 'FontRegular'),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 45.0),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -184,13 +186,13 @@ class _TransferState extends State<Transfer> {
                   ),
                 ],
               ),
-              SizedBox(height: 15.0,),
+              SizedBox(height: 24.0,),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 0.5,
                 color:Color(0xFFacacac) ,
               ),
-              SizedBox(height: 15.0,),
+              SizedBox(height: 24.0,),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

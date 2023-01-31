@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 
 class Success_To_Buy_Sell_Property extends StatefulWidget {
   const Success_To_Buy_Sell_Property({Key? key}) : super(key: key);
@@ -39,11 +40,11 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
             Image.asset("assets/others/logo.png",
               color: AppColors.appColor,
               height: 22,),
-            SizedBox(width: 5.0,),
+            SizedBox(width: 6.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
@@ -64,16 +65,16 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
                   Image.asset("assets/menu/succcesss.png",
-                    height: 150,),
+                    height: 168.0,),
 
-                  SizedBox(height: 20.0,),
+                  SizedBox(height: 48.0,),
                   Text(
                     "Success",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        28.0,
+                        32.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
                   SizedBox(
@@ -84,9 +85,9 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                     "Your details has been verified!",
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
-                        AppColors.blackColor,
-                        FontWeight.w500,
+                        16.0,
+                        AppColors.hintColor,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                   SizedBox(

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/side_menu/profile_menu_screen.dart';
 
 class Listing_Add_Screen extends StatefulWidget {
@@ -53,9 +54,9 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
               padding: EdgeInsets.fromLTRB(1.0, 0.0, 15.0, 0.0),
               child:  Center(
                 child: Text(
-                  "Cancel",
+                  AppLocalizations.instance.text("loc_cancel"),
                   style: CustomWidget(context: context).CustomSizedTextStyle(
-                      15.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
+                      14.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
                 ),
               ),
             ),
@@ -78,26 +79,26 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 children: [
                   SizedBox(height: 15.0,),
                   Text(
-                    "Listings Add Ons",
+                    AppLocalizations.instance.text("loc_listing_add"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        26.0,
+                        24.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                   ),
 
                   SizedBox(
-                    height: 10.0,
+                    height: 6.0,
                   ),
 
                   Text(
-                    "Let us help you improve your listings",
+                    AppLocalizations.instance.text("loc_let_us_help"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
                         AppColors.hintColor,
-                        FontWeight.w500,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
 
@@ -130,7 +131,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "List your property on MLS",
+                              AppLocalizations.instance.text("loc_list_your_property"),
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
                                   15.0,
@@ -144,7 +145,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Get seen by more people",
+                                  AppLocalizations.instance.text("loc_get_seen"),
                                   style: CustomWidget(context: context)
                                       .CustomSizedTextStyle(
                                       12.0,
@@ -203,7 +204,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Include a virtual tour",
+                              AppLocalizations.instance.text("loc_virtual_tour"),
                               style: CustomWidget(context: context)
                                   .CustomSizedTextStyle(
                                   15.0,
@@ -217,7 +218,7 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Create a degital twin of your property",
+                                  AppLocalizations.instance.text("loc_create_digital"),
                                   style: CustomWidget(context: context)
                                       .CustomSizedTextStyle(
                                       12.0,
@@ -274,12 +275,12 @@ class _Listing_Add_ScreenState extends State<Listing_Add_Screen> {
                 ),
                 child: Center(
                   child: Text(
-                    "Continue",
+                   AppLocalizations.instance.text("loc_continue"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                 ),

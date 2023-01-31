@@ -1,6 +1,11 @@
 
 import 'package:flutter_svg/svg.dart';
 import 'package:rabbit/screens/side_menu/offer_success.dart';
+import 'package:rabbit/screens/side_menu/sellers_terms_screen.dart';
+import 'package:rabbit/screens/success/listing_add_screen.dart';
+import 'package:rabbit/screens/success/offer_to_seller.dart';
+import 'package:rabbit/screens/success/offer_to_seller_2.dart';
+import 'package:rabbit/screens/success/success_to_buy_sell.dart';
 import 'package:rabbit/screens/success/updated_terms_screen.dart';
 import 'package:rabbit/screens/wallet/change_pin.dart';
 import 'package:rabbit/screens/basic/register_screen.dart';
@@ -106,7 +111,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    SetpinPage()));
+                                    Success_To_Buy_Sell_Property()));
 
                       });
                     },

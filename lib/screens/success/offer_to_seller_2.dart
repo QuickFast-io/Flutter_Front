@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rabbit/common/colors.dart';
 import 'package:rabbit/common/custom_widget.dart';
+import 'package:rabbit/common/localization/localizations.dart';
 import 'package:rabbit/screens/success/deal_screen.dart';
 
 class Offer_To_Seller_Screen2 extends StatefulWidget {
@@ -41,15 +42,14 @@ class _Offer_To_Seller_Screen2State extends State<Offer_To_Seller_Screen2> {
             Image.asset("assets/others/logo.png",
               color: AppColors.appColor,
               height: 22,),
-            SizedBox(width: 5.0,),
+            SizedBox(width: 6.0,),
             Text(
-              "Rabbit",
+              AppLocalizations.instance.text("loc_app_name"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  20.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
             ),
           ],
         ),
-        //
       ),
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -58,7 +58,7 @@ class _Offer_To_Seller_Screen2State extends State<Offer_To_Seller_Screen2> {
         padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment. spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
               child: Column(
@@ -66,30 +66,30 @@ class _Offer_To_Seller_Screen2State extends State<Offer_To_Seller_Screen2> {
                 mainAxisAlignment: MainAxisAlignment. center,
                 children: [
                   Image.asset("assets/others/logo.png",
-                    height: 100,),
+                    height: 102,),
 
-                  SizedBox(height: 35.0,),
+                  SizedBox(height: 48.0,),
                   Text(
-                    "Congratulations on accepting the offer",
+                    AppLocalizations.instance.text("loc_accept_offer"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        28.0,
+                        32.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w500,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 15.0,
                   ),
 
                   Text(
-                    "To purchase property you will need \nto complete some paper work",
+                    AppLocalizations.instance.text("loc_purchase_property"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        15.0,
+                        16.0,
                         AppColors.blackColor,
-                        FontWeight.w500,
+                        FontWeight.w400,
                         'FontRegular'),
                     textAlign: TextAlign.center,
                   ),
@@ -115,16 +115,16 @@ class _Offer_To_Seller_Screen2State extends State<Offer_To_Seller_Screen2> {
                   // border: Border.all(
                   //     color: AppColors.blackColor
                   // ),
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(18.0),
                 ),
                 child: Center(
                   child: Text(
-                    "Continue",
+                    AppLocalizations.instance.text("loc_continue"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w600,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                 ),

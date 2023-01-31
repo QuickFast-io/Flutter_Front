@@ -84,7 +84,7 @@ class _SendScreenState extends State<SendScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Send "+widget.coinDetails!.name.toString(),
+                 AppLocalizations.instance.text("loc_send")+widget.coinDetails!.name.toString(),
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
                       24.0,
@@ -96,7 +96,7 @@ class _SendScreenState extends State<SendScreen> {
                   height: 10.0,
                 ),
                 Text(
-                  "Send"+ widget.coinDetails!.coin.toString()+" to crypto address ",
+                  AppLocalizations.instance.text("loc_send")+ widget.coinDetails!.coin.toString()+" to crypto address ",
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
                       14.0,
@@ -108,7 +108,7 @@ class _SendScreenState extends State<SendScreen> {
                   height: 45.0,
                 ),
                 Text(
-                  "Address ",
+                  AppLocalizations.instance.text("loc_addres"),
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
                       14.0,
@@ -169,7 +169,7 @@ class _SendScreenState extends State<SendScreen> {
                   height: 20.0,
                 ),
                 Text(
-                  "Network",
+                  AppLocalizations.instance.text("loc_network"),
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
                       14.0,
@@ -214,7 +214,7 @@ class _SendScreenState extends State<SendScreen> {
                       "Select correct network",
                       style: CustomWidget(context: context).CustomSizedTextStyle(
                           12.0,
-                          Theme.of(context).errorColor,
+                          AppColors.hintColor,
                           FontWeight.w500,
                           'FontRegular'),
                     ),
@@ -230,7 +230,7 @@ class _SendScreenState extends State<SendScreen> {
                   height: 25.0,
                 ),
                 Text(
-                  "Amount ",
+                  AppLocalizations.instance.text("loc_amount"),
                   style: CustomWidget(context: context)
                       .CustomSizedTextStyle(
                       14.0,
