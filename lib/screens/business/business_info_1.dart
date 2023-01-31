@@ -287,7 +287,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                                 "Select Category",
                                 style: CustomWidget(context: context).CustomSizedTextStyle(
                                     12.0,
-                                    Theme.of(context).errorColor,
+                                    AppColors.blackColor2,
                                     FontWeight.w500,
                                     'FontRegular'),
                               ),
@@ -350,7 +350,7 @@ class _BusinessInfo_Screen1State extends State<BusinessInfo_Screen1> {
                                 "Select Category",
                                 style: CustomWidget(context: context).CustomSizedTextStyle(
                                     12.0,
-                                    Theme.of(context).errorColor,
+                                    AppColors.blackColor2,
                                     FontWeight.w500,
                                     'FontRegular'),
                               ),

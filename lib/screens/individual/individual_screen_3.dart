@@ -335,7 +335,7 @@ class _Individual_Screen3State extends State<Individual_Screen3> {
                               "Select Category",
                               style: CustomWidget(context: context).CustomSizedTextStyle(
                                   12.0,
-                                  Theme.of(context).errorColor,
+                                  AppColors.blackColor2,
                                   FontWeight.w500,
                                   'FontRegular'),
                             ),
