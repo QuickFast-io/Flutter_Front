@@ -79,6 +79,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                   SizedBox(
                     height: 5.0,
                   ),
+
                   Text(
                       AppLocalizations.instance.text("loc_verify_details"),
                     style: CustomWidget(context: context)
