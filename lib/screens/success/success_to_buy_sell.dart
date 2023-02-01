@@ -57,7 +57,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
         padding: EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment. spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment. spaceAround,
           children: [
             Container(
               child: Column(
@@ -69,7 +69,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
 
                   SizedBox(height: 48.0,),
                   Text(
-                    "Success",
+                    AppLocalizations.instance.text("loc_success"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         32.0,
@@ -82,7 +82,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                   ),
 
                   Text(
-                    "Your details has been verified!",
+                    AppLocalizations.instance.text("loc_details_verified"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         16.0,
@@ -94,16 +94,15 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                     height: 20.0,
                   ),
                   Text(
-                    "Now you can buy or sell properties",
+                    AppLocalizations.instance.text("loc_buy_sell_properties"),
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
-                        14.0,
+                        16.0,
                         AppColors.blackColor,
-                        FontWeight.w500,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
 
-                  SizedBox(height: 100.0,),
                 ],
               ),
             ),
@@ -119,7 +118,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                   // border: Border.all(
                   //     color: AppColors.blackColor
                   // ),
-                  borderRadius: BorderRadius.circular(15.0),
+                  borderRadius: BorderRadius.circular(18.0),
                 ),
                 child: Center(
                   child: Text(
@@ -128,7 +127,7 @@ class _Success_To_Buy_Sell_PropertyState extends State<Success_To_Buy_Sell_Prope
                         .CustomSizedTextStyle(
                         16.0,
                         AppColors.blackColor,
-                        FontWeight.w700,
+                        FontWeight.w400,
                         'FontRegular'),
                   ),
                 ),

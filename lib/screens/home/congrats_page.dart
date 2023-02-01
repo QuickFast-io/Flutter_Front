@@ -46,7 +46,7 @@ class _CongratsScreenState extends State<CongratsScreen> {
                     style: CustomWidget(context: context)
                         .CustomSizedTextStyle(
                         14.0,
-                        Color(0xFFb8b8b8),
+                        AppColors.hintColor,
                         FontWeight.w600,
                         'FontRegular'),
                     textAlign: TextAlign.center,

@@ -44,14 +44,14 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
           children: [
             SizedBox(height: 25.0),
             SvgPicture.asset("assets/menu/backup.svg",
-                height: 150.0, width: 150.0),
-            SizedBox(height: 25.0),
+                height: 99.0),
+            SizedBox(height: 41.0),
             Text(
               AppLocalizations.instance.text("loc_phrase_verified"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  24.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  32.0, AppColors.blackColor, FontWeight.w500, 'FontRegular'),
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 44.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +73,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
                     child: Container(
                   margin: EdgeInsets.only(top: 15.0),
                   child: Text(
-                    'I acknowledge and accept the wallet terms of use',
+                    AppLocalizations.instance.text("loc_phrase_desc"),
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         14.0,
                         AppColors.blackColor,
@@ -107,7 +107,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
                     child: Container(
                   margin: EdgeInsets.only(top: 10.0),
                   child: Text(
-                    'I understand my digital assets are held and  controlled on this device.Rabbit has no custody  access or control over my asset.',
+                    AppLocalizations.instance.text("loc_phrase_desc1"),
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         14.0,
                         AppColors.blackColor,
@@ -140,7 +140,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
                     child: Container(
                   margin: EdgeInsets.only(top: 10.0),
                   child: Text(
-                    'Rabbit can never recover my assets for me.it is my responsibility to maintain my 12 words recovery phrase. If I lose my recovery phrase,I it can\'t be recovered',
+                    AppLocalizations.instance.text("loc_phrase_desc2"),
                     style: CustomWidget(context: context).CustomSizedTextStyle(
                         14.0,
                         AppColors.blackColor,
@@ -184,7 +184,7 @@ class _PhraseConfirmState extends State<PhraseConfirm> {
             child: Text(
               AppLocalizations.instance.text("loc_agree_continue"),
               style: CustomWidget(context: context).CustomSizedTextStyle(
-                  16.0, AppColors.blackColor, FontWeight.w600, 'FontRegular'),
+                  16.0, AppColors.blackColor, FontWeight.w400, 'FontRegular'),
               textAlign: TextAlign.center,
             ),
           ),

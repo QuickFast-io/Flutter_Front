@@ -111,7 +111,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) =>
-                                    Success_To_Buy_Sell_Property()));
+                                    SetpinPage()));
 
                       });
                     },

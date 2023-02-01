@@ -40,76 +40,74 @@ class _ProfileMenu_ScreenState extends State<ProfileMenu_Screen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                       height: 48.0,
-                        decoration: BoxDecoration(
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(10.0)),
-                        child: SvgPicture.asset("assets/menu/profile.svg",
-                          height: 48.0,),
-                      ),
-                      SizedBox(width: 15.0,),
+                  Container(
+                    child: Row(
+                      children: [
+                        Container(
+                         height: 48.0,
+                          decoration: BoxDecoration(
+                              color: Colors.transparent,
+                              borderRadius: BorderRadius.circular(10.0)),
+                          child: SvgPicture.asset("assets/menu/profile.svg",
+                            height: 48.0,),
+                        ),
+                        SizedBox(width: 15.0,),
 
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Caption Jack",
-                            textAlign: TextAlign.start,
-                            style: CustomWidget(context: context)
-                                .CustomSizedTextStyle(
-                                20.0,
-                                AppColors.blackColor,
-                                FontWeight.w500,
-                                'FontRegular'),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text(
-                                    "caribbean king",
-                                    textAlign: TextAlign.start,
-                                    style: CustomWidget(context: context)
-                                        .CustomSizedTextStyle(
-                                        14.0,
-                                        AppColors.hintColor,
-                                        FontWeight.w400,
-                                        'FontRegular'),
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                  SizedBox(width: 10.0,),
-                                  Icon(Icons.copy,
-                                    color: Colors.black,
-                                    size: 12.0,
-                                  )
-                                ],
-                              ),
-                              Text(
-                                "Edit Profile".toUpperCase(),
-                                textAlign: TextAlign.start,
-                                style: CustomWidget(context: context)
-                                    .CustomSizedTextStyle(
-                                    10.0,
-                                    AppColors.hintColor,
-                                    FontWeight.w600,
-                                    'FontRegular'),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Caption Jack",
+                              textAlign: TextAlign.start,
+                              style: CustomWidget(context: context)
+                                  .CustomSizedTextStyle(
+                                  20.0,
+                                  AppColors.blackColor,
+                                  FontWeight.w500,
+                                  'FontRegular'),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "caribbean king",
+                                  textAlign: TextAlign.start,
+                                  style: CustomWidget(context: context)
+                                      .CustomSizedTextStyle(
+                                      14.0,
+                                      AppColors.hintColor,
+                                      FontWeight.w400,
+                                      'FontRegular'),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                SizedBox(width: 8.0,),
+                                Icon(Icons.copy,
+                                color: Colors.black,
+                                  size: 12.0,
+                                )
+                              ],
+                            )
+
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
+                  Flexible(child: Text(
+                    "Edit Profile".toUpperCase(),
+                    textAlign: TextAlign.justify,
+                    style: CustomWidget(context: context)
+                        .CustomSizedTextStyle(
+                        10.0,
+                        AppColors.hintColor,
+                        FontWeight.w600,
+                        'FontRegular'),
+                  ),)
                 ],
               ),
             ),
+
             SizedBox(
               height: 20.0,
             ),
